@@ -40,10 +40,13 @@ jobs:
       - name: Build landing
         run: pnpm --filter @wisp/landing build
 
+      - name: Build select
+        run: pnpm --filter @wisp/select build
+
       - name: Build mockup
         run: pnpm --filter @wisp/mockup build
 
-      - name: Assemble site (landing at root, mockup at /mockup)
+      - name: Assemble site (landing at root, select at /select, mockup at /mockup)
         run: node scripts/assemble-site.mjs
 
       - name: Configure Pages
