@@ -1,12 +1,15 @@
 import type { DragEvent, ReactNode } from 'react';
 import type { Augment } from '@wisp/data/types';
 import { AugmentIcon } from './AugmentIcon';
+import { ItemIcon } from './ItemIcon';
 import type { ShopEntry } from './ItemsToBuy';
 
 export const MAX_PURCHASED_ITEMS = 6;
 export const MAX_SELECTED_AUGMENTS = 5;
 
 interface CharacterPanelProps {
+  championName: string;
+  championLetters: string;
   gold: number;
   cs: number;
   championInfo?: ReactNode;
@@ -19,6 +22,8 @@ interface CharacterPanelProps {
 }
 
 export function CharacterPanel({
+  championName,
+  championLetters,
   gold,
   cs,
   championInfo,
@@ -55,10 +60,10 @@ export function CharacterPanel({
       </div>
       <div className="flex items-center gap-4">
         <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-void-600 bg-void-800 font-display text-2xl">
-          DM
+          {championLetters}
         </div>
         <div>
-          <h2 className="font-display text-lg font-semibold">Dr. Mundo</h2>
+          <h2 className="font-display text-lg font-semibold">{championName}</h2>
           <p className="text-sm text-mist-400">Level 14 · Top</p>
         </div>
       </div>
@@ -96,7 +101,7 @@ export function CharacterPanel({
             </p>
           ) : (
             <div className="grid grid-cols-5 gap-1.5">
-              {purchased.map(({ item, icon }) => (
+              {purchased.map(({ item }) => (
                 <button
                   key={item.id}
                   type="button"
@@ -104,7 +109,7 @@ export function CharacterPanel({
                   title={`${item.name} — ${item.price}g (click to remove)`}
                   className="group relative h-9 w-9 shrink-0 rounded-md border border-void-600 bg-void-800"
                 >
-                  <img src={icon} alt={item.name} className="h-full w-full rounded-md" />
+                  <ItemIcon id={item.id} alt={item.name} className="h-full w-full" />
                   <span className="absolute inset-0 flex items-center justify-center rounded-md bg-void-950/70 text-troll-400 opacity-0 transition-opacity group-hover:opacity-100">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                       <path

@@ -7,11 +7,14 @@
     "dev": "pnpm --parallel --filter ./apps/* dev",
     "dev:landing": "pnpm --filter @wisp/landing dev",
     "dev:mockup": "pnpm --filter @wisp/mockup dev",
-    "build": "pnpm --filter @wisp/landing build && pnpm --filter @wisp/mockup build && node scripts/assemble-site.mjs",
+    "dev:select": "pnpm --filter @wisp/select dev",
+    "build": "pnpm --filter @wisp/landing build && pnpm --filter @wisp/select build && pnpm --filter @wisp/mockup build && node scripts/assemble-site.mjs",
     "lint": "eslint .",
+    "test": "pnpm --filter @wisp/engine test",
     "format": "prettier --write .",
     "fetch:augments": "pnpm --filter @wisp/data fetch:augments",
-    "fetch:items": "pnpm --filter @wisp/data fetch:items"
+    "fetch:items": "pnpm --filter @wisp/data fetch:items",
+    "fetch:champions": "pnpm --filter @wisp/data fetch:champions"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

@@ -41,6 +41,9 @@ interface DDragonItem {
   gold: DDragonItemGold;
   image: DDragonItemImage;
   maps: Record<string, boolean>;
+  tags?: string[];
+  depth?: number;
+  from?: string[];
   /** Item ids this upgrades into. Absent/empty = top-tier, no further upgrade. */
   into?: string[];
 }
@@ -109,6 +112,10 @@ async function main() {
       price: raw.gold.total,
       iconPath: `assets/items/${raw.image.full}`,
       isCompleted: !raw.into || raw.into.length === 0,
+      tags: raw.tags ?? [],
+      depth: raw.depth,
+      from: raw.from?.map(Number),
+      into: raw.into?.map(Number),
     });
 
     done += 1;

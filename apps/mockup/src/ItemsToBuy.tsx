@@ -1,10 +1,10 @@
 import type { DragEvent } from 'react';
 import type { Item } from '@wisp/data/types';
 import { Panel } from './Panel';
+import { ItemIcon } from './ItemIcon';
 
 export interface ShopEntry {
   item: Item;
-  icon: string;
   recommended?: boolean;
 }
 
@@ -33,7 +33,7 @@ export function ItemsToBuy({ entries, onBuy, disabled = false }: ItemsToBuyProps
         <p className="text-xs text-mist-500">All stocked items purchased.</p>
       ) : (
         <div className="grid grid-cols-3 gap-2">
-          {entries.map(({ item, icon, recommended }) => (
+          {entries.map(({ item, recommended }) => (
             <button
               key={item.id}
               type="button"
@@ -52,7 +52,7 @@ export function ItemsToBuy({ entries, onBuy, disabled = false }: ItemsToBuyProps
                     }`
               }`}
             >
-              <img src={icon} alt="" className="h-9 w-9 rounded-md border border-white/10" />
+              <ItemIcon id={item.id} className="h-9 w-9 border border-white/10" />
               <span className="line-clamp-1 text-[11px] text-mist-200">{item.name}</span>
               <span className="font-mono text-[11px] text-gold-500">{item.price}g</span>
             </button>

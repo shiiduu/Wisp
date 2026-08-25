@@ -1,6 +1,6 @@
 {
   "source": "16.16.1",
-  "generatedAt": "2026-08-25T12:00:36.457Z",
+  "generatedAt": "2026-08-25T14:43:59.213Z",
   "items": [
     {
       "id": 8020,
@@ -8,7 +8,19 @@
       "description": "350 Health 45 Magic Resist 15 Ability Haste Unmake Nearby enemy champions take 12% more magic damage.",
       "price": 2650,
       "iconPath": "assets/items/8020.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "CooldownReduction",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1057
+      ]
     },
     {
       "id": 328020,
@@ -16,7 +28,19 @@
       "description": "350 Health 50 Magic Resist 15 Ability Haste Unmake Nearby enemy champions take 12% more magic damage.",
       "price": 2850,
       "iconPath": "assets/items/328020.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "CooldownReduction",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1057
+      ]
     },
     {
       "id": 2522,
@@ -24,7 +48,17 @@
       "description": "90 Ability Power 300 Mana 10 Ability Haste Mana Made Real (0s) For 8 seconds, your mana is Empowered. While Empowered, your spells cost 100% more Mana, you gai…",
       "price": 2800,
       "iconPath": "assets/items/2522.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3802,
+        1026
+      ]
     },
     {
       "id": 3113,
@@ -32,7 +66,26 @@
       "description": "Increases Ability Power and Move Speed",
       "price": 900,
       "iconPath": "assets/items/3113.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "NonbootsMovement",
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052
+      ],
+      "into": [
+        123430,
+        3100,
+        2065,
+        322065,
+        3087,
+        323504,
+        3504,
+        4629,
+        4646
+      ]
     },
     {
       "id": 1052,
@@ -40,7 +93,36 @@
       "description": "Slightly increases Ability Power",
       "price": 400,
       "iconPath": "assets/items/1052.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "into": [
+        3113,
+        2421,
+        2420,
+        3145,
+        124011,
+        4637,
+        3916,
+        6656,
+        3147,
+        3146,
+        3802,
+        4005,
+        2508,
+        326616,
+        3108,
+        3116,
+        3124,
+        4630,
+        323504,
+        4628,
+        4632,
+        4635,
+        4642,
+        4644
+      ]
     },
     {
       "id": 3003,
@@ -48,7 +130,18 @@
       "description": "Increases Ability Power based on maximum Mana",
       "price": 2900,
       "iconPath": "assets/items/3003.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3070,
+        3802,
+        3108
+      ]
     },
     {
       "id": 323003,
@@ -56,7 +149,18 @@
       "description": "70 Ability Power 600 Mana 25 Ability Haste Awe Gain Ability Power equal to 1% bonus Mana. Manaflow (8s, max 5 charges) Landing Abilities grants 9.5 max Mana (d…",
       "price": 2900,
       "iconPath": "assets/items/323003.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        323070,
+        3802,
+        3108
+      ]
     },
     {
       "id": 3504,
@@ -64,7 +168,18 @@
       "description": "Shield and heal effects on other units grant both of you Attack Speed and their attacks deal additional on-hit magic damage.",
       "price": 2200,
       "iconPath": "assets/items/3504.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "ManaRegen",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3113,
+        3114
+      ]
     },
     {
       "id": 323504,
@@ -72,7 +187,19 @@
       "description": "55 Ability Power 10% Heal and Shield Power 150% Base Mana Regen 6% Move Speed Sanctify Healing or Shielding an ally enhances you both for 6 seconds, granting 2…",
       "price": 2600,
       "iconPath": "assets/items/323504.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "ManaRegen",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3113,
+        1052,
+        3114
+      ]
     },
     {
       "id": 3174,
@@ -80,7 +207,15 @@
       "description": "Deal damage to empower your heals and shields",
       "price": 1200,
       "iconPath": "assets/items/3174.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "Boots"
+      ],
+      "depth": 3,
+      "from": [
+        3047
+      ]
     },
     {
       "id": 663039,
@@ -88,7 +223,12 @@
       "description": "500 Health 20% Critical Strike Chance Big Hands Gain 0-30% Critical Strike Chance, scaling with your bonus Health.",
       "price": 2500,
       "iconPath": "assets/items/663039.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "CriticalStrike",
+        "Lane"
+      ]
     },
     {
       "id": 6696,
@@ -96,7 +236,17 @@
       "description": "55 Attack Damage 18 Lethality 20 Ability Haste Flux When a champion that you damaged within 3 seconds dies, refund some of your Ultimate Ability's total cooldo…",
       "price": 2750,
       "iconPath": "assets/items/6696.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2020,
+        3133
+      ]
     },
     {
       "id": 1038,
@@ -104,7 +254,20 @@
       "description": "Greatly increases Attack Damage",
       "price": 1300,
       "iconPath": "assets/items/1038.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage"
+      ],
+      "into": [
+        3031,
+        3026,
+        3032,
+        3072,
+        3095,
+        3097,
+        4403,
+        6671
+      ]
     },
     {
       "id": 6660,
@@ -112,7 +275,20 @@
       "description": "150 Health 5 Ability Haste Immolate After taking or dealing damage, deal magic damage to nearby enemies for 3 seconds.",
       "price": 900,
       "iconPath": "assets/items/6660.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        2022
+      ],
+      "into": [
+        3068,
+        6664
+      ]
     },
     {
       "id": 4642,
@@ -120,7 +296,29 @@
       "description": "20 Ability Power 100% Base Mana Regen 10 Ability Haste",
       "price": 900,
       "iconPath": "assets/items/4642.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1004,
+        1052,
+        2022
+      ],
+      "into": [
+        2065,
+        322065,
+        6620,
+        326617,
+        324005,
+        4005,
+        6617,
+        326620
+      ]
     },
     {
       "id": 2524,
@@ -128,7 +326,21 @@
       "description": "200 Health 15 Ability Haste 20 Armor 20 Magic Resist Fanfare Slowing or Immobilizing an enemy champion grants Fanfare for seconds. Fanfare grants you 20 Move S…",
       "price": 2300,
       "iconPath": "assets/items/2524.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AttackSpeed",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1029,
+        1033
+      ]
     },
     {
       "id": 3102,
@@ -136,7 +348,16 @@
       "description": "Periodically blocks enemy abilities",
       "price": 3000,
       "iconPath": "assets/items/3102.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "SpellDamage"
+      ],
+      "depth": 3,
+      "from": [
+        1058,
+        4632
+      ]
     },
     {
       "id": 2520,
@@ -144,7 +365,17 @@
       "description": "55 Attack Damage 22 Lethality 15 Ability Haste Shaped Charge (0s) Dealing Ability damage to a Champion or Epic Monster deals an additional true damage. Sabotag…",
       "price": 3000,
       "iconPath": "assets/items/2520.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2020,
+        3134
+      ]
     },
     {
       "id": 3006,
@@ -152,7 +383,20 @@
       "description": "Enhances Move Speed and Attack Speed",
       "price": 1100,
       "iconPath": "assets/items/3006.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "AttackSpeed",
+        "Boots"
+      ],
+      "depth": 2,
+      "from": [
+        1001,
+        1042,
+        1042
+      ],
+      "into": [
+        3172
+      ]
     },
     {
       "id": 3071,
@@ -160,7 +404,22 @@
       "description": "Dealing physical damage to enemy champions reduces their Armor",
       "price": 3000,
       "iconPath": "assets/items/3071.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3044,
+        3067,
+        1037
+      ]
     },
     {
       "id": 2503,
@@ -168,7 +427,18 @@
       "description": "80 Ability Power 600 Mana 20 Ability Haste Baleful Blaze Damaging Abilities deals bonus magic damage for 3 seconds. Blackfire For each enemy champion, epic and…",
       "price": 2800,
       "iconPath": "assets/items/2503.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3802,
+        2508
+      ]
     },
     {
       "id": 3153,
@@ -176,7 +446,20 @@
       "description": "Deals damage based on target's Health, can steal Move Speed",
       "price": 3200,
       "iconPath": "assets/items/3153.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "LifeSteal",
+        "Slow",
+        "OnHit"
+      ],
+      "depth": 3,
+      "from": [
+        1053,
+        1043,
+        1037
+      ]
     },
     {
       "id": 1026,
@@ -184,7 +467,26 @@
       "description": "Moderately increases Ability Power",
       "price": 850,
       "iconPath": "assets/items/1026.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "into": [
+        2522,
+        3100,
+        326621,
+        4637,
+        3135,
+        3165,
+        3115,
+        324005,
+        2510,
+        3116,
+        3118,
+        326657,
+        6621,
+        6657
+      ]
     },
     {
       "id": 4630,
@@ -192,7 +494,19 @@
       "description": "25 Ability Power 13% Magic Penetration",
       "price": 1100,
       "iconPath": "assets/items/4630.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "MagicPenetration",
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052
+      ],
+      "into": [
+        3135,
+        3137
+      ]
     },
     {
       "id": 8010,
@@ -200,7 +514,18 @@
       "description": "65 Ability Power 400 Health 15 Ability Haste Vile Decay Dealing magic damage with abilities or passives to champions reduces their Magic Resist by 7.5% for 6 s…",
       "price": 2900,
       "iconPath": "assets/items/8010.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "MagicPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3147,
+        3108
+      ]
     },
     {
       "id": 3877,
@@ -208,7 +533,19 @@
       "description": "200 Health 75% Base Health Regen 75% Base Mana Regen 9 Gold Per 10 Seconds Spellblade After using an Ability, your next Attack deals bonus physical damage On-H…",
       "price": 400,
       "iconPath": "assets/items/3877.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "depth": 2,
+      "from": [
+        3867
+      ]
     },
     {
       "id": 3072,
@@ -216,7 +553,17 @@
       "description": "Grants Attack Damage, Life Steal and Life Steal now overheals",
       "price": 3400,
       "iconPath": "assets/items/3072.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "LifeSteal"
+      ],
+      "depth": 3,
+      "from": [
+        1038,
+        1037,
+        1053
+      ]
     },
     {
       "id": 1001,
@@ -224,7 +571,22 @@
       "description": "Slightly increases Move Speed",
       "price": 300,
       "iconPath": "assets/items/1001.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Boots"
+      ],
+      "into": [
+        3005,
+        3047,
+        3008,
+        3006,
+        3009,
+        3010,
+        3020,
+        3111,
+        3117,
+        3158
+      ]
     },
     {
       "id": 3009,
@@ -232,7 +594,17 @@
       "description": "Enhances Move Speed and reduces the effect of slows",
       "price": 1000,
       "iconPath": "assets/items/3009.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Boots"
+      ],
+      "depth": 2,
+      "from": [
+        1001
+      ],
+      "into": [
+        3170
+      ]
     },
     {
       "id": 3076,
@@ -240,7 +612,19 @@
       "description": "30 Armor Thorns When hit by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
       "price": 800,
       "iconPath": "assets/items/3076.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor"
+      ],
+      "depth": 2,
+      "from": [
+        1029,
+        1029
+      ],
+      "into": [
+        323075,
+        3075
+      ]
     },
     {
       "id": 2141,
@@ -248,7 +632,11 @@
       "description": "Helps you get on a head.Active - Consume: This juice does nothing.",
       "price": 300,
       "iconPath": "assets/items/2141.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Consumable"
+      ]
     },
     {
       "id": 3803,
@@ -256,7 +644,24 @@
       "description": "300 Health 375 Mana Eternity Restores 10% of the damage taken from champions as Mana. Casting an Ability heals for 25% of Mana spent.",
       "price": 1300,
       "iconPath": "assets/items/3803.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        1028,
+        1027
+      ],
+      "into": [
+        4402,
+        326657,
+        6657
+      ]
     },
     {
       "id": 3133,
@@ -264,7 +669,39 @@
       "description": "Attack Damage and Cooldown Reduction",
       "price": 1050,
       "iconPath": "assets/items/3133.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        2022,
+        1036
+      ],
+      "into": [
+        6333,
+        126697,
+        6697,
+        4402,
+        3156,
+        2517,
+        323004,
+        6693,
+        3004,
+        3508,
+        3074,
+        3179,
+        6691,
+        6609,
+        6610,
+        6632,
+        6692,
+        6694,
+        6696
+      ]
     },
     {
       "id": 3869,
@@ -272,7 +709,19 @@
       "description": "200 Health 75% Base Health Regen 75% Base Mana Regen 9 Gold Per 10 Seconds Blessing of the Mountain Reduce incoming champion damage for 2 seconds after taking…",
       "price": 400,
       "iconPath": "assets/items/3869.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "depth": 2,
+      "from": [
+        3867
+      ]
     },
     {
       "id": 1031,
@@ -280,7 +729,27 @@
       "description": "Greatly increases Armor",
       "price": 800,
       "iconPath": "assets/items/1031.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor"
+      ],
+      "depth": 2,
+      "from": [
+        1029
+      ],
+      "into": [
+        3742,
+        3068,
+        323002,
+        3109,
+        323075,
+        2502,
+        3002,
+        3075,
+        323109,
+        6665,
+        6662
+      ]
     },
     {
       "id": 3173,
@@ -288,7 +757,17 @@
       "description": "Increases Move Speed and Cooldown Reduction",
       "price": 1250,
       "iconPath": "assets/items/3173.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "Boots",
+        "Tenacity",
+        "MagicResist"
+      ],
+      "depth": 3,
+      "from": [
+        3111
+      ]
     },
     {
       "id": 6609,
@@ -296,7 +775,19 @@
       "description": "45 Attack Damage 450 Health 15 Ability Haste Hackshorn Dealing physical damage applies 40% Wounds to enemy champions for 3 seconds.",
       "price": 3000,
       "iconPath": "assets/items/6609.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3123,
+        1011,
+        3133
+      ]
     },
     {
       "id": 1018,
@@ -304,7 +795,23 @@
       "description": "Increases critical strike chance",
       "price": 600,
       "iconPath": "assets/items/1018.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "CriticalStrike"
+      ],
+      "into": [
+        123430,
+        667666,
+        3031,
+        3086,
+        6670,
+        3033,
+        3039,
+        3508,
+        3095,
+        3097,
+        6676
+      ]
     },
     {
       "id": 663059,
@@ -312,7 +819,11 @@
       "description": "250 Health 60 Magic Resist Limitless as the Stars Increase your Magic Resist by 10%. Reduce all damage you take from non-Basic Attack sources by a percentage,…",
       "price": 2500,
       "iconPath": "assets/items/663059.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock"
+      ]
     },
     {
       "id": 1029,
@@ -320,7 +831,28 @@
       "description": "Slightly increases Armor",
       "price": 300,
       "iconPath": "assets/items/1029.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor"
+      ],
+      "into": [
+        2421,
+        2420,
+        1031,
+        323050,
+        323190,
+        2019,
+        3193,
+        3047,
+        3024,
+        3050,
+        2524,
+        3023,
+        3076,
+        3082,
+        3105,
+        3190
+      ]
     },
     {
       "id": 2055,
@@ -328,7 +860,13 @@
       "description": "Used to disable wards and invisible traps in an area.",
       "price": 75,
       "iconPath": "assets/items/2055.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Consumable",
+        "Lane",
+        "Stealth",
+        "Vision"
+      ]
     },
     {
       "id": 4629,
@@ -336,7 +874,19 @@
       "description": "Massive amounts of Cooldown Reduction",
       "price": 3000,
       "iconPath": "assets/items/4629.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        3113,
+        3108
+      ]
     },
     {
       "id": 3171,
@@ -344,7 +894,15 @@
       "description": "20 Ability Haste 45 Move Speed Ionian Insight Gain 20 Summoner Spell Haste. Noxian Haste Empowering or protecting allies with abilities, dealing damage to enem…",
       "price": 900,
       "iconPath": "assets/items/3171.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CooldownReduction",
+        "Boots"
+      ],
+      "depth": 3,
+      "from": [
+        3158
+      ]
     },
     {
       "id": 664644,
@@ -352,7 +910,13 @@
       "description": "65 Ability Power 250 Health 600 Mana 15 Ability Haste Safeguard You are Safeguarded, reducing incoming champion damage by 40%. Safeguard persists for 3 seconds…",
       "price": 2500,
       "iconPath": "assets/items/664644.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 667109,
@@ -360,7 +924,12 @@
       "description": "60 Ability Power 25 Armor 25 Magic Resist Watch Them Fall On Immobilize or Grounding an enemy champion, summon a comet above them. The comet lands after 1 seco…",
       "price": 2500,
       "iconPath": "assets/items/667109.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "MagicResist"
+      ]
     },
     {
       "id": 3137,
@@ -368,7 +937,18 @@
       "description": "Activate to remove all debuffs and grant massive Move Speed",
       "price": 3000,
       "iconPath": "assets/items/3137.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "MagicPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        4630,
+        3108,
+        3108
+      ]
     },
     {
       "id": 3801,
@@ -376,7 +956,20 @@
       "description": "Grants Health and Health Regen",
       "price": 800,
       "iconPath": "assets/items/3801.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "HealthRegen"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        1006
+      ],
+      "into": [
+        3084,
+        3083
+      ]
     },
     {
       "id": 1083,
@@ -384,7 +977,12 @@
       "description": "Provides damage and Life Steal on hit - Killing minions grant bonus Gold",
       "price": 450,
       "iconPath": "assets/items/1083.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "OnHit",
+        "Lane"
+      ]
     },
     {
       "id": 1042,
@@ -392,7 +990,24 @@
       "description": "Slightly increases Attack Speed",
       "price": 250,
       "iconPath": "assets/items/1042.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "AttackSpeed"
+      ],
+      "into": [
+        1043,
+        3086,
+        2510,
+        3006,
+        3046,
+        3051,
+        3073,
+        3131,
+        3144,
+        6631,
+        6675,
+        6677
+      ]
     },
     {
       "id": 1082,
@@ -400,7 +1015,15 @@
       "description": "Provides Ability Power and Mana. Increases in power as you kill enemies.",
       "price": 350,
       "iconPath": "assets/items/1082.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Lane"
+      ],
+      "into": [
+        3041
+      ]
     },
     {
       "id": 6621,
@@ -408,7 +1031,17 @@
       "description": "45 Ability Power 16% Heal and Shield Power 100% Base Mana Regen First Light Gain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
       "price": 2500,
       "iconPath": "assets/items/6621.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        3114,
+        3114
+      ]
     },
     {
       "id": 326621,
@@ -416,7 +1049,17 @@
       "description": "50 Ability Power 20% Heal and Shield Power 150% Base Mana Regen First Light Gain 2% Heal and Shield Power and 10 Ability Power per 100% Base Mana Regen.",
       "price": 2900,
       "iconPath": "assets/items/326621.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        3114,
+        3114
+      ]
     },
     {
       "id": 3742,
@@ -424,7 +1067,19 @@
       "description": "Build momentum as you move around then smash into enemies.",
       "price": 2900,
       "iconPath": "assets/items/3742.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "Slow",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3066,
+        1028,
+        1031
+      ]
     },
     {
       "id": 6333,
@@ -432,7 +1087,18 @@
       "description": "60 Attack Damage 50 Armor 15 Ability Haste Ignore Pain A percentage of damage taken is dealt to you over 3 seconds instead. Defy When a champion that you damag…",
       "price": 3300,
       "iconPath": "assets/items/6333.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "Damage",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2019,
+        1037,
+        3133
+      ]
     },
     {
       "id": 663056,
@@ -440,7 +1106,16 @@
       "description": "Supremacy Increases your Health, Armor, Magic Resist, Attack Damage, Ability Power, Attack Speed, and Ability Haste by 20%, increased by 0% perTakedown and -3%…",
       "price": 2500,
       "iconPath": "assets/items/663056.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "MagicResist",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 1055,
@@ -448,7 +1123,14 @@
       "description": "Good starting item for attackers",
       "price": 450,
       "iconPath": "assets/items/1055.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "Lane"
+      ]
     },
     {
       "id": 1086,
@@ -456,7 +1138,13 @@
       "description": "8 Attack Damage 15% Attack Speed 1.5% Omnivamp",
       "price": 400,
       "iconPath": "assets/items/1086.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "SpellVamp",
+        "Lane"
+      ]
     },
     {
       "id": 1120,
@@ -464,7 +1152,13 @@
       "description": "150 Health 8 Armor 8 Magic Resist Helping Hand Attacks deal 5 bonus physical damage to minions.",
       "price": 450,
       "iconPath": "assets/items/1120.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "Lane"
+      ]
     },
     {
       "id": 1056,
@@ -472,7 +1166,13 @@
       "description": "Good starting item for casters",
       "price": 400,
       "iconPath": "assets/items/1056.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Lane",
+        "ManaRegen",
+        "SpellDamage"
+      ]
     },
     {
       "id": 1054,
@@ -480,7 +1180,12 @@
       "description": "Good defensive starting item",
       "price": 450,
       "iconPath": "assets/items/1054.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Lane"
+      ]
     },
     {
       "id": 3870,
@@ -488,7 +1193,19 @@
       "description": "200 Health 75% Base Health Regen 75% Base Mana Regen 9 Gold Per 10 Seconds Dream Maker Healing or Shielding another ally blows Dream Bubbles to them for 3 seco…",
       "price": 400,
       "iconPath": "assets/items/3870.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "depth": 2,
+      "from": [
+        3867
+      ]
     },
     {
       "id": 2510,
@@ -496,7 +1213,21 @@
       "description": "300 Health 60 Ability Power 20 Ability Haste 20% Attack Speed Spellblade (0s) After using an Ability, your next Attack deals bonus magic damage and heals you f…",
       "price": 3100,
       "iconPath": "assets/items/2510.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3057,
+        1026,
+        3067,
+        1042
+      ]
     },
     {
       "id": 6620,
@@ -504,7 +1235,19 @@
       "description": "Damage low-health enemies to trigger a cursed explosion, dealing damage and slowing nearby foes",
       "price": 2200,
       "iconPath": "assets/items/6620.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        4642
+      ]
     },
     {
       "id": 326620,
@@ -512,7 +1255,19 @@
       "description": "35 Ability Power 250 Health 20 Ability Haste 150% Base Mana Regen Soul Siphon Gain 30% of pre-mitigation damage dealt to champions as Soul Charges. Healing or…",
       "price": 2600,
       "iconPath": "assets/items/326620.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        4642
+      ]
     },
     {
       "id": 6692,
@@ -520,7 +1275,18 @@
       "description": "60 Attack Damage 15 Ability Haste Ever Rising Moon Hitting a champion with 2 separate Attacks or Abilities within 2 seconds grants you a Shield for 2 seconds.",
       "price": 2900,
       "iconPath": "assets/items/6692.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3133,
+        1037,
+        1036
+      ]
     },
     {
       "id": 3814,
@@ -528,7 +1294,17 @@
       "description": "Periodically blocks enemy abilities",
       "price": 3000,
       "iconPath": "assets/items/3814.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3134,
+        2021
+      ]
     },
     {
       "id": 2138,
@@ -536,7 +1312,13 @@
       "description": "Temporarily increases defenses. Leaves a trail for allies to follow.",
       "price": 500,
       "iconPath": "assets/items/2138.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Consumable",
+        "NonbootsMovement",
+        "Tenacity"
+      ]
     },
     {
       "id": 2139,
@@ -544,7 +1326,12 @@
       "description": "Temporarily grants Ability Power and Bonus Damage to champions and turrets.",
       "price": 500,
       "iconPath": "assets/items/2139.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Consumable",
+        "ManaRegen",
+        "SpellDamage"
+      ]
     },
     {
       "id": 2140,
@@ -552,7 +1339,13 @@
       "description": "Temporarily grants Attack Damage and heals you when dealing physical damage to champions.",
       "price": 500,
       "iconPath": "assets/items/2140.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Consumable",
+        "Damage",
+        "LifeSteal",
+        "SpellVamp"
+      ]
     },
     {
       "id": 2517,
@@ -560,7 +1353,20 @@
       "description": "65 Attack Damage 5% Omnivamp 20% Tenacity Famine Gain Ability Haste based on your Bonus AD. Feast When a champion that you damaged recently dies, gain Omnivamp…",
       "price": 3100,
       "iconPath": "assets/items/2517.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3133,
+        1037,
+        1036
+      ]
     },
     {
       "id": 3508,
@@ -568,7 +1374,21 @@
       "description": "50 Attack Damage 20 Ability Haste 25% Critical Strike Chance Spellblade After using an Ability, your next Attack deals bonus physical damage and grants Mana On…",
       "price": 3050,
       "iconPath": "assets/items/3508.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ManaRegen",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3057,
+        3133,
+        1018
+      ]
     },
     {
       "id": 3123,
@@ -576,7 +1396,18 @@
       "description": "Overcomes enemies with high health gain",
       "price": 800,
       "iconPath": "assets/items/3123.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage"
+      ],
+      "depth": 2,
+      "from": [
+        1036
+      ],
+      "into": [
+        3033,
+        6609
+      ]
     },
     {
       "id": 3073,
@@ -584,7 +1415,21 @@
       "description": "Increases maximum Mana as Mana is spent",
       "price": 3000,
       "iconPath": "assets/items/3073.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2021,
+        1042,
+        3044
+      ]
     },
     {
       "id": 1004,
@@ -592,7 +1437,15 @@
       "description": "Slightly increases Mana Regen",
       "price": 200,
       "iconPath": "assets/items/1004.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "ManaRegen"
+      ],
+      "into": [
+        3114,
+        3012,
+        4642
+      ]
     },
     {
       "id": 3363,
@@ -600,7 +1453,12 @@
       "description": "Grants increased range and reveals the targetted area",
       "price": 0,
       "iconPath": "assets/items/3363.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Active",
+        "Trinket",
+        "Vision"
+      ]
     },
     {
       "id": 2508,
@@ -608,7 +1466,18 @@
       "description": "30 Ability Power Inflame Damaging Abilities deal 15 bonus magic damage over 3 seconds. Deals an additional 45 magic damage to monsters.",
       "price": 900,
       "iconPath": "assets/items/2508.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052
+      ],
+      "into": [
+        2503,
+        6653
+      ]
     },
     {
       "id": 2512,
@@ -616,7 +1485,18 @@
       "description": "45% Attack Speed 25% Critical Strike Chance 4% Move Speed Night Vigil Gain 30 Ultimate Ability Haste. Opening Barrage After casting your Ultimate, your next 3…",
       "price": 2650,
       "iconPath": "assets/items/2512.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3086,
+        3144
+      ]
     },
     {
       "id": 3108,
@@ -624,7 +1504,33 @@
       "description": "Increases Ability Power and Cooldown Reduction",
       "price": 850,
       "iconPath": "assets/items/3108.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        2022
+      ],
+      "into": [
+        123430,
+        4636,
+        323003,
+        3115,
+        3003,
+        326616,
+        3107,
+        3128,
+        3137,
+        8010,
+        6616,
+        4628,
+        4629,
+        4633
+      ]
     },
     {
       "id": 667112,
@@ -632,7 +1538,13 @@
       "description": "55 Adaptive Force 500 Health Hack the Meat Dealing damage shreds 3 Armor and Magic Resist for 5 seconds, stacking up to 10 times. Applying stacks has a 1 secon…",
       "price": 2500,
       "iconPath": "assets/items/667112.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "SpellDamage",
+        "MagicPenetration",
+        "ArmorPenetration"
+      ]
     },
     {
       "id": 3114,
@@ -640,7 +1552,31 @@
       "description": "Increases Heal and Shield Power, Mana Regeneration, and Cooldown Reduction",
       "price": 600,
       "iconPath": "assets/items/3114.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "ManaRegen"
+      ],
+      "depth": 2,
+      "from": [
+        1004
+      ],
+      "into": [
+        124011,
+        326621,
+        223011,
+        323222,
+        323107,
+        322526,
+        2526,
+        3011,
+        326616,
+        3107,
+        3222,
+        323504,
+        3504,
+        6616,
+        6621
+      ]
     },
     {
       "id": 4401,
@@ -648,7 +1584,18 @@
       "description": "Move Speed, Magic Resist, and max Health Regeneration",
       "price": 2800,
       "iconPath": "assets/items/4401.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        1057,
+        1028,
+        3066
+      ]
     },
     {
       "id": 3110,
@@ -656,7 +1603,19 @@
       "description": "Massively increases Armor and slows enemy basic attacks",
       "price": 2500,
       "iconPath": "assets/items/3110.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "Mana",
+        "Aura",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3082,
+        3024
+      ]
     },
     {
       "id": 323110,
@@ -664,7 +1623,19 @@
       "description": "75 Armor 500 Mana 25 Ability Haste Winter's Caress Reduce the Attack Speed of nearby champions by 20%.",
       "price": 2700,
       "iconPath": "assets/items/323110.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "Mana",
+        "Aura",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3082,
+        3024
+      ]
     },
     {
       "id": 667101,
@@ -672,7 +1643,14 @@
       "description": "55 Adaptive Force 10 Ability Haste 15 Lethality 15 Magic Penetration 15% Move Speed Playing for Time Champion takedowns while using Gambler's Blade delays Doom…",
       "price": 2500,
       "iconPath": "assets/items/667101.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "NonbootsMovement",
+        "MagicPenetration",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 663193,
@@ -680,7 +1658,14 @@
       "description": "55 Armor 55 Magic Resist 10 Ability Haste 8% Move Speed Active - Unbreakable: Gain a Shield that decays and grow in size.",
       "price": 2500,
       "iconPath": "assets/items/663193.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 1011,
@@ -688,7 +1673,30 @@
       "description": "Greatly increases Health",
       "price": 900,
       "iconPath": "assets/items/1011.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health"
+      ],
+      "depth": 2,
+      "from": [
+        1028
+      ],
+      "into": [
+        4637,
+        3084,
+        2525,
+        3039,
+        3083,
+        3116,
+        3119,
+        3143,
+        323119,
+        3748,
+        6665,
+        6609,
+        6667,
+        8001
+      ]
     },
     {
       "id": 3024,
@@ -696,7 +1704,23 @@
       "description": "Increases Armor and Cooldown Reduction",
       "price": 900,
       "iconPath": "assets/items/3024.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor",
+        "Mana",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1029,
+        1027,
+        2022
+      ],
+      "into": [
+        323110,
+        3110
+      ]
     },
     {
       "id": 2022,
@@ -704,7 +1728,22 @@
       "description": "5 Ability Haste",
       "price": 250,
       "iconPath": "assets/items/2022.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "CooldownReduction"
+      ],
+      "into": [
+        2020,
+        3024,
+        3133,
+        3802,
+        3057,
+        3067,
+        3108,
+        3158,
+        4642,
+        6660
+      ]
     },
     {
       "id": 3008,
@@ -712,7 +1751,19 @@
       "description": "Increases Attack Damage based on maximum Mana",
       "price": 1000,
       "iconPath": "assets/items/3008.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "LifeSteal",
+        "SpellVamp",
+        "Boots"
+      ],
+      "depth": 2,
+      "from": [
+        1001
+      ],
+      "into": [
+        3168
+      ]
     },
     {
       "id": 3026,
@@ -720,7 +1771,16 @@
       "description": "Periodically revives champion upon death",
       "price": 3200,
       "iconPath": "assets/items/3026.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "Damage"
+      ],
+      "depth": 3,
+      "from": [
+        2019,
+        1038
+      ]
     },
     {
       "id": 3177,
@@ -728,7 +1788,13 @@
       "description": "Good starting item for attackers",
       "price": 950,
       "iconPath": "assets/items/3177.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "Lane",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 3184,
@@ -736,7 +1802,13 @@
       "description": "Good starting item for attackers",
       "price": 950,
       "iconPath": "assets/items/3184.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "LifeSteal",
+        "Lane"
+      ]
     },
     {
       "id": 2051,
@@ -744,7 +1816,12 @@
       "description": "Good starting item for tanks",
       "price": 950,
       "iconPath": "assets/items/2051.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Lane"
+      ]
     },
     {
       "id": 3112,
@@ -752,7 +1829,13 @@
       "description": "Good starting item for mages",
       "price": 950,
       "iconPath": "assets/items/3112.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "Lane"
+      ]
     },
     {
       "id": 3124,
@@ -760,7 +1843,19 @@
       "description": "30 Attack Damage 30 Ability Power 25% Attack Speed Wrath Attacks deal 30 bonus magic damage On-Hit. Seething Strike Attacks grant 8% Attack Speed for 3 seconds…",
       "price": 3000,
       "iconPath": "assets/items/3124.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit"
+      ],
+      "depth": 3,
+      "from": [
+        1052,
+        1043,
+        1037
+      ]
     },
     {
       "id": 3172,
@@ -768,7 +1863,16 @@
       "description": "Mobility and Tenacity",
       "price": 1100,
       "iconPath": "assets/items/3172.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "AttackSpeed",
+        "LifeSteal",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3006
+      ]
     },
     {
       "id": 1102,
@@ -776,7 +1880,10 @@
       "description": "Jungle Companions Summon a Gustwalker that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1102.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 1106,
@@ -784,7 +1891,10 @@
       "description": "Jungle Companions Summon a Gustwalker that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1106.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 3147,
@@ -792,7 +1902,21 @@
       "description": "Deals additional physical damage when ambushing enemies",
       "price": 1300,
       "iconPath": "assets/items/3147.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        1028
+      ],
+      "into": [
+        8010,
+        4633,
+        6653
+      ]
     },
     {
       "id": 2003,
@@ -800,7 +1924,13 @@
       "description": "Consume to restore Health over time",
       "price": 50,
       "iconPath": "assets/items/2003.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "HealthRegen",
+        "Consumable",
+        "Lane",
+        "Jungle"
+      ]
     },
     {
       "id": 3051,
@@ -808,7 +1938,22 @@
       "description": "20 Attack Damage 20% Attack Speed",
       "price": 1200,
       "iconPath": "assets/items/3051.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "AttackSpeed"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1042,
+        1036
+      ],
+      "into": [
+        3078,
+        3302,
+        6672
+      ]
     },
     {
       "id": 3084,
@@ -816,7 +1961,17 @@
       "description": "Restores Health on kill or assist",
       "price": 3000,
       "iconPath": "assets/items/3084.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1011,
+        3801,
+        1011
+      ]
     },
     {
       "id": 3155,
@@ -824,7 +1979,20 @@
       "description": "Increases Attack Damage and Magic Resist",
       "price": 1300,
       "iconPath": "assets/items/3155.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "SpellBlock"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1033,
+        1036
+      ],
+      "into": [
+        3156
+      ]
     },
     {
       "id": 2523,
@@ -832,7 +2000,17 @@
       "description": "55 Attack Damage 25% Critical Strike Chance Magnification Deal up to 10% increased damage with Attacks, based on how far away the enemy is (max damage at 500 r…",
       "price": 2800,
       "iconPath": "assets/items/2523.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        6670,
+        1036
+      ]
     },
     {
       "id": 3145,
@@ -840,7 +2018,23 @@
       "description": "Increases Ability Power. Deal bonus magic damage on attack periodically.",
       "price": 1100,
       "iconPath": "assets/items/3145.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        1052
+      ],
+      "into": [
+        4645,
+        4636,
+        3146,
+        6655,
+        3152,
+        4646
+      ]
     },
     {
       "id": 3146,
@@ -848,7 +2042,20 @@
       "description": "Increases Attack Damage and Ability Power, activate to slow a target",
       "price": 3000,
       "iconPath": "assets/items/3146.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellDamage",
+        "Active",
+        "SpellVamp"
+      ],
+      "depth": 3,
+      "from": [
+        1053,
+        3145,
+        1052
+      ]
     },
     {
       "id": 663146,
@@ -856,7 +2063,14 @@
       "description": "90 Ability Power 45 Attack Damage 15% Omnivamp ACTIVE (0s) Lightning Bolt Shocks the target enemy champion, dealing magic damage and Slowing them by 40% for 2…",
       "price": 2500,
       "iconPath": "assets/items/663146.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "SpellDamage",
+        "Active",
+        "SpellVamp"
+      ]
     },
     {
       "id": 3152,
@@ -864,7 +2078,21 @@
       "description": "Activate to dash forward and unleash a fiery explosion",
       "price": 2650,
       "iconPath": "assets/items/3152.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3145,
+        3067,
+        1028
+      ]
     },
     {
       "id": 6664,
@@ -872,7 +2100,20 @@
       "description": "Immobilize enemies to gain a shield. Activate to run faster at opponents.",
       "price": 2800,
       "iconPath": "assets/items/6664.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Aura",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        6660,
+        3211
+      ]
     },
     {
       "id": 4628,
@@ -880,7 +2121,17 @@
       "description": "Immobilizing a champion causes lightning to strike them",
       "price": 2700,
       "iconPath": "assets/items/4628.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3108,
+        3108,
+        1052
+      ]
     },
     {
       "id": 6697,
@@ -888,7 +2139,19 @@
       "description": "55 Attack Damage 18 Lethality 10 Ability Haste Eminence When a champion that you damaged within 3 seconds dies, gain 12 Attack Damage plus 3 per champion kille…",
       "price": 2800,
       "iconPath": "assets/items/6697.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3134,
+        3133
+      ]
     },
     {
       "id": 3181,
@@ -896,7 +2159,18 @@
       "description": "40 Attack Damage 500 Health 4% Move Speed Skipper Every fifth Attack against champions and epic monsters deals bonus physical damage, increased against Structu…",
       "price": 3000,
       "iconPath": "assets/items/3181.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        2021,
+        3066,
+        1037
+      ]
     },
     {
       "id": 6662,
@@ -904,7 +2178,21 @@
       "description": "High Magic Resist.Passively slow nearby enemies. When spells are cast near you, release a wave of energy that damages and slows.",
       "price": 2900,
       "iconPath": "assets/items/6662.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "Slow",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3057,
+        1028,
+        1031
+      ]
     },
     {
       "id": 3168,
@@ -912,7 +2200,16 @@
       "description": "45 Move Speed 4% Omnivamp Slay Gain 0.6% Omnivamp on Champion takedown, stacking up to 10 times. Now and Forever While above half Health, deal 4% increased dam…",
       "price": 1000,
       "iconPath": "assets/items/3168.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "LifeSteal",
+        "SpellVamp",
+        "Boots"
+      ],
+      "depth": 3,
+      "from": [
+        3008
+      ]
     },
     {
       "id": 6673,
@@ -920,7 +2217,16 @@
       "description": "55 Attack Damage 25% Critical Strike Chance Lifeline Taking damage that would reduce your Health below 30% grants a Shield for 3 seconds.",
       "price": 3000,
       "iconPath": "assets/items/6673.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        6670
+      ]
     },
     {
       "id": 4005,
@@ -928,7 +2234,19 @@
       "description": "Defer damage until later.",
       "price": 2400,
       "iconPath": "assets/items/4005.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1052,
+        4642,
+        1052
+      ]
     },
     {
       "id": 324005,
@@ -936,7 +2254,18 @@
       "description": "65 Ability Power 15 Ability Haste 150% Base Mana Regen Control Gain 20 Ability Haste for your abilities with Immobilizing effects. Command On Immobilizing an e…",
       "price": 2400,
       "iconPath": "assets/items/324005.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        4642
+      ]
     },
     {
       "id": 3031,
@@ -944,7 +2273,17 @@
       "description": "Massively enhances critical strikes",
       "price": 3500,
       "iconPath": "assets/items/3031.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "Damage"
+      ],
+      "depth": 2,
+      "from": [
+        1038,
+        1037,
+        1018
+      ]
     },
     {
       "id": 3158,
@@ -952,7 +2291,19 @@
       "description": "Increases Move Speed and Cooldown Reduction",
       "price": 900,
       "iconPath": "assets/items/3158.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Boots",
+        "CooldownReduction"
+      ],
+      "depth": 2,
+      "from": [
+        1001,
+        2022
+      ],
+      "into": [
+        3171
+      ]
     },
     {
       "id": 6665,
@@ -960,7 +2311,19 @@
       "description": "350 Health 45 Armor 45 Magic Resist Voidborn Resilience After 5 seconds of champion combat, increase your bonus Armor and Magic Resist by 30% until end of comb…",
       "price": 3200,
       "iconPath": "assets/items/6665.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "MagicResist"
+      ],
+      "depth": 3,
+      "from": [
+        1011,
+        1031,
+        1057
+      ]
     },
     {
       "id": 2504,
@@ -968,7 +2331,17 @@
       "description": "400 Health 80 Magic Resist 100% Base Health Regen Magebane After not taking magic damage for 15 seconds, gain a magic shield.",
       "price": 2900,
       "iconPath": "assets/items/2504.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen"
+      ],
+      "depth": 3,
+      "from": [
+        3211,
+        1057
+      ]
     },
     {
       "id": 3599,
@@ -976,7 +2349,10 @@
       "description": "Kalista's spear that binds an Oathsworn Ally.",
       "price": 0,
       "iconPath": "assets/items/3599.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Consumable"
+      ]
     },
     {
       "id": 3600,
@@ -984,7 +2360,10 @@
       "description": "Kalista's spear that binds an Oathsworn Ally.",
       "price": 0,
       "iconPath": "assets/items/3600.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Consumable"
+      ]
     },
     {
       "id": 3067,
@@ -992,7 +2371,52 @@
       "description": "Increases Health and Cooldown Reduction",
       "price": 800,
       "iconPath": "assets/items/3067.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        2022
+      ],
+      "into": [
+        3071,
+        8020,
+        323050,
+        328020,
+        124011,
+        323190,
+        323222,
+        3165,
+        6620,
+        3050,
+        3109,
+        6656,
+        326617,
+        323107,
+        2502,
+        2510,
+        2524,
+        2525,
+        6617,
+        3065,
+        3152,
+        3119,
+        326620,
+        3190,
+        3222,
+        323109,
+        323119,
+        4403,
+        4629,
+        4644,
+        6630,
+        6632,
+        8001
+      ]
     },
     {
       "id": 3109,
@@ -1000,7 +2424,22 @@
       "description": "Partner with an ally to protect each other",
       "price": 2300,
       "iconPath": "assets/items/3109.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Armor",
+        "Aura",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1031,
+        1006
+      ]
     },
     {
       "id": 323109,
@@ -1008,7 +2447,22 @@
       "description": "300 Health 50 Armor 10 Ability Haste 150% Base Health Regen Sacrifice While near your Worthy ally, take 14% of the damage they receive and heal for 12% of the…",
       "price": 2900,
       "iconPath": "assets/items/323109.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Armor",
+        "Aura",
+        "Active",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1031,
+        1006
+      ]
     },
     {
       "id": 6672,
@@ -1016,7 +2470,19 @@
       "description": "45 Attack Damage 40% Attack Speed 4% Move Speed Bring It Down Every third Attack deals bonus physical damage On-Hit, increased based on their missing Health.",
       "price": 3000,
       "iconPath": "assets/items/6672.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        6690,
+        3051,
+        1043
+      ]
     },
     {
       "id": 3035,
@@ -1024,7 +2490,21 @@
       "description": "Overcomes enemies with high Armor",
       "price": 1450,
       "iconPath": "assets/items/3035.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "ArmorPenetration",
+        "Damage"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1036
+      ],
+      "into": [
+        3033,
+        3036,
+        6694
+      ]
     },
     {
       "id": 6653,
@@ -1032,7 +2512,16 @@
       "description": "Charge up in combat to deal high damage over time, especially against durable enemies",
       "price": 3000,
       "iconPath": "assets/items/6653.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage"
+      ],
+      "depth": 3,
+      "from": [
+        3147,
+        2508
+      ]
     },
     {
       "id": 3100,
@@ -1040,7 +2529,19 @@
       "description": "Grants a bonus to next attack after spell cast",
       "price": 2900,
       "iconPath": "assets/items/3100.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "OnHit",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3057,
+        3113,
+        1026
+      ]
     },
     {
       "id": 3190,
@@ -1048,7 +2549,22 @@
       "description": "Activate to shield nearby allies from damage",
       "price": 2200,
       "iconPath": "assets/items/3190.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "Aura",
+        "Active",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1029,
+        1033
+      ]
     },
     {
       "id": 323190,
@@ -1056,7 +2572,22 @@
       "description": "250 Health 30 Armor 30 Magic Resist 10 Ability Haste Devotion Grant nearby allies a 290 - 360 Shield that decays over 2.5 seconds.",
       "price": 2600,
       "iconPath": "assets/items/323190.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "Aura",
+        "Active",
+        "MagicResist",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1029,
+        1033
+      ]
     },
     {
       "id": 1036,
@@ -1064,7 +2595,38 @@
       "description": "Slightly increases Attack Damage",
       "price": 350,
       "iconPath": "assets/items/1036.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "Lane"
+      ],
+      "into": [
+        1053,
+        4003,
+        6701,
+        2015,
+        2019,
+        2021,
+        3077,
+        6670,
+        3133,
+        2517,
+        323004,
+        3142,
+        3004,
+        2523,
+        3032,
+        3035,
+        3044,
+        3051,
+        3155,
+        6690,
+        3123,
+        3134,
+        6699,
+        6671,
+        6692
+      ]
     },
     {
       "id": 3036,
@@ -1072,7 +2634,17 @@
       "description": "Overcomes enemies with high health and armor",
       "price": 3300,
       "iconPath": "assets/items/3036.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3035,
+        6670
+      ]
     },
     {
       "id": 3802,
@@ -1080,7 +2652,30 @@
       "description": "Restores Mana upon levelling up.",
       "price": 1200,
       "iconPath": "assets/items/3802.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        1027,
+        2022
+      ],
+      "into": [
+        2522,
+        323003,
+        6656,
+        3003,
+        6655,
+        2503,
+        3118,
+        4644
+      ]
     },
     {
       "id": 6655,
@@ -1088,7 +2683,18 @@
       "description": "High burst damage, good against fragile foes",
       "price": 2750,
       "iconPath": "assets/items/6655.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3802,
+        3145
+      ]
     },
     {
       "id": 3118,
@@ -1096,7 +2702,17 @@
       "description": "Partner with an ally to protect each other",
       "price": 2700,
       "iconPath": "assets/items/3118.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3802,
+        1026
+      ]
     },
     {
       "id": 3004,
@@ -1104,7 +2720,20 @@
       "description": "Increases Attack Damage based on maximum Mana",
       "price": 2900,
       "iconPath": "assets/items/3004.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3070,
+        3133,
+        1036
+      ]
     },
     {
       "id": 323004,
@@ -1112,7 +2741,20 @@
       "description": "35 Attack Damage 500 Mana 15 Ability Haste Awe Gain bonus Attack Damage. Manaflow (8s, max 4 charges) Landing Attacks and Abilities grants 6.5 max Mana (double…",
       "price": 2900,
       "iconPath": "assets/items/323004.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        323070,
+        3133,
+        1036
+      ]
     },
     {
       "id": 3156,
@@ -1120,7 +2762,19 @@
       "description": "Grants bonus Attack Damage when Health is low",
       "price": 3100,
       "iconPath": "assets/items/3156.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3155,
+        3133
+      ]
     },
     {
       "id": 3041,
@@ -1128,7 +2782,16 @@
       "description": "Grants Ability Power for kills and assists",
       "price": 1500,
       "iconPath": "assets/items/3041.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "NonbootsMovement"
+      ],
+      "depth": 2,
+      "from": [
+        1082
+      ]
     },
     {
       "id": 3139,
@@ -1136,7 +2799,21 @@
       "description": "Activate to remove all crowd control debuffs and grant massive Move Speed",
       "price": 3200,
       "iconPath": "assets/items/3139.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "Active",
+        "NonbootsMovement",
+        "Tenacity"
+      ],
+      "depth": 3,
+      "from": [
+        3140,
+        1037,
+        1053
+      ]
     },
     {
       "id": 3111,
@@ -1144,7 +2821,20 @@
       "description": "Increases Move Speed and reduces duration of disabling effects",
       "price": 1250,
       "iconPath": "assets/items/3111.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Boots",
+        "SpellBlock",
+        "Tenacity"
+      ],
+      "depth": 2,
+      "from": [
+        1001,
+        1033
+      ],
+      "into": [
+        3173
+      ]
     },
     {
       "id": 3222,
@@ -1152,7 +2842,20 @@
       "description": "Activate to remove all disabling effects from an allied champion",
       "price": 2300,
       "iconPath": "assets/items/3222.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        3114
+      ]
     },
     {
       "id": 323222,
@@ -1160,7 +2863,21 @@
       "description": "400 Health 100% Base Mana Regen 15% Heal and Shield Power 15 Ability Haste Purify Remove all crowd control debuffs (excluding Airborne and Suppression) from an…",
       "price": 2800,
       "iconPath": "assets/items/323222.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1028,
+        3114
+      ]
     },
     {
       "id": 6617,
@@ -1168,7 +2885,19 @@
       "description": "Your heals and shields cool down faster and have greater effect on low health allies",
       "price": 2200,
       "iconPath": "assets/items/6617.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        4642
+      ]
     },
     {
       "id": 326617,
@@ -1176,7 +2905,20 @@
       "description": "35 Ability Power 400 Health 20 Ability Haste 150% Base Mana Regen Starlit Grace Healing or shielding an ally chains the effect to another ally (excluding yours…",
       "price": 2900,
       "iconPath": "assets/items/326617.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1028,
+        4642
+      ]
     },
     {
       "id": 3165,
@@ -1184,7 +2926,19 @@
       "description": "Increases magic damage",
       "price": 2850,
       "iconPath": "assets/items/3165.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3916,
+        1026,
+        3067
+      ]
     },
     {
       "id": 3033,
@@ -1192,7 +2946,18 @@
       "description": "Overcomes enemies with high Health recovery and Armor",
       "price": 3000,
       "iconPath": "assets/items/3033.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3123,
+        3035,
+        1018
+      ]
     },
     {
       "id": 1103,
@@ -1200,7 +2965,10 @@
       "description": "Jungle Companions Summon a Mosstomper that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1103.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 1105,
@@ -1208,7 +2976,10 @@
       "description": "Jungle Companions Summon a Mosstomper that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1105.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 3115,
@@ -1216,7 +2987,19 @@
       "description": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
       "price": 2900,
       "iconPath": "assets/items/3115.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1043,
+        1026,
+        3108
+      ]
     },
     {
       "id": 6675,
@@ -1224,7 +3007,18 @@
       "description": "40% Attack Speed 25% Critical Strike Chance 4% Move Speed Transcendence Attacks reduce Basic Ability cooldowns by 15% of their remaining cooldown.",
       "price": 2650,
       "iconPath": "assets/items/6675.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        1042,
+        3086,
+        1042
+      ]
     },
     {
       "id": 1058,
@@ -1232,7 +3026,18 @@
       "description": "Greatly increases Ability Power",
       "price": 1200,
       "iconPath": "assets/items/1058.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "into": [
+        3157,
+        4645,
+        3089,
+        3102,
+        3128,
+        4403
+      ]
     },
     {
       "id": 1057,
@@ -1240,7 +3045,22 @@
       "description": "Moderately increases Magic Resist",
       "price": 850,
       "iconPath": "assets/items/1057.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellBlock"
+      ],
+      "depth": 2,
+      "from": [
+        1033
+      ],
+      "into": [
+        2504,
+        8020,
+        328020,
+        3091,
+        6665,
+        4401
+      ]
     },
     {
       "id": 6670,
@@ -1248,7 +3068,21 @@
       "description": "15 Attack Damage 20% Critical Strike Chance",
       "price": 1300,
       "iconPath": "assets/items/6670.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "CriticalStrike"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1018
+      ],
+      "into": [
+        2523,
+        3036,
+        6673
+      ]
     },
     {
       "id": 1033,
@@ -1256,7 +3090,26 @@
       "description": "Slightly increases Magic Resist",
       "price": 400,
       "iconPath": "assets/items/1033.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellBlock"
+      ],
+      "into": [
+        1057,
+        3140,
+        323050,
+        323190,
+        3193,
+        3050,
+        3001,
+        3211,
+        2524,
+        3155,
+        3105,
+        3111,
+        3190,
+        4632
+      ]
     },
     {
       "id": 3916,
@@ -1264,7 +3117,19 @@
       "description": "Increases magic damage",
       "price": 800,
       "iconPath": "assets/items/3916.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052
+      ],
+      "into": [
+        223011,
+        3165,
+        3011
+      ]
     },
     {
       "id": 3364,
@@ -1272,7 +3137,12 @@
       "description": "Disables nearby invisible wards and traps for a duration",
       "price": 0,
       "iconPath": "assets/items/3364.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Active",
+        "Trinket",
+        "Vision"
+      ]
     },
     {
       "id": 2501,
@@ -1280,7 +3150,16 @@
       "description": "30 Attack Damage 550 Health Tyranny Gain 2.5% of your bonus Health as Attack Damage. Retribution Gain up to 12% increased Attack Damage based on your percent m…",
       "price": 3300,
       "iconPath": "assets/items/2501.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage"
+      ],
+      "depth": 3,
+      "from": [
+        2021,
+        2021
+      ]
     },
     {
       "id": 3044,
@@ -1288,7 +3167,24 @@
       "description": "Attacks and kills give a small burst of speed",
       "price": 1100,
       "iconPath": "assets/items/3044.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "Damage",
+        "NonbootsMovement"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        1036
+      ],
+      "into": [
+        3071,
+        3078,
+        3073,
+        6630,
+        6631
+      ]
     },
     {
       "id": 3046,
@@ -1296,7 +3192,18 @@
       "description": "Move faster while attacking enemies and gain a shield when on low health.",
       "price": 2650,
       "iconPath": "assets/items/3046.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        1042,
+        3086,
+        1042
+      ]
     },
     {
       "id": 1037,
@@ -1304,7 +3211,34 @@
       "description": "Moderately increases Attack Damage",
       "price": 875,
       "iconPath": "assets/items/1037.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage"
+      ],
+      "into": [
+        667666,
+        3071,
+        6333,
+        3031,
+        3153,
+        6701,
+        2020,
+        2517,
+        3087,
+        6695,
+        2523,
+        3053,
+        3072,
+        3124,
+        3181,
+        3139,
+        3161,
+        6029,
+        6035,
+        6673,
+        6676,
+        6692
+      ]
     },
     {
       "id": 3047,
@@ -1312,7 +3246,19 @@
       "description": "Enhances Move Speed and reduces incoming basic attack damage",
       "price": 1200,
       "iconPath": "assets/items/3047.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor",
+        "Boots"
+      ],
+      "depth": 2,
+      "from": [
+        1001,
+        1029
+      ],
+      "into": [
+        3174
+      ]
     },
     {
       "id": 6698,
@@ -1320,7 +3266,19 @@
       "description": "55 Attack Damage 18 Lethality 10 Ability Haste Cleave Attacks deal physical damage to nearby enemies. Heretical Cleave Deal physical damage around you.",
       "price": 2850,
       "iconPath": "assets/items/6698.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3077,
+        2020
+      ]
     },
     {
       "id": 2525,
@@ -1328,7 +3286,18 @@
       "description": "600 Health 20 Ability Haste Lifeline (0s) Taking damage that would reduce your Health below 30% causes you to gain maximum Health for 5 seconds, then heal Heal…",
       "price": 2600,
       "iconPath": "assets/items/2525.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "NonbootsMovement",
+        "Tenacity",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1011
+      ]
     },
     {
       "id": 3140,
@@ -1336,7 +3305,19 @@
       "description": "Activate to remove all crowd control debuffs",
       "price": 1300,
       "iconPath": "assets/items/3140.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Active",
+        "SpellBlock"
+      ],
+      "depth": 2,
+      "from": [
+        1033
+      ],
+      "into": [
+        3139,
+        6035
+      ]
     },
     {
       "id": 3089,
@@ -1344,7 +3325,15 @@
       "description": "Massively increases Ability Power",
       "price": 3500,
       "iconPath": "assets/items/3089.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1058,
+        1058
+      ]
     },
     {
       "id": 3143,
@@ -1352,7 +3341,18 @@
       "description": "Greatly increases defenses, activate to slow nearby enemies",
       "price": 2700,
       "iconPath": "assets/items/3143.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "Active",
+        "Slow"
+      ],
+      "depth": 3,
+      "from": [
+        3082,
+        1011
+      ]
     },
     {
       "id": 3094,
@@ -1360,7 +3360,17 @@
       "description": "Movement builds charges that release a sieging fire attack on release",
       "price": 2650,
       "iconPath": "assets/items/3094.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3086,
+        3144
+      ]
     },
     {
       "id": 3074,
@@ -1368,7 +3378,20 @@
       "description": "Melee attacks hit nearby enemies, dealing damage and restoring Health",
       "price": 3300,
       "iconPath": "assets/items/3074.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3077,
+        1053,
+        3133
+      ]
     },
     {
       "id": 6690,
@@ -1376,7 +3399,21 @@
       "description": "15 Attack Damage 4% Move Speed",
       "price": 775,
       "iconPath": "assets/items/6690.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "NonbootsMovement"
+      ],
+      "depth": 2,
+      "from": [
+        1036
+      ],
+      "into": [
+        4003,
+        6700,
+        6672,
+        3142
+      ]
     },
     {
       "id": 1043,
@@ -1384,7 +3421,23 @@
       "description": "Greatly increases Attack Speed",
       "price": 700,
       "iconPath": "assets/items/1043.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "AttackSpeed",
+        "OnHit"
+      ],
+      "depth": 2,
+      "from": [
+        1042
+      ],
+      "into": [
+        3302,
+        3153,
+        3115,
+        6672,
+        3091,
+        3124
+      ]
     },
     {
       "id": 3107,
@@ -1392,7 +3445,18 @@
       "description": "Activate to heal allies and damage enemies in an area",
       "price": 2300,
       "iconPath": "assets/items/3107.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3108,
+        3114
+      ]
     },
     {
       "id": 323107,
@@ -1400,7 +3464,19 @@
       "description": "30 Ability Power 15 Ability Haste 100% Base Mana Regen 10% Heal and Shield Power Intervention Restore 150 - 350 Health to allied units and deal 10% max Health…",
       "price": 2800,
       "iconPath": "assets/items/323107.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1028,
+        3114
+      ]
     },
     {
       "id": 2031,
@@ -1408,7 +3484,17 @@
       "description": "Restores Health over time. Refills at shop.",
       "price": 150,
       "iconPath": "assets/items/2031.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "HealthRegen",
+        "Consumable",
+        "Active",
+        "Lane",
+        "Jungle"
+      ],
+      "into": [
+        2033
+      ]
     },
     {
       "id": 1006,
@@ -1416,7 +3502,16 @@
       "description": "Slightly increases Health Regen",
       "price": 300,
       "iconPath": "assets/items/1006.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "HealthRegen"
+      ],
+      "into": [
+        3109,
+        3211,
+        323109,
+        3801
+      ]
     },
     {
       "id": 4633,
@@ -1424,7 +3519,18 @@
       "description": "70 Ability Power 350 Health 15 Ability Haste Void Corruption For each second in combat with enemy champions, deal 2% bonus damage, up to 8%. At maximum strengt…",
       "price": 3100,
       "iconPath": "assets/items/4633.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "SpellVamp"
+      ],
+      "depth": 3,
+      "from": [
+        3147,
+        3108
+      ]
     },
     {
       "id": 6657,
@@ -1432,7 +3538,19 @@
       "description": "45 Ability Power 350 Health 500 Mana Timeless This item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks,…",
       "price": 2600,
       "iconPath": "assets/items/6657.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        3803
+      ]
     },
     {
       "id": 326657,
@@ -1440,7 +3558,19 @@
       "description": "45 Ability Power 350 Health 500 Mana Timeless This item gains 10 Health, 30 Mana and 3 Ability Power every 60 seconds up to 10 times. Upon reaching max stacks,…",
       "price": 2600,
       "iconPath": "assets/items/326657.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        3803
+      ]
     },
     {
       "id": 1028,
@@ -1448,7 +3578,41 @@
       "description": "Increases Health",
       "price": 400,
       "iconPath": "assets/items/1028.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health"
+      ],
+      "into": [
+        3742,
+        1011,
+        3068,
+        2021,
+        323222,
+        323075,
+        326617,
+        323107,
+        3012,
+        3147,
+        3211,
+        2502,
+        322526,
+        2526,
+        3023,
+        3044,
+        3053,
+        3066,
+        3067,
+        3075,
+        3152,
+        3161,
+        3801,
+        3803,
+        4401,
+        4635,
+        6035,
+        6660,
+        6662
+      ]
     },
     {
       "id": 3085,
@@ -1456,7 +3620,18 @@
       "description": "Ranged attacks fire two bolts at nearby enemies",
       "price": 2650,
       "iconPath": "assets/items/3085.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3086,
+        3144
+      ]
     },
     {
       "id": 3116,
@@ -1464,7 +3639,18 @@
       "description": "Abilities slow enemies",
       "price": 2600,
       "iconPath": "assets/items/3116.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Slow"
+      ],
+      "depth": 3,
+      "from": [
+        1026,
+        1011,
+        1052
+      ]
     },
     {
       "id": 1027,
@@ -1472,7 +3658,15 @@
       "description": "Increases Mana",
       "price": 300,
       "iconPath": "assets/items/1027.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Mana"
+      ],
+      "into": [
+        3024,
+        3802,
+        3803
+      ]
     },
     {
       "id": 3330,
@@ -1480,7 +3674,14 @@
       "description": "Periodically place a Stealth Ward",
       "price": 0,
       "iconPath": "assets/items/3330.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Active",
+        "Jungle",
+        "Lane",
+        "Trinket",
+        "Vision"
+      ]
     },
     {
       "id": 1101,
@@ -1488,7 +3689,10 @@
       "description": "Jungle Companions Summon a Scorchclaw that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1101.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 1107,
@@ -1496,7 +3700,10 @@
       "description": "Jungle Companions Summon a Scorchclaw that assists you against monsters. The companion grows as you hunt monsters, empowering your Smite. When fully grown, it…",
       "price": 450,
       "iconPath": "assets/items/1107.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Jungle"
+      ]
     },
     {
       "id": 3144,
@@ -1504,7 +3711,24 @@
       "description": "Activate to deal magic damage and slow target champion",
       "price": 600,
       "iconPath": "assets/items/3144.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "AttackSpeed"
+      ],
+      "depth": 2,
+      "from": [
+        1042,
+        1042
+      ],
+      "into": [
+        2512,
+        3094,
+        3087,
+        3032,
+        3085,
+        3095,
+        3097
+      ]
     },
     {
       "id": 2420,
@@ -1512,7 +3736,21 @@
       "description": "Activate to become invincible but unable to take actions",
       "price": 1600,
       "iconPath": "assets/items/2420.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        1029,
+        1052
+      ],
+      "into": [
+        3157
+      ]
     },
     {
       "id": 6695,
@@ -1520,7 +3758,16 @@
       "description": "55 Attack Damage 15 Lethality Shield Reaver Damaging an enemy champion reduces Shields they gain by % for 3 seconds. If they were not already affected by Shiel…",
       "price": 2500,
       "iconPath": "assets/items/6695.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3134,
+        1037
+      ]
     },
     {
       "id": 3134,
@@ -1528,7 +3775,32 @@
       "description": "Increases Attack Damage and Lethality",
       "price": 1000,
       "iconPath": "assets/items/3134.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "ArmorPenetration"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1036
+      ],
+      "into": [
+        3142,
+        667666,
+        126697,
+        6697,
+        6701,
+        6693,
+        2520,
+        4004,
+        6695,
+        3814,
+        3131,
+        3179,
+        6691,
+        6676
+      ]
     },
     {
       "id": 6694,
@@ -1536,7 +3808,18 @@
       "description": "45 Attack Damage 35% Armor Penetration 15 Ability Haste Bitter Cold Damaging Abilities Slow enemies below 50% Health by 30% for 1 second.",
       "price": 3000,
       "iconPath": "assets/items/6694.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3133,
+        3035
+      ]
     },
     {
       "id": 4645,
@@ -1544,7 +3827,16 @@
       "description": "110 Ability Power 15 Magic Penetration Cinderbloom Magic and true damage Critically Strike enemies below 40% Health, dealing 20% increased damage.",
       "price": 3200,
       "iconPath": "assets/items/4645.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "MagicPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3145,
+        1058
+      ]
     },
     {
       "id": 2421,
@@ -1552,7 +3844,17 @@
       "description": "Upgrades to stopwatch",
       "price": 1600,
       "iconPath": "assets/items/2421.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [],
+      "depth": 2,
+      "from": [
+        1052,
+        1029,
+        1052
+      ],
+      "into": [
+        3157
+      ]
     },
     {
       "id": 3057,
@@ -1560,7 +3862,23 @@
       "description": "Grants a bonus to next attack after spell cast",
       "price": 900,
       "iconPath": "assets/items/3057.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "OnHit",
+        "AbilityHaste"
+      ],
+      "depth": 2,
+      "from": [
+        2022
+      ],
+      "into": [
+        3078,
+        3100,
+        2510,
+        3508,
+        6632,
+        6662
+      ]
     },
     {
       "id": 663058,
@@ -1568,7 +3886,11 @@
       "description": "250 Health 80 Armor Immovable as the Earth Increase your armor by 20%, and gain Block Chance based on your Armor.",
       "price": 2500,
       "iconPath": "assets/items/663058.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor"
+      ]
     },
     {
       "id": 2065,
@@ -1576,7 +3898,20 @@
       "description": "Activate to speed up nearby allies.",
       "price": 2200,
       "iconPath": "assets/items/2065.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3113,
+        4642
+      ]
     },
     {
       "id": 322065,
@@ -1584,7 +3919,20 @@
       "description": "65 Ability Power 15 Ability Haste 6% Move Speed 150% Base Mana Regen Inspiring Speech Grant nearby allies 30% Move Speed for 4 seconds.",
       "price": 2600,
       "iconPath": "assets/items/322065.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3113,
+        4642
+      ]
     },
     {
       "id": 3876,
@@ -1592,7 +3940,19 @@
       "description": "200 Health 75% Base Health Regen 75% Base Mana Regen 9 Gold Per 10 Seconds Going Sledding Slowing or Immobilizing an enemy champion near allies restores Health…",
       "price": 400,
       "iconPath": "assets/items/3876.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "depth": 2,
+      "from": [
+        3867
+      ]
     },
     {
       "id": 3020,
@@ -1600,7 +3960,18 @@
       "description": "Enhances Move Speed and magic damage",
       "price": 1100,
       "iconPath": "assets/items/3020.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Boots",
+        "MagicPenetration"
+      ],
+      "depth": 2,
+      "from": [
+        1001
+      ],
+      "into": [
+        3175
+      ]
     },
     {
       "id": 3161,
@@ -1608,7 +3979,18 @@
       "description": "Reduce damage taken from champions by a flat amount. Attack while near multiple enemy champions to increase this amount for a short time.",
       "price": 3100,
       "iconPath": "assets/items/3161.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        2021,
+        1028
+      ]
     },
     {
       "id": 3211,
@@ -1616,7 +3998,23 @@
       "description": "Improves defense and grants regeneration upon being damaged",
       "price": 1250,
       "iconPath": "assets/items/3211.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
+      ],
+      "depth": 2,
+      "from": [
+        1028,
+        1033,
+        1006
+      ],
+      "into": [
+        2504,
+        3065,
+        6664
+      ]
     },
     {
       "id": 3175,
@@ -1624,7 +4022,15 @@
       "description": "20 Magic Penetration 8% Magic Penetration 45 Move Speed",
       "price": 1100,
       "iconPath": "assets/items/3175.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Boots",
+        "MagicPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3020
+      ]
     },
     {
       "id": 3065,
@@ -1632,7 +4038,19 @@
       "description": "Increases Health and healing effects",
       "price": 2700,
       "iconPath": "assets/items/3065.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3211,
+        3067
+      ]
     },
     {
       "id": 6616,
@@ -1640,7 +4058,18 @@
       "description": "Your heals and shields reduce crowd control and grant Move Speed",
       "price": 2250,
       "iconPath": "assets/items/6616.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3108,
+        3114
+      ]
     },
     {
       "id": 326616,
@@ -1648,7 +4077,19 @@
       "description": "45 Ability Power 10% Heal and Shield Power 150% Base Mana Regen 10 Ability Haste Rapids Healing or Shielding an ally grants you both 40 Ability Power and 15 Ab…",
       "price": 2600,
       "iconPath": "assets/items/326616.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3108,
+        1052,
+        3114
+      ]
     },
     {
       "id": 3087,
@@ -1656,7 +4097,20 @@
       "description": "Movement builds charges that release chain lightning on basic attack",
       "price": 3000,
       "iconPath": "assets/items/3087.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        3144,
+        3113,
+        1037
+      ]
     },
     {
       "id": 3340,
@@ -1664,7 +4118,14 @@
       "description": "Periodically place a Stealth Ward",
       "price": 0,
       "iconPath": "assets/items/3340.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Active",
+        "Jungle",
+        "Lane",
+        "Trinket",
+        "Vision"
+      ]
     },
     {
       "id": 2019,
@@ -1672,7 +4133,22 @@
       "description": "15 Attack Damage 30 Armor",
       "price": 1100,
       "iconPath": "assets/items/2019.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor",
+        "Damage"
+      ],
+      "depth": 2,
+      "from": [
+        1029,
+        1036,
+        1029
+      ],
+      "into": [
+        6333,
+        6700,
+        3026
+      ]
     },
     {
       "id": 3053,
@@ -1680,7 +4156,18 @@
       "description": "Shields against large bursts of damage",
       "price": 3200,
       "iconPath": "assets/items/3053.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "Tenacity"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        2021,
+        1028
+      ]
     },
     {
       "id": 3097,
@@ -1688,7 +4175,19 @@
       "description": "Periodically kill enemy minions to heal and grant gold to a nearby ally",
       "price": 3200,
       "iconPath": "assets/items/3097.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "depth": 3,
+      "from": [
+        1038,
+        1018,
+        3144
+      ]
     },
     {
       "id": 4646,
@@ -1696,7 +4195,18 @@
       "description": "90 Ability Power 15 Magic Penetration 6% Move Speed Stormraider Dealing 25% of a champion's maximum Health within 2.5s applies Squall to them. Squall After 2 s…",
       "price": 2800,
       "iconPath": "assets/items/4646.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellDamage",
+        "GoldPer",
+        "NonbootsMovement",
+        "MagicPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3145,
+        3113
+      ]
     },
     {
       "id": 6631,
@@ -1704,7 +4214,19 @@
       "description": "40 Attack Damage 25% Attack Speed 450 Health Cleave Attacks deal physical damage to nearby enemies. Breaking Shockwave Deal physical damage and Slow nearby ene…",
       "price": 3300,
       "iconPath": "assets/items/6631.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "Slow"
+      ],
+      "depth": 3,
+      "from": [
+        3077,
+        3044,
+        1042
+      ]
     },
     {
       "id": 6610,
@@ -1712,7 +4234,18 @@
       "description": "45 Attack Damage 450 Health 10 Ability Haste Lightshield Strike Your first Attack against a champion Critically Strikes and restores Health.",
       "price": 3100,
       "iconPath": "assets/items/6610.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2021,
+        3133
+      ]
     },
     {
       "id": 3068,
@@ -1720,7 +4253,19 @@
       "description": "High armor. Constantly deals damage to nearby enemies. Immobilize enemies to release a wave of damaging flame",
       "price": 2800,
       "iconPath": "assets/items/3068.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "Aura",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        6660,
+        1031,
+        1028
+      ]
     },
     {
       "id": 3170,
@@ -1728,7 +4273,14 @@
       "description": "Improves defense and reduces duration of disabling effects",
       "price": 1000,
       "iconPath": "assets/items/3170.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Boots"
+      ],
+      "depth": 3,
+      "from": [
+        3009
+      ]
     },
     {
       "id": 664011,
@@ -1736,7 +4288,14 @@
       "description": "35 Ability Power 150 Health 10% Heal and Shield Power 10 Ability Haste Effervescence Gain +1% Attack Speed for every 1% Heal and Shield Power you have. Pepperm…",
       "price": 2500,
       "iconPath": "assets/items/664011.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ]
     },
     {
       "id": 663060,
@@ -1744,7 +4303,12 @@
       "description": "90 Adaptive Force 50% Critical Strike Chance Excoriate Each Critical strike deals random bonus Critical Strike Damage, scaling up to 50% of your Critical Strik…",
       "price": 2500,
       "iconPath": "assets/items/663060.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "SpellDamage"
+      ]
     },
     {
       "id": 3070,
@@ -1752,7 +4316,17 @@
       "description": "Increases maximum Mana as Mana is spent",
       "price": 400,
       "iconPath": "assets/items/3070.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Mana",
+        "ManaRegen"
+      ],
+      "into": [
+        3003,
+        3004,
+        2526,
+        3119
+      ]
     },
     {
       "id": 323070,
@@ -1760,7 +4334,19 @@
       "description": "240 Mana Manaflow (8s, max 4 charges) Landing Abilities grants 6.5 max Mana (doubled vs. champions), up to 360. Helping Hand Attacks deal an additional 5 physi…",
       "price": 400,
       "iconPath": "assets/items/323070.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Mana",
+        "ManaRegen"
+      ],
+      "into": [
+        3003,
+        3004,
+        323003,
+        323004,
+        322526,
+        323119
+      ]
     },
     {
       "id": 3302,
@@ -1768,7 +4354,19 @@
       "description": "Kill minions periodically to heal and grant gold to a nearby ally",
       "price": 3000,
       "iconPath": "assets/items/3302.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "OnHit",
+        "MagicPenetration",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3051,
+        1043
+      ]
     },
     {
       "id": 2020,
@@ -1776,7 +4374,23 @@
       "description": "25 Attack Damage 10 Ability Haste 5 Lethality",
       "price": 1337,
       "iconPath": "assets/items/2020.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "CooldownReduction",
+        "ArmorPenetration"
+      ],
+      "depth": 2,
+      "from": [
+        2022,
+        1037
+      ],
+      "into": [
+        6698,
+        2520,
+        6699,
+        6696
+      ]
     },
     {
       "id": 6676,
@@ -1784,7 +4398,18 @@
       "description": "50 Attack Damage 10 Lethality 25% Critical Strike Chance Death Your damage executes champions that are below 5% Health. Taxes Champion kills grant 25 bonus gol…",
       "price": 3000,
       "iconPath": "assets/items/6676.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        3134,
+        1018
+      ]
     },
     {
       "id": 667666,
@@ -1792,7 +4417,18 @@
       "description": "50 Attack Damage 10 Lethality 25% Critical Strike Chance Death Your damage executes champions that are below 5% Health. Taxes Champion kills grant 25 bonus gol…",
       "price": 3000,
       "iconPath": "assets/items/667666.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        1037,
+        3134,
+        1018
+      ]
     },
     {
       "id": 3075,
@@ -1800,7 +4436,17 @@
       "description": "150 Health 75 Armor Thorns When struck by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
       "price": 2450,
       "iconPath": "assets/items/3075.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "depth": 3,
+      "from": [
+        3076,
+        1031,
+        1028
+      ]
     },
     {
       "id": 323075,
@@ -1808,7 +4454,17 @@
       "description": "200 Health 85 Armor Thorns When struck by an Attack, deal magic damage to the attacker and apply 40% Wounds for 3 seconds if they are a champion.",
       "price": 2650,
       "iconPath": "assets/items/323075.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "depth": 3,
+      "from": [
+        3076,
+        1031,
+        1028
+      ]
     },
     {
       "id": 3077,
@@ -1816,7 +4472,22 @@
       "description": "Melee attacks hit nearby enemies",
       "price": 1200,
       "iconPath": "assets/items/3077.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "OnHit"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1036
+      ],
+      "into": [
+        3074,
+        3748,
+        6698,
+        6631
+      ]
     },
     {
       "id": 3748,
@@ -1824,7 +4495,19 @@
       "description": "Deals area of effect damage based on owner's health",
       "price": 3300,
       "iconPath": "assets/items/3748.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Damage",
+        "OnHit"
+      ],
+      "depth": 3,
+      "from": [
+        3077,
+        2021,
+        1011
+      ]
     },
     {
       "id": 3078,
@@ -1832,7 +4515,22 @@
       "description": "Tons of Damage",
       "price": 3333,
       "iconPath": "assets/items/3078.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Damage",
+        "AttackSpeed",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3057,
+        3044,
+        3051
+      ]
     },
     {
       "id": 2021,
@@ -1840,7 +4538,26 @@
       "description": "15 Attack Damage 250 Health",
       "price": 1150,
       "iconPath": "assets/items/2021.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "Damage"
+      ],
+      "depth": 2,
+      "from": [
+        1036,
+        1028
+      ],
+      "into": [
+        2501,
+        3053,
+        3073,
+        3814,
+        3181,
+        3161,
+        3748,
+        6610
+      ]
     },
     {
       "id": 3179,
@@ -1848,7 +4565,19 @@
       "description": "Provides trap and ward detection periodically",
       "price": 2800,
       "iconPath": "assets/items/3179.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Vision",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3134,
+        3133
+      ]
     },
     {
       "id": 2502,
@@ -1856,7 +4585,19 @@
       "description": "400 Health 50 Armor 15 Ability Haste Anguish Every 4 seconds while in combat with champions, deal magic damage to nearby enemy champions and heal for 250% of t…",
       "price": 2800,
       "iconPath": "assets/items/2502.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1031,
+        3067,
+        1028
+      ]
     },
     {
       "id": 1053,
@@ -1864,7 +4605,23 @@
       "description": "Basic attacks restore Health",
       "price": 900,
       "iconPath": "assets/items/1053.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Damage",
+        "LifeSteal"
+      ],
+      "depth": 2,
+      "from": [
+        1036
+      ],
+      "into": [
+        3153,
+        3146,
+        3072,
+        3074,
+        3139,
+        4403
+      ]
     },
     {
       "id": 663064,
@@ -1872,7 +4629,8 @@
       "description": "Gain 100% Extra Experience Offers no stats, and cannot be sold... ...But will be worth it if you reach Level 30.",
       "price": 900,
       "iconPath": "assets/items/663064.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": []
     },
     {
       "id": 4632,
@@ -1880,7 +4638,20 @@
       "description": "40 Ability Power 25 Magic Resist Annul Grants a Spell Shield that blocks the next enemy Ability.",
       "price": 1600,
       "iconPath": "assets/items/4632.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "SpellBlock",
+        "SpellDamage"
+      ],
+      "depth": 2,
+      "from": [
+        1052,
+        1033,
+        1052
+      ],
+      "into": [
+        3102
+      ]
     },
     {
       "id": 3135,
@@ -1888,7 +4659,16 @@
       "description": "Increases magic damage",
       "price": 3000,
       "iconPath": "assets/items/3135.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "MagicPenetration",
+        "SpellDamage"
+      ],
+      "depth": 3,
+      "from": [
+        4630,
+        1026
+      ]
     },
     {
       "id": 6699,
@@ -1896,7 +4676,20 @@
       "description": "55 Attack Damage 10 Lethality 10 Ability Haste Galvanize Damaging an Enemy Champions with an ability triggers Energized if it is ready. Firmament Your Energize…",
       "price": 3000,
       "iconPath": "assets/items/6699.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Active",
+        "CooldownReduction",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        2020,
+        1036,
+        1036
+      ]
     },
     {
       "id": 3082,
@@ -1904,7 +4697,20 @@
       "description": "40 Armor Rock Solid Reduce incoming damage from Attacks.",
       "price": 1000,
       "iconPath": "assets/items/3082.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Armor"
+      ],
+      "depth": 2,
+      "from": [
+        1029,
+        1029
+      ],
+      "into": [
+        323110,
+        3110,
+        3143
+      ]
     },
     {
       "id": 3083,
@@ -1912,7 +4718,17 @@
       "description": "Grants massive Health and Health Regen",
       "price": 3100,
       "iconPath": "assets/items/3083.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen"
+      ],
+      "depth": 3,
+      "from": [
+        1011,
+        1011,
+        3801
+      ]
     },
     {
       "id": 2526,
@@ -1920,7 +4736,21 @@
       "description": "200 Health 8% Heal and Shield Power 75% Base Mana Regen 300 Mana Harmony Gain % Heal and Shield Power. Manaflow (8s, max 5 charges) Landing Abilities grants 4…",
       "price": 2250,
       "iconPath": "assets/items/2526.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "Mana",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        3114,
+        1028,
+        3070
+      ],
+      "into": [
+        2530
+      ]
     },
     {
       "id": 322526,
@@ -1928,7 +4758,21 @@
       "description": "200 Health 8% Heal and Shield Power 75% Base Mana Regen 300 Mana Harmony Gain % Heal and Shield Power. Manaflow (8s, max 5 charges) Landing Abilities grants 4…",
       "price": 2250,
       "iconPath": "assets/items/322526.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "Mana",
+        "ManaRegen"
+      ],
+      "depth": 3,
+      "from": [
+        3114,
+        1028,
+        323070
+      ],
+      "into": [
+        322530
+      ]
     },
     {
       "id": 3066,
@@ -1936,7 +4780,22 @@
       "description": "200 Health 4% Move Speed",
       "price": 800,
       "iconPath": "assets/items/3066.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "Health",
+        "NonbootsMovement"
+      ],
+      "depth": 2,
+      "from": [
+        1028
+      ],
+      "into": [
+        3742,
+        323002,
+        3002,
+        3181,
+        4401
+      ]
     },
     {
       "id": 3119,
@@ -1944,7 +4803,18 @@
       "description": "550 Health 500 Mana 15 Ability Haste Awe Gain Health. Manaflow (8s, max 4 charges) Landing Attacks and Abilities grant 3 max Mana (doubled vs. champions). Tran…",
       "price": 2400,
       "iconPath": "assets/items/3119.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3070,
+        1011,
+        3067
+      ]
     },
     {
       "id": 323119,
@@ -1952,7 +4822,18 @@
       "description": "550 Health 500 Mana 15 Ability Haste Awe Gain Health. Manaflow (8s, max 4 charges) Landing Attacks and Abilities grant 6.5 max Mana (doubled vs. champions). Tr…",
       "price": 2400,
       "iconPath": "assets/items/323119.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "Mana",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        323070,
+        1011,
+        3067
+      ]
     },
     {
       "id": 3091,
@@ -1960,7 +4841,19 @@
       "description": "Resist magic damage and claw your way back to life.",
       "price": 2800,
       "iconPath": "assets/items/3091.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "SpellBlock",
+        "AttackSpeed",
+        "OnHit",
+        "Tenacity"
+      ],
+      "depth": 3,
+      "from": [
+        1043,
+        1057,
+        1043
+      ]
     },
     {
       "id": 3865,
@@ -1968,7 +4861,14 @@
       "description": "",
       "price": 400,
       "iconPath": "assets/items/3865.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ]
     },
     {
       "id": 3142,
@@ -1976,7 +4876,19 @@
       "description": "Activate to greatly increase Move Speed",
       "price": 2800,
       "iconPath": "assets/items/3142.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "Active",
+        "NonbootsMovement",
+        "ArmorPenetration"
+      ],
+      "depth": 3,
+      "from": [
+        3134,
+        6690,
+        1036
+      ]
     },
     {
       "id": 3032,
@@ -1984,7 +4896,18 @@
       "description": "50 Attack Damage 45% Attack Speed 0% Critical Strike Chance Practice Makes Lethal On-Attack, gain Critical Strike Chance permanently up to 25%. Flurry On-Attac…",
       "price": 3000,
       "iconPath": "assets/items/3032.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed"
+      ],
+      "depth": 3,
+      "from": [
+        1038,
+        3144,
+        1036
+      ]
     },
     {
       "id": 3871,
@@ -1992,7 +4915,19 @@
       "description": "200 Health 75% Base Health Regen 75% Base Mana Regen 9 Gold Per 10 Seconds Void Explosion Dealing Ability damage to a champion causes an explosion that deals m…",
       "price": 400,
       "iconPath": "assets/items/3871.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "depth": 2,
+      "from": [
+        3867
+      ]
     },
     {
       "id": 3086,
@@ -2000,7 +4935,26 @@
       "description": "Slight bonuses to Critical Strike Chance, Move Speed and Attack Speed",
       "price": 1200,
       "iconPath": "assets/items/3086.png",
-      "isCompleted": false
+      "isCompleted": false,
+      "tags": [
+        "CriticalStrike",
+        "AttackSpeed",
+        "NonbootsMovement"
+      ],
+      "depth": 2,
+      "from": [
+        1018,
+        1042
+      ],
+      "into": [
+        2512,
+        3094,
+        3046,
+        3085,
+        4403,
+        6671,
+        6675
+      ]
     },
     {
       "id": 3050,
@@ -2008,7 +4962,19 @@
       "description": "Grants you and your ally bonuses when you cast your ultimate.",
       "price": 2200,
       "iconPath": "assets/items/3050.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        3067,
+        1029,
+        1033
+      ]
     },
     {
       "id": 323050,
@@ -2016,7 +4982,19 @@
       "description": "350 Health 30 Armor 30 Magic Resist 10 Ability Haste Frostfire Tempest Casting your Ultimate summons a storm around you for 5 seconds. The storm deals 30 magic…",
       "price": 2300,
       "iconPath": "assets/items/323050.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor",
+        "AbilityHaste"
+      ],
+      "depth": 3,
+      "from": [
+        1029,
+        3067,
+        1033
+      ]
     },
     {
       "id": 663172,
@@ -2024,7 +5002,14 @@
       "description": "40% Attack Speed 8% Move Speed 25 Ability Haste 20% Tenacity Like the Wind Gain 5% Move Speed On-Hit for 6 seconds, stacking up to 25% Move Speed.",
       "price": 2500,
       "iconPath": "assets/items/663172.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "AttackSpeed",
+        "CooldownReduction",
+        "OnHit",
+        "NonbootsMovement",
+        "Tenacity"
+      ]
     },
     {
       "id": 3157,
@@ -2032,7 +5017,17 @@
       "description": "Activate to become invincible but unable to take actions",
       "price": 3250,
       "iconPath": "assets/items/3157.png",
-      "isCompleted": true
+      "isCompleted": true,
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active"
+      ],
+      "depth": 3,
+      "from": [
+        1058,
+        2420
+      ]
     }
   ]
 }

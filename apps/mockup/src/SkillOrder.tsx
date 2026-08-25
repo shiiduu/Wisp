@@ -1,10 +1,12 @@
 import { InfoTooltip } from '@wisp/ui';
+import type { LaneAbilityKey } from '@wisp/engine';
 import { Panel } from './Panel';
 
 type AbilityKey = 'Q' | 'W' | 'E' | 'R';
 
 const ABILITY_MAX_LEVELS: Record<AbilityKey, number> = { Q: 5, W: 5, E: 5, R: 3 };
 const ABILITY_ORDER: AbilityKey[] = ['Q', 'W', 'E', 'R'];
+const ULTIMATE_LEVELS = [6, 11, 16];
 
 const ABILITY_DOT_CLASS: Record<AbilityKey, string> = {
   Q: 'bg-wisp-500 border-wisp-400 text-void-950',
@@ -14,15 +16,15 @@ const ABILITY_DOT_CLASS: Record<AbilityKey, string> = {
 };
 
 /**
- * Mock recommendation: E carries this build's scaling, so it's maxed
- * first; the ultimate follows the usual 6/11/16 cadence. Static priority
- * order for character levels 1-18 — not a real calculation yet.
+ * Builds the 18-level grid from a real Q/W/E priority order (see
+ * @wisp/engine's pickSkillPriority): R always follows the standard 6/11/16
+ * cadence; the remaining 15 levels fill the first priority ability's 5
+ * points, then the second's, then the third's — a simplified sequential
+ * maxing order, not exact competitive-meta interleaving, but directionally
+ * correct (primary ability maxed first) and driven by real per-champion
+ * scaling data where available.
  */
-const MOCK_LEVEL_PRIORITY: AbilityKey[] = [
-  'E', 'Q', 'E', 'W', 'E', 'R', 'E', 'E', 'Q', 'Q', 'R', 'Q', 'Q', 'W', 'W', 'R', 'W', 'W',
-];
-
-function computeSkillGrid(): Record<AbilityKey, (number | null)[]> {
+function computeSkillGrid(priority: LaneAbilityKey[]): Record<AbilityKey, (number | null)[]> {
   const grid: Record<AbilityKey, (number | null)[]> = {
     Q: Array(ABILITY_MAX_LEVELS.Q).fill(null),
     W: Array(ABILITY_MAX_LEVELS.W).fill(null),
@@ -31,11 +33,14 @@ function computeSkillGrid(): Record<AbilityKey, (number | null)[]> {
   };
   const counters: Record<AbilityKey, number> = { Q: 0, W: 0, E: 0, R: 0 };
 
-  MOCK_LEVEL_PRIORITY.forEach((ability, idx) => {
-    const level = idx + 1;
+  const queue: AbilityKey[] = priority.flatMap((key) => Array(ABILITY_MAX_LEVELS[key]).fill(key));
+  let queueIndex = 0;
+
+  for (let level = 1; level <= 18; level++) {
+    const ability: AbilityKey = ULTIMATE_LEVELS.includes(level) ? 'R' : queue[queueIndex++];
     grid[ability][counters[ability]] = level;
     counters[ability] += 1;
-  });
+  }
 
   return grid;
 }
@@ -43,11 +48,13 @@ function computeSkillGrid(): Record<AbilityKey, (number | null)[]> {
 interface SkillOrderProps {
   /** Champion's current level — points beyond this are shown as "not yet reached". */
   currentLevel: number;
+  /** Real per-champion Q/W/E maxing priority from the scoring engine. */
+  priority: LaneAbilityKey[];
 }
 
-export function SkillOrder({ currentLevel }: SkillOrderProps) {
-  const grid = computeSkillGrid();
-  const firstPickAbility = MOCK_LEVEL_PRIORITY[0];
+export function SkillOrder({ currentLevel, priority }: SkillOrderProps) {
+  const grid = computeSkillGrid(priority);
+  const firstPickAbility = priority[0];
 
   return (
     <Panel

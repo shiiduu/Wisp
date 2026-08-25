@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "fetch:augments": "tsx scripts/fetch-augments.ts",
-    "fetch:items": "tsx scripts/fetch-items.ts"
+    "fetch:items": "tsx scripts/fetch-items.ts",
+    "fetch:champions": "tsx scripts/fetch-champions.ts"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",

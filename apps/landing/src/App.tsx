@@ -1,4 +1,4 @@
-const MOCKUP_URL = import.meta.env.PROD ? '/Wisp/mockup/' : 'http://localhost:5174/';
+const SELECT_URL = import.meta.env.PROD ? '/Wisp/select/' : 'http://localhost:5175/';
 const GITHUB_URL = 'https://github.com/shiiduu/Wisp';
 
 const CHALLENGES = ['AP Mundo', 'Tank Yuumi', 'Full Lethality Soraka', 'Attack Speed Nasus'];
@@ -75,7 +75,7 @@ export default function App() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={MOCKUP_URL}
+              href={SELECT_URL}
               className="group flex items-center gap-2 rounded-full bg-wisp-500 px-6 py-3 font-medium text-void-950 shadow-glow transition-transform hover:scale-[1.02]"
             >
               View live mockup

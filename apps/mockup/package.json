@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@wisp/data": "workspace:*"
+    "@wisp/data": "workspace:*",
+    "@wisp/engine": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.3",
