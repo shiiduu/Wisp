@@ -1,5 +1,5 @@
 const MOCKUP_URL = import.meta.env.PROD ? '/mockup/' : 'http://localhost:5174/';
-const GITHUB_URL = 'https://github.com/PLACEHOLDER/wisp';
+const GITHUB_URL = 'https://github.com/shiiduu/Wisp';
 
 const CHALLENGES = ['AP Mundo', 'Tank Yuumi', 'Full Lethality Soraka', 'Attack Speed Nasus'];
 
