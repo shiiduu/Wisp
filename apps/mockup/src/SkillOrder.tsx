@@ -87,10 +87,6 @@ export function SkillOrder({ currentLevel }: SkillOrderProps) {
           </div>
         ))}
       </div>
-      <p className="mt-3 text-[11px] text-mist-500">
-        First point (level 1) goes to <span className="text-mist-300">{firstPickAbility}</span> —
-        highlighted above.
-      </p>
     </Panel>
   );
 }

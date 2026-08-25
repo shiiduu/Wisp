@@ -11,16 +11,24 @@ export interface ShopEntry {
 interface ItemsToBuyProps {
   entries: ShopEntry[];
   onBuy: (itemId: number) => void;
+  disabled?: boolean;
 }
 
-export function ItemsToBuy({ entries, onBuy }: ItemsToBuyProps) {
+export function ItemsToBuy({ entries, onBuy, disabled = false }: ItemsToBuyProps) {
   function handleDragStart(event: DragEvent<HTMLButtonElement>, itemId: number) {
+    if (disabled) {
+      event.preventDefault();
+      return;
+    }
     event.dataTransfer.setData('text/plain', String(itemId));
     event.dataTransfer.effectAllowed = 'move';
   }
 
   return (
     <Panel title="Items to buy">
+      {disabled && (
+        <p className="mb-2 text-xs text-troll-400">Inventory full — sell or use an item first.</p>
+      )}
       {entries.length === 0 ? (
         <p className="text-xs text-mist-500">All stocked items purchased.</p>
       ) : (
@@ -29,14 +37,19 @@ export function ItemsToBuy({ entries, onBuy }: ItemsToBuyProps) {
             <button
               key={item.id}
               type="button"
-              draggable
+              draggable={!disabled}
+              disabled={disabled}
               onDragStart={(e) => handleDragStart(e, item.id)}
               onClick={() => onBuy(item.id)}
               title={item.description}
-              className={`flex cursor-grab flex-col items-center gap-1 rounded-lg border px-2 py-2 text-center transition-colors active:cursor-grabbing ${
-                recommended
-                  ? 'border-wisp-500/40 bg-wisp-500/10 hover:border-wisp-500/70'
-                  : 'border-void-700 bg-void-800/40 hover:border-void-600'
+              className={`flex flex-col items-center gap-1 rounded-lg border px-2 py-2 text-center transition-colors ${
+                disabled
+                  ? 'cursor-not-allowed border-void-700 bg-void-800/20 opacity-40'
+                  : `cursor-grab active:cursor-grabbing ${
+                      recommended
+                        ? 'border-wisp-500/40 bg-wisp-500/10 hover:border-wisp-500/70'
+                        : 'border-void-700 bg-void-800/40 hover:border-void-600'
+                    }`
               }`}
             >
               <img src={icon} alt="" className="h-9 w-9 rounded-md border border-white/10" />

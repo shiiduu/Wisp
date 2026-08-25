@@ -19,7 +19,7 @@ import iconHealthPotion from '@wisp/data/assets/items/2003.png';
 import iconDoranRing from '@wisp/data/assets/items/1056.png';
 
 import { Panel } from './Panel';
-import { CharacterPanel } from './CharacterPanel';
+import { CharacterPanel, MAX_PURCHASED_ITEMS, MAX_SELECTED_AUGMENTS } from './CharacterPanel';
 import { ItemsToBuy, type ShopEntry } from './ItemsToBuy';
 import { SkillOrder } from './SkillOrder';
 import { AugmentSelectPopup } from './AugmentSelectPopup';
@@ -106,6 +106,10 @@ export default function App() {
   const [purchased, setPurchased] = useState<ShopEntry[]>(INITIAL_PURCHASED_ITEMS);
   const [selectedAugments, setSelectedAugments] = useState<Augment[]>([]);
   const [popupChoices, setPopupChoices] = useState<Augment[] | null>(null);
+  const [popupRecommendation, setPopupRecommendation] = useState<string | null>(null);
+
+  const isInventoryFull = purchased.length >= MAX_PURCHASED_ITEMS;
+  const isAugmentsFull = selectedAugments.length >= MAX_SELECTED_AUGMENTS;
 
   const noGoZones = useNoGoZones([
     shopEntries.length,
@@ -114,23 +118,47 @@ export default function App() {
   ]);
 
   function buyItem(itemId: number) {
+    if (isInventoryFull) return;
     setShopEntries((prev) => {
       const entry = prev.find((e) => e.item.id === itemId);
       if (!entry) return prev;
-      setPurchased((p) => (p.some((e) => e.item.id === itemId) ? p : [...p, entry]));
+      setPurchased((p) =>
+        p.length >= MAX_PURCHASED_ITEMS || p.some((e) => e.item.id === itemId)
+          ? p
+          : [...p, entry],
+      );
       return prev.filter((e) => e.item.id !== itemId);
     });
   }
 
+  function removeItem(itemId: number) {
+    setPurchased((prev) => {
+      const entry = prev.find((e) => e.item.id === itemId);
+      if (!entry) return prev;
+      setShopEntries((s) => (s.some((e) => e.item.id === itemId) ? s : [...s, entry]));
+      return prev.filter((e) => e.item.id !== itemId);
+    });
+  }
+
+  function removeAugment(apiName: string) {
+    setSelectedAugments((prev) => prev.filter((a) => a.apiName !== apiName));
+  }
+
   function openAugmentPopup() {
-    setPopupChoices(sampleRandom(AUGMENTS, 3));
+    if (isAugmentsFull) return;
+    const choices = sampleRandom(AUGMENTS, 3);
+    setPopupChoices(choices);
+    setPopupRecommendation(choices[Math.floor(Math.random() * choices.length)].apiName);
   }
 
   function selectAugment(augment: Augment) {
-    setSelectedAugments((prev) =>
-      prev.some((a) => a.apiName === augment.apiName) ? prev : [...prev, augment],
-    );
+    setSelectedAugments((prev) => {
+      if (prev.length >= MAX_SELECTED_AUGMENTS) return prev;
+      if (prev.some((a) => a.apiName === augment.apiName)) return prev;
+      return [...prev, augment];
+    });
     setPopupChoices(null);
+    setPopupRecommendation(null);
   }
 
   return (
@@ -144,7 +172,7 @@ export default function App() {
         <Panel
           title="Tonight's troll challenge"
           info={
-            <InfoTooltip label="About the challenge">
+            <InfoTooltip label="About the challenge" side="bottom">
               This challenge is Wisp&apos;s own logic — a locally defined pick, not data from
               Riot or Community Dragon.
             </InfoTooltip>
@@ -175,27 +203,37 @@ export default function App() {
           <CharacterPanel
             gold={gold}
             cs={cs}
+            championInfo={
+              <InfoTooltip label="About champion selection" side="bottom">
+                Champion is assigned by ARAM&apos;s random/limited pool, not freely picked — Wisp
+                doesn&apos;t control or influence champion selection.
+              </InfoTooltip>
+            }
             purchased={purchased}
             purchasedInfo={
               <InfoTooltip label="About item data">
-                Item data is static, local JSON generated from Riot Data Dragon — never fetched
-                live.
+                Item names, icons and prices come from static, local JSON generated from Riot
+                Data Dragon. What you own here is currently mock/manual data (click a purchased
+                item to remove it, for testing) — later it will update live from your actual
+                in-game purchases via GEP.
               </InfoTooltip>
             }
             selectedAugments={selectedAugments}
             onDropItem={buyItem}
+            onRemoveItem={removeItem}
+            onRemoveAugment={removeAugment}
           />
 
           <div className="flex min-h-0 flex-1 flex-col">
             {/* Open space above — this is where the mascot mostly wanders. */}
             <div className="flex-1" />
 
-            <ItemsToBuy entries={shopEntries} onBuy={buyItem} />
+            <ItemsToBuy entries={shopEntries} onBuy={buyItem} disabled={isInventoryFull} />
           </div>
 
           <div className="flex w-80 shrink-0 flex-col gap-5">
             <Panel
-              title="Augment pick"
+              title="Best augments"
               info={
                 <InfoTooltip label="About augment data">
                   Augment name, icon and description are static, local JSON generated from
@@ -261,18 +299,24 @@ export default function App() {
           <button
             type="button"
             onClick={openAugmentPopup}
-            className="rounded-lg border border-void-600 bg-void-800 px-3 py-1.5 text-xs font-medium text-mist-200 transition-colors hover:border-wisp-500/50 hover:text-wisp-400"
+            disabled={isAugmentsFull}
+            title={isAugmentsFull ? `Augments full (${MAX_SELECTED_AUGMENTS}/${MAX_SELECTED_AUGMENTS})` : undefined}
+            className="rounded-lg border border-void-600 bg-void-800 px-3 py-1.5 text-xs font-medium text-mist-200 transition-colors hover:border-wisp-500/50 hover:text-wisp-400 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-void-600 disabled:hover:text-mist-200"
           >
             Simulate augment pick
           </button>
         </div>
       </div>
 
-      {popupChoices && (
+      {popupChoices && popupRecommendation && (
         <AugmentSelectPopup
           choices={popupChoices}
+          recommendedApiName={popupRecommendation}
           onSelect={selectAugment}
-          onClose={() => setPopupChoices(null)}
+          onClose={() => {
+            setPopupChoices(null);
+            setPopupRecommendation(null);
+          }}
         />
       )}
     </div>
