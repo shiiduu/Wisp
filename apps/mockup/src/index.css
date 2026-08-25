@@ -1,0 +1,27 @@
+@import '@wisp/ui/styles.css';
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes wisp-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.9);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.96);
+  }
+}

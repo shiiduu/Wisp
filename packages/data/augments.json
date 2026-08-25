@@ -1,0 +1,1806 @@
+{
+  "source": "latest",
+  "generatedAt": "2026-08-25T11:15:12.249Z",
+  "augments": [
+    {
+      "id": 404,
+      "apiName": "Augment404",
+      "name": "404 Augment Not Found",
+      "description": "How did you find this?!?!? Gain hats.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/augment404.png"
+    },
+    {
+      "id": 366,
+      "apiName": "GoHAbstainFromPower",
+      "name": "Abstain From Power",
+      "description": "Restore % of the health you've sacrificed to Tahm Kench. Gain Silver Stat Anvil.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohabstainfrompower.png"
+    },
+    {
+      "id": 367,
+      "apiName": "GoHAbstainFromRisk",
+      "name": "Abstain From Risk",
+      "description": "Restore % of the health you've sacrificed to Tahm Kench. Instantly gain a %i:Augment% Silver Augment.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohabstainfromrisk.png"
+    },
+    {
+      "id": 365,
+      "apiName": "GoHAbstainFromWealth",
+      "name": "Abstain From Wealth",
+      "description": "Restore % of the health you've sacrificed to Tahm Kench. Gain +%i:goldCoins% gold.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohabstainfromwealth.png"
+    },
+    {
+      "id": 1,
+      "apiName": "AcceleratingSorcery",
+      "name": "Accelerating Sorcery",
+      "description": "Using Abilities grant you stacking Ability Haste. This resets each round.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/acceleratingsorcery.png"
+    },
+    {
+      "id": 205,
+      "apiName": "ADAPt",
+      "name": "ADAPt",
+      "description": "Convert Bonus Attack Damage to Ability Power. Gain % Ability Power.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/adapt.png"
+    },
+    {
+      "id": 336,
+      "apiName": "AimForTheHead",
+      "name": "Aim for the Head",
+      "description": "Your Critical Strike Chance is capped at %. Convert % of Critical Strike Chance above % into Critical Strike Damage. Gain % Critical Strike Chance and % Critic…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/aimforthehead.png"
+    },
+    {
+      "id": 141,
+      "apiName": "AllForYou",
+      "name": "All For You",
+      "description": "Your Heals and Shields are stronger when used on an ally.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/allforyou.png"
+    },
+    {
+      "id": 361,
+      "apiName": "GoHVoteAllyDemon",
+      "name": "Ally Demon",
+      "description": "Vote for your team to ally with the Demons. Allying with Demons grants an %i:AugmentLevel% Augment Level when a Hunter team is eliminated.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohvoteallydemon.png"
+    },
+    {
+      "id": 362,
+      "apiName": "GoHVoteAllyHunter",
+      "name": "Ally Hunter",
+      "description": "Vote for your team to ally with the Demon Hunters. Allying with Demon Hunters grants you +%i:goldCoins% bonus gold when you beat a Demon team.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohvoteallyhunter.png"
+    },
+    {
+      "id": 309,
+      "apiName": "AndMyAxe",
+      "name": "And My Axe!",
+      "description": "Autocast: Periodically throws an axe at the nearest opponent, dealing physical damage, slowing, and shredding their armor and magic resist. Picking up the axe…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/andmyaxe.png"
+    },
+    {
+      "id": 2,
+      "apiName": "ApexInventor",
+      "name": "Apex Inventor",
+      "description": "Gain Item Haste (equivalent to % Item CDR). Item Haste reduces the cooldown %i:cooldown% of all Item Abilities.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/apexinventor.png"
+    },
+    {
+      "id": 405,
+      "apiName": "Augment405",
+      "name": "Augment 405",
+      "description": "Gain % damage per hat you're wearing.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/augment405.png"
+    },
+    {
+      "id": 322,
+      "apiName": "AugmentedPower",
+      "name": "Augmented Power",
+      "description": "Increase the damage done by your augments and items by .",
+      "rarity": "silver",
+      "iconPath": "assets/augments/augmentedpower.png"
+    },
+    {
+      "id": 4,
+      "apiName": "BacktoBasics",
+      "name": "Back To Basics",
+      "description": "Gain increased Ability Damage, Healing, Shielding, and Ability Haste, but you cannot use your Ultimate Ability.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/backtobasics.png"
+    },
+    {
+      "id": 5,
+      "apiName": "BannerofCommand",
+      "name": "Banner of Command",
+      "description": "Gain the Banner of Command Summoner Spell. Banner of Command empowers your ally for a brief duration.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/bannerofcommand.png"
+    },
+    {
+      "id": 180,
+      "apiName": "BigBrain",
+      "name": "Big Brain",
+      "description": "At the start of each round, gain Shield for every %i:scaleAP% Ability Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/bigbrain.png"
+    },
+    {
+      "id": 6,
+      "apiName": "BladeWaltz",
+      "name": "Blade Waltz",
+      "description": "Gain the Blade Waltz Summoner Spell. Blade Waltz makes you untargetable while you dash at and damage enemies times.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/bladewaltz.png"
+    },
+    {
+      "id": 200,
+      "apiName": "BloodBrother",
+      "name": "Blood Brother",
+      "description": "Gain Darius's Passive Hemorrhage. Attacks and damaging Abilities cause the target to Hemorrhage, dealing physical damage over seconds, stacking up to times. Dr…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/bloodbrother.png"
+    },
+    {
+      "id": 348,
+      "apiName": "GoHBloodrazor",
+      "name": "Bloodrazor",
+      "description": "Dealing damage deals an additional % max health physical damage.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohbloodrazor.png"
+    },
+    {
+      "id": 7,
+      "apiName": "BluntForce",
+      "name": "Blunt Force",
+      "description": "Gain %i:scaleAD% % Attack Damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/bluntforce.png"
+    },
+    {
+      "id": 321,
+      "apiName": "Bodyguard",
+      "name": "Bodyguard",
+      "description": "Using a dash, blink, or teleport grants yourself, and any allied champions you pass through, a shield.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/bodyguard.png"
+    },
+    {
+      "id": 324,
+      "apiName": "BravestoftheBrave",
+      "name": "Bravest of the Brave",
+      "description": "Increase future augment offerings by tier. If the augments were already Prismatic tier, gain a bonus gold.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/bravestofthebrave.png"
+    },
+    {
+      "id": 103,
+      "apiName": "BreadAndButter",
+      "name": "Bread And Butter",
+      "description": "Your gains Ability Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/breadandbutter.png"
+    },
+    {
+      "id": 151,
+      "apiName": "BreadAndCheese",
+      "name": "Bread And Cheese",
+      "description": "Your gains Ability Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/breadandcheese.png"
+    },
+    {
+      "id": 150,
+      "apiName": "BreadAndJam",
+      "name": "Bread And Jam",
+      "description": "Your gains Ability Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/breadandjam.png"
+    },
+    {
+      "id": 346,
+      "apiName": "BreadSandwich",
+      "name": "Bread Sandwich",
+      "description": "Gain Ability Haste. Casting an ability gants % for seconds.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/breadsandwich.png"
+    },
+    {
+      "id": 9,
+      "apiName": "BuffBuddies",
+      "name": "Buff Buddies",
+      "description": "You gain Crest of Cinders and Crest of Insight. Granting yourself Ability Haste and resource regeneration and causing your Attacks to Burn and Slow enemy champ…",
+      "rarity": "silver",
+      "iconPath": "assets/augments/buffbuddies.png"
+    },
+    {
+      "id": 11,
+      "apiName": "CantTouchThis",
+      "name": "Can't Touch This",
+      "description": "Casting your Ultimate makes you Invulnerable for a short duration.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/canttouchthis.png"
+    },
+    {
+      "id": 10,
+      "apiName": "CannonFodder",
+      "name": "Cannon Fodder",
+      "description": "You enter combat launching from a cannon.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/cannonfodder.png"
+    },
+    {
+      "id": 12,
+      "apiName": "Castle",
+      "name": "Castle",
+      "description": "Gain the Castle Summoner Spell. Castle: Swap places with your ally, gaining Move Speed and a Shield.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/castle.png"
+    },
+    {
+      "id": 13,
+      "apiName": "CelestialBody",
+      "name": "Celestial Body",
+      "description": "Gain Health, but you deal % less damage.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/celestialbody.png"
+    },
+    {
+      "id": 193,
+      "apiName": "CenterOfTheUniverse",
+      "name": "Center of the Universe",
+      "description": "Stars orbit you, dealing magic damage to enemies they pass through.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/centeroftheuniverse.png"
+    },
+    {
+      "id": 323,
+      "apiName": "Cerberus",
+      "name": "Cerberus",
+      "description": "Gain the Hail of Blades and Press the Attack Keystone Runes.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/cerberus.png"
+    },
+    {
+      "id": 14,
+      "apiName": "Chauffeur",
+      "name": "Chauffeur",
+      "description": "You are attached to your ally and can't move on your own. Your bonus Move Speed is also granted to your ally, and you gain Ability Haste and Attack Speed.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/chauffeur.png"
+    },
+    {
+      "id": 347,
+      "apiName": "GoHChemtechPutrifier",
+      "name": "Chemtech Putrifier",
+      "description": "All damage you do applies Grevious Wounds.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohchemtechputrifier.png"
+    },
+    {
+      "id": 15,
+      "apiName": "CircleofDeath",
+      "name": "Circle of Death",
+      "description": "Healing and Health Regen you do deals a portion of the value as magic damage to the nearest enemy champion.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/circleofdeath.png"
+    },
+    {
+      "id": 110,
+      "apiName": "Clothesline",
+      "name": "Clothesline",
+      "description": "There is a tether connecting your team, deals constant magic damage to enemies it touches.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/clothesline.png"
+    },
+    {
+      "id": 310,
+      "apiName": "ClownCollege",
+      "name": "Clown College",
+      "description": "Gain Deceive Summoner Spell. Deceive: You teleport and become Invisible. Your next Attack while Invisible deals an additional physical damage. When you die, sp…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/clowncollege.png"
+    },
+    {
+      "id": 16,
+      "apiName": "ComboMaster",
+      "name": "Combo Master",
+      "description": "Gain the Electrocute and Phase Rush Keystone Runes.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/combomaster.png"
+    },
+    {
+      "id": 372,
+      "apiName": "GoHCompulsionForPower",
+      "name": "Compulsion For Power",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain Prismatic Stat Anvils.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcompulsionforpower.png"
+    },
+    {
+      "id": 373,
+      "apiName": "GoHCompulsionForRisk",
+      "name": "Compulsion For Risk",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain a %i:Augment% Prismatic Augment.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcompulsionforrisk.png"
+    },
+    {
+      "id": 371,
+      "apiName": "GoHCompulsionForWealth",
+      "name": "Compulsion For Wealth",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain +%i:goldCoins% gold.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcompulsionforwealth.png"
+    },
+    {
+      "id": 17,
+      "apiName": "ContractKiller",
+      "name": "Contract Killer",
+      "description": "Each round, mark an opposing champion. That champion takes % extra damage and grants an +%i:goldCoins% gold when killed.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/contractkiller.png"
+    },
+    {
+      "id": 18,
+      "apiName": "CourageoftheColossus",
+      "name": "Courage of the Colossus",
+      "description": "Gain Shield after Immobilizing or Grounding an enemy champion.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/courageofthecolossus.png"
+    },
+    {
+      "id": 369,
+      "apiName": "GoHCravingForPower",
+      "name": "Craving For Power",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain Gold Stat Anvil.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcravingforpower.png"
+    },
+    {
+      "id": 370,
+      "apiName": "GoHCravingForRisk",
+      "name": "Craving For Risk",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain a %i:Augment% Gold Augment.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcravingforrisk.png"
+    },
+    {
+      "id": 368,
+      "apiName": "GoHCravingForWealth",
+      "name": "Craving For Wealth",
+      "description": "Sacrifice % of your max health to Tahm Kench. Your total sacrifice will increase to -% max health. Gain +%i:goldCoins% gold.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohcravingforwealth.png"
+    },
+    {
+      "id": 118,
+      "apiName": "CriticalHealing",
+      "name": "Critical Healing",
+      "description": "Your Heals and Shields can Critically Strike for an addtional . Gain %i:scaleCrit% % Crit Chance.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/criticalhealing.png"
+    },
+    {
+      "id": 215,
+      "apiName": "DarkBlessing",
+      "name": "Dark Blessing",
+      "description": "Healing or Shielding an ally grants you permanent Cursed Power. Gain Ability Haste based on your Cursed Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/darkblessing.png"
+    },
+    {
+      "id": 19,
+      "apiName": "Dashing",
+      "name": "Dashing",
+      "description": "Your dash, leap, blink, or teleport Abilities gain Ability Haste.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/dashing.png"
+    },
+    {
+      "id": 20,
+      "apiName": "DawnbringersResolve",
+      "name": "Dawnbringer's Resolve",
+      "description": "Upon dropping below % Health, heal for over seconds.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/dawnbringersresolve.png"
+    },
+    {
+      "id": 217,
+      "apiName": "Deathtouch",
+      "name": "Deathtouch",
+      "description": "Attacking enemy champions grants permanent Cursed Power and deal additional magic damage based on your Cursed Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/deathtouch.png"
+    },
+    {
+      "id": 21,
+      "apiName": "DefensiveManeuvers",
+      "name": "Defensive Maneuvers",
+      "description": "Gain the Defensive Maneuvers Summoner Spell. Defensive Maneuvers Casts both Summoner Barrier and Heal on your team.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/defensivemaneuvers.png"
+    },
+    {
+      "id": 22,
+      "apiName": "Deft",
+      "name": "Deft",
+      "description": "Gain %i:scaleAS% % Attack Speed.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/deft.png"
+    },
+    {
+      "id": 171,
+      "apiName": "Dematerialize",
+      "name": "Dematerialize",
+      "description": "Gain %i:miniAdaptiveForce% Adaptive Force on takedown, once per champion per round. Gaining this augment after round , gain %i:miniAdaptiveForce% Adaptive Forc…",
+      "rarity": "silver",
+      "iconPath": "assets/augments/dematerialize.png"
+    },
+    {
+      "id": 349,
+      "apiName": "GoHDematerializer",
+      "name": "Dematerializer",
+      "description": "Your damage executes champions that are below % Health.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohdematerializer.png"
+    },
+    {
+      "id": 23,
+      "apiName": "DemonsDance",
+      "name": "Demon's Dance",
+      "description": "Gain the Fleet Footwork and Grasp of the Undying Keystone Runes.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/demonsdance.png"
+    },
+    {
+      "id": 218,
+      "apiName": "Desecrator",
+      "name": "Desecrator",
+      "description": "Immobilizing enemy champions grants you permanent Cursed Power. Gain Armor and Magic Resistance based on your Cursed Power.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/desecrator.png"
+    },
+    {
+      "id": 330,
+      "apiName": "Despoil",
+      "name": "Despoil",
+      "description": "Dashing or Teleporting grants you Cursed Power if there is an enemy nearby. Gain Move Speed scaling with your Cursed Power.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/despoil.png"
+    },
+    {
+      "id": 24,
+      "apiName": "DieAnotherDay",
+      "name": "Die Another Day",
+      "description": "Gain the Die Another Day Summoner Spell. Die Another Day creates a zone where no unit can die for 4 seconds.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/dieanotherday.png"
+    },
+    {
+      "id": 25,
+      "apiName": "DiveBomber",
+      "name": "Dive Bomber",
+      "description": "Your team's first death each round explodes, dealing massive damage true damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/divebomber.png"
+    },
+    {
+      "id": 301,
+      "apiName": "DivineIntervention",
+      "name": "Divine Intervention",
+      "description": "Shortly after combat starts, call a protective star. Upon its landing, you and nearby allies become Invulnerable for a few seconds. Then Autocast this every se…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/divineintervention.png"
+    },
+    {
+      "id": 26,
+      "apiName": "DontBlink",
+      "name": "Don't Blink",
+      "description": "Gain % bonus damage per 10 Move Speed you have more than the target.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/dontblink.png"
+    },
+    {
+      "id": 102,
+      "apiName": "DontChase",
+      "name": "Don't Chase",
+      "description": "You become Ghosted and leave a trail of poisonous gas behind you, dealing magic damage to enemies inside.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/dontchase.png"
+    },
+    {
+      "id": 219,
+      "apiName": "Doomsayer",
+      "name": "Doomsayer",
+      "description": "Hitting an enemy champion with an ability hits grant you permanent Cursed Power. Gain Adaptive Force based on your Cursed Power.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/doomsayer.png"
+    },
+    {
+      "id": 134,
+      "apiName": "DrawYourSword",
+      "name": "Draw Your Sword",
+      "description": "You are now melee. Gain Attack Damage, Health, Attack Speed, Lifesteal, and Move Speed based on how much Attack Range you lost.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/drawyoursword.png"
+    },
+    {
+      "id": 216,
+      "apiName": "Dreadbringer",
+      "name": "Dreadbringer",
+      "description": "Gain an aura that continuously harvests permanent Cursed Power per enemy champion inside. Gain max Health based on your Cursed Power.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/dreadbringer.png"
+    },
+    {
+      "id": 225,
+      "apiName": "DualWield",
+      "name": "Dual Wield",
+      "description": "When you Attack, fire a bolt that deals % damage and applies your item keyword onhit effects at % effectiveness. Gain % total Attack Speed.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/dualwield.png"
+    },
+    {
+      "id": 27,
+      "apiName": "Earthwake",
+      "name": "Earthwake",
+      "description": "Your dash, blink, or teleport Abilities leave behind a trail that detonates after 1 second.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/earthwake.png"
+    },
+    {
+      "id": 350,
+      "apiName": "GoHEnchantedFlask",
+      "name": "Enchanted Flask",
+      "description": "Gain a Spell Shield every seconds.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohenchantedflask.png"
+    },
+    {
+      "id": 344,
+      "apiName": "Energetic",
+      "name": "Energetic",
+      "description": "Gain Energized % quicker. Triggering Energized fires a Magic Missile, dealing up to % max Health true damage based on distance traveled.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/energetic.png"
+    },
+    {
+      "id": 28,
+      "apiName": "Erosion",
+      "name": "Erosion",
+      "description": "Damaging enemies adds a stacking Armor and Magic Resist shred for s.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/erosion.png"
+    },
+    {
+      "id": 206,
+      "apiName": "escAPADe",
+      "name": "escAPADe",
+      "description": "Convert Ability Power to Bonus Attack Damage. Gain % Attack Damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/escapade.png"
+    },
+    {
+      "id": 29,
+      "apiName": "EtherealWeapon",
+      "name": "Ethereal Weapon",
+      "description": "Your Abilities apply item keyword onhit effects.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/etherealweapon.png"
+    },
+    {
+      "id": 30,
+      "apiName": "Eureka",
+      "name": "Eureka",
+      "description": "Gain Ability Haste equal to % Ability Power.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/eureka.png"
+    },
+    {
+      "id": 32,
+      "apiName": "Executioner",
+      "name": "Executioner",
+      "description": "Deal % more damage to enemies below % health. Reset your basic abilities on takedown.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/executioner.png"
+    },
+    {
+      "id": 33,
+      "apiName": "ExtendoArm",
+      "name": "Extendo-Arm",
+      "description": "Autocast fire a Blitzcrank hook every 12 seconds at a nearby enemy champion.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/extendoarm.png"
+    },
+    {
+      "id": 34,
+      "apiName": "FallenAegis",
+      "name": "Fallen Aegis",
+      "description": "Start combat with a Black Shield for s. Black Shield blocks Magic Damage and Immobilizing effects.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/fallenaegis.png"
+    },
+    {
+      "id": 220,
+      "apiName": "FanTheHammer",
+      "name": "Fan the Hammer",
+      "description": "When you Attack, fire bolts that each deal physical damage and applies your item keyword onhit.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/fanthehammer.png"
+    },
+    {
+      "id": 35,
+      "apiName": "FeeltheBurn",
+      "name": "Feel the Burn",
+      "description": "Gain the Feel the Burn Summoner Spell. Feel the Burn casts Ignite and Exhaust on all nearby enemy champions.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/feeltheburn.png"
+    },
+    {
+      "id": 194,
+      "apiName": "FeyMagic",
+      "name": "Fey Magic",
+      "description": "Damaging with your Ultimate Polymorphs enemies for a few seconds.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/feymagic.png"
+    },
+    {
+      "id": 229,
+      "apiName": "FireSale",
+      "name": "Fire Sale",
+      "description": "Instantly sell all your non-quest items for % of their direct buy price. Great for all those discounted anvils.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/firesale.png"
+    },
+    {
+      "id": 36,
+      "apiName": "Firebrand",
+      "name": "Firebrand",
+      "description": "Your Attacks apply an infinitely stacking Burn item keyword onhit, dealing damage over time.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/firebrand.png"
+    },
+    {
+      "id": 308,
+      "apiName": "Firefox",
+      "name": "Firefox",
+      "description": "Autocast Gain Movement Speed and conjure three flames that orbit you, targetting the closest visible enemy in range and dealing magic damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/firefox.png"
+    },
+    {
+      "id": 37,
+      "apiName": "FirstAidKit",
+      "name": "First-Aid Kit",
+      "description": "Gain % Heal and Shield Power.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/firstaidkit.png"
+    },
+    {
+      "id": 116,
+      "apiName": "Flashy",
+      "name": "Flashy",
+      "description": "Your Flash has Ammo and a second Cooldown.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/flashy.png"
+    },
+    {
+      "id": 38,
+      "apiName": "FromBeginningToEnd",
+      "name": "From Beginning to End",
+      "description": "Gain the First Strike and Dark Harvest Keystone Runes.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/frombeginningtoend.png"
+    },
+    {
+      "id": 39,
+      "apiName": "FrostWraith",
+      "name": "Frost Wraith",
+      "description": "Autocast Root nearby enemies for seconds every seconds.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/frostwraith.png"
+    },
+    {
+      "id": 351,
+      "apiName": "GoHFrozenMallet",
+      "name": "Frozen Mallet",
+      "description": "Dealing damage Slows enemies.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohfrozenmallet.png"
+    },
+    {
+      "id": 222,
+      "apiName": "FruitsOfYourLabor",
+      "name": "Fruits of Your Labor",
+      "description": "Power Flowers are % more effective on you and are shared with your ally.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/fruitsofyourlabor.png"
+    },
+    {
+      "id": 340,
+      "apiName": "CraftingPrisStatAnvil",
+      "name": "Gain a Prismatic Stat Anvil",
+      "description": "Gain a %i:StatAnvil% Prismatic Stat Anvil.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/craftingprisstatanvil.png"
+    },
+    {
+      "id": 341,
+      "apiName": "CraftingAugmentSlot",
+      "name": "Gain an Augment slot",
+      "description": "Unlock your th %i:Augment% Augment Slot. In rounds gain a %i:Augment% Silver Augment.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/craftingaugmentslot.png"
+    },
+    {
+      "id": 355,
+      "apiName": "GainStatAnvil",
+      "name": "Gain Stat Anvil",
+      "description": "Gain a random %i:StatAnvil% Stat Anvil.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gainstatanvil.png"
+    },
+    {
+      "id": 234,
+      "apiName": "GambaAnvil",
+      "name": "Gamba Anvil",
+      "description": "Gain +%i:goldCoins% gold and reduce the price of all anvils. Prismatic Anvils: -%i:goldCoins% gold Legendary Anvils: -%i:goldCoins% gold Stat Anvils: -%i:goldC…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/gambaanvil.png"
+    },
+    {
+      "id": 195,
+      "apiName": "GiantSlayer",
+      "name": "Giant Slayer",
+      "description": "Become tiny, gain Move Speed, and bonus damage to champions based on how much larger they are than you.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/giantslayer.png"
+    },
+    {
+      "id": 41,
+      "apiName": "Goliath",
+      "name": "Goliath",
+      "description": "Become large, gaining % Health and % Adaptive Force.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/goliath.png"
+    },
+    {
+      "id": 138,
+      "apiName": "Goredrink",
+      "name": "Goredrink",
+      "description": "Gain % Omnivamp.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/goredrink.png"
+    },
+    {
+      "id": 316,
+      "apiName": "GrievousVenom",
+      "name": "Grievous Venom",
+      "description": "Dealing damage to an enemy champion reduces any shields they gain, and applies Grievous Wounds, reducing any healing they receive.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/grievousvenom.png"
+    },
+    {
+      "id": 42,
+      "apiName": "GuiltyPleasure",
+      "name": "Guilty Pleasure",
+      "description": "Immobilizing or Grounding enemy champions heals you.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/guiltypleasure.png"
+    },
+    {
+      "id": 241,
+      "apiName": "HatTrick",
+      "name": "Hat Trick",
+      "description": "Instantly gain hats, and reduce the price of Cappa Juice by . When your health drops below % gain Move Speed and a shield, but lose one hat.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/hattrick.png"
+    },
+    {
+      "id": 181,
+      "apiName": "HeavyHitter",
+      "name": "Heavy Hitter",
+      "description": "Your Attacks deal additional physical damage equal to % of your max Health.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/heavyhitter.png"
+    },
+    {
+      "id": 338,
+      "apiName": "HiveMind",
+      "name": "Hive Mind",
+      "description": "Start each round with Bee, gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing magic damage over seconds on arrival, befo…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/hivemind.png"
+    },
+    {
+      "id": 207,
+      "apiName": "HoldVeryStill",
+      "name": "Hold Very Still",
+      "description": "Gain Guerrilla Warfare. Not moving causes you to turn Invisibile until you move. Exiting this Invisibility, causes your next attack to deal bonus magic damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/holdverystill.png"
+    },
+    {
+      "id": 198,
+      "apiName": "HolyFire",
+      "name": "Holy Fire",
+      "description": "Healing or Shielding applies an infinitely stacking Burn to a nearby enemy, dealing percent max Health magic damage over a few seconds.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/holyfire.png"
+    },
+    {
+      "id": 105,
+      "apiName": "Homeguard",
+      "name": "Homeguard",
+      "description": "Gain % Move Speed, disabled for seconds after taking damage.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/homeguard.png"
+    },
+    {
+      "id": 357,
+      "apiName": "Hybrid",
+      "name": "Hybrid",
+      "description": "When you deal damage with an Attack, your next Ability deals % increased damage. When you deal damage with an Ability, your next Attack deals % increased damag…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/hybrid.png"
+    },
+    {
+      "id": 44,
+      "apiName": "IceCold",
+      "name": "Ice Cold",
+      "description": "Your Slowing effects reduce Move Speed by an extra .",
+      "rarity": "silver",
+      "iconPath": "assets/augments/icecold.png"
+    },
+    {
+      "id": 149,
+      "apiName": "Impassable",
+      "name": "Impassable",
+      "description": "Gain the Aftershock and Glacial Augment Keystone Runes.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/impassable.png"
+    },
+    {
+      "id": 45,
+      "apiName": "InfernalConduit",
+      "name": "Infernal Conduit",
+      "description": "Your Abilities apply an infinitely stacking Burn, dealing magic damage over time. Your Burn effects reduce your basic Ability Cooldowns.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/infernalconduit.png"
+    },
+    {
+      "id": 46,
+      "apiName": "InfernalSoul",
+      "name": "Infernal Soul",
+      "description": "You gain the Infernal Dragon Soul, dealing bonus damage when you hit enemies with Abilities or Attacks.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/infernalsoul.png"
+    },
+    {
+      "id": 47,
+      "apiName": "ItsCritical",
+      "name": "It's Critical",
+      "description": "Gain %i:scaleCrit% % Crit chance.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/itscritical.png"
+    },
+    {
+      "id": 211,
+      "apiName": "ItsKillingTime",
+      "name": "It's Killing Time",
+      "description": "After casting your Ultimate, mark all enemy champions for death. While marked, store damage dealt to them, and detonate the damage when the mark ends.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/itskillingtime.png"
+    },
+    {
+      "id": 48,
+      "apiName": "JeweledGauntlet",
+      "name": "Jeweled Gauntlet",
+      "description": "Your Abilities can Critically Strike. Gain %i:scaleCrit% % Crit Chance.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/jeweledgauntlet.png"
+    },
+    {
+      "id": 49,
+      "apiName": "JuiceBox",
+      "name": "Juice Box",
+      "description": "Each round, everyone on your team gains Juice.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/juicebox.png"
+    },
+    {
+      "id": 50,
+      "apiName": "KeystoneConjurer",
+      "name": "Keystone Conjurer",
+      "description": "Gain the Summon Aery and Arcane Comet Keystone Runes.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/keystoneconjurer.png"
+    },
+    {
+      "id": 359,
+      "apiName": "GoHLamb",
+      "name": "Lamb's Respite",
+      "description": "Gain additional revive, and cuts the time needed to revive in half.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohlamb.png"
+    },
+    {
+      "id": 174,
+      "apiName": "LaserEyes",
+      "name": "Laser Eyes",
+      "description": "There is a laser in the direction you are facing that deals continuous magic damage.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/lasereyes.png"
+    },
+    {
+      "id": 305,
+      "apiName": "LegDay",
+      "name": "Leg Day",
+      "description": "Gain Movement Speed and % Slow Resist.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/legday.png"
+    },
+    {
+      "id": 342,
+      "apiName": "CraftingSellAugment",
+      "name": "Level Augments",
+      "description": "Remove an %i:Augment% Augment. Gain random %i:AugmentLevel% Augment Levels.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/craftingsellaugment.png"
+    },
+    {
+      "id": 51,
+      "apiName": "LightemUp",
+      "name": "Light 'em Up!",
+      "description": "Every 4th Attack deals additional magic damage item keyword onhit.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/lightemup.png"
+    },
+    {
+      "id": 231,
+      "apiName": "LightWarden",
+      "name": "Light Warden",
+      "description": "Every few seconds, Autocast a warding light, Shielding yourself and allies it passes through before returning, repeating the effect.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/lightwarden.png"
+    },
+    {
+      "id": 52,
+      "apiName": "LightningStrikes",
+      "name": "Lightning Strikes",
+      "description": "Gain % total Attack Speed. At Attacks per second, deal additional magic damage item keyword onhit.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/lightningstrikes.png"
+    },
+    {
+      "id": 53,
+      "apiName": "MadScientist",
+      "name": "Mad Scientist",
+      "description": "Each Round you'll either grow large (Adaptive Force and Health) or tiny (Ability Haste and Move Speed).",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/madscientist.png"
+    },
+    {
+      "id": 133,
+      "apiName": "MagicMissile",
+      "name": "Magic Missile",
+      "description": "Dealing damage with an Ability fires magic missiles, each dealing percent max Health true damage.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/magicmissile.png"
+    },
+    {
+      "id": 345,
+      "apiName": "MagicalGirl",
+      "name": "Magical Girl",
+      "description": "Each round a star falls, picking it up transforms you into a powerful Magical Girl. As a Magical Girl, stars rain down around you and your enemies, dealing mag…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/magicalgirl.png"
+    },
+    {
+      "id": 129,
+      "apiName": "Marksmage",
+      "name": "Marksmage",
+      "description": "Your Attacks deal additional physical damage equal to % Ability Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/marksmage.png"
+    },
+    {
+      "id": 54,
+      "apiName": "MasterofDuality",
+      "name": "Master of Duality",
+      "description": "Your Attacks grant you Ability Power item keyword onhit and your Abilities grant you Attack Damage, until the end of the round.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/masterofduality.png"
+    },
+    {
+      "id": 56,
+      "apiName": "MindtoMatter",
+      "name": "Mind to Matter",
+      "description": "Increase max Health by half of your Mana.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/mindtomatter.png"
+    },
+    {
+      "id": 104,
+      "apiName": "Minionmancer",
+      "name": "Minionmancer",
+      "description": "Your summons gain % increased size, health, and damage.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/minionmancer.png"
+    },
+    {
+      "id": 172,
+      "apiName": "MirrorImage",
+      "name": "Mirror Image",
+      "description": "When you drop below % Health, briefly become Invisible and create 4 clones of yourself.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/mirrorimage.png"
+    },
+    {
+      "id": 57,
+      "apiName": "MountainSoul",
+      "name": "Mountain Soul",
+      "description": "You gain the Mountain Soul, gaining a Shield after being out of combat for a short time.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/mountainsoul.png"
+    },
+    {
+      "id": 58,
+      "apiName": "MysticPunch",
+      "name": "Mystic Punch",
+      "description": "item keyword onhit reduce the cooldown of your abilities by seconds %i:scaleCooldown%.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/mysticpunch.png"
+    },
+    {
+      "id": 177,
+      "apiName": "NestingDoll",
+      "name": "Nesting Doll",
+      "description": "Gain additional Revives, and begin reviving yourself after you die. When you Revive Knockback enemies around you, and come back smaller with reduced max Health.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/nestingdoll.png"
+    },
+    {
+      "id": 43,
+      "apiName": "NowYouSeeMe",
+      "name": "Now You See Me",
+      "description": "Gain the Now You See Me Summoner Spell. Now You See Me teleports you back to the starting position of your last Movement Ability.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/nowyouseeme.png"
+    },
+    {
+      "id": 3,
+      "apiName": "NullAugment",
+      "name": "Null Augment",
+      "description": "Null",
+      "rarity": "silver",
+      "iconPath": "assets/augments/nullaugment.png"
+    },
+    {
+      "id": 251,
+      "apiName": "NumbToPain",
+      "name": "Numb to Pain",
+      "description": "% of damage you take instead happens over seconds (% for ranged champions).",
+      "rarity": "silver",
+      "iconPath": "assets/augments/numbtopain.png"
+    },
+    {
+      "id": 109,
+      "apiName": "Oathsworn",
+      "name": "Oathsworn",
+      "description": "Replace Flee with Fate's Call. Fate's Call making your ally Untargetable for up to 4 seconds. your ally can launch themself out, Knocking Back enemies.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/oathsworn.png"
+    },
+    {
+      "id": 60,
+      "apiName": "OceanSoul",
+      "name": "Ocean Soul",
+      "description": "Gain the Ocean Soul, granting high Health and Mana regen after damaging enemies.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/oceansoul.png"
+    },
+    {
+      "id": 61,
+      "apiName": "OkBoomerang",
+      "name": "OK Boomerang",
+      "description": "Autocast throw a boomerang at a nearby enemy every s.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/okboomerang.png"
+    },
+    {
+      "id": 62,
+      "apiName": "OmniSoul",
+      "name": "Omni Soul",
+      "description": "Gain random Dragon Souls.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/omnisoul.png"
+    },
+    {
+      "id": 208,
+      "apiName": "OrbitalLaser",
+      "name": "Orbital Laser",
+      "description": "Replace Summoner Flee with Orbital Laser. After a delay, call down an orbital laser that deals % max Health true damage plus magic damage over seconds.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/orbitallaser.png"
+    },
+    {
+      "id": 63,
+      "apiName": "OutlawsGrit",
+      "name": "Outlaw's Grit",
+      "description": "After using a Dash, Blink, or Teleport Ability you gain Armor and Magic Resist.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/outlawsgrit.png"
+    },
+    {
+      "id": 311,
+      "apiName": "Overflow",
+      "name": "Overflow",
+      "description": "Your Mana costs are doubled. Your Ability Heals, Shields, and damage are increased based on your max Mana.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/overflow.png"
+    },
+    {
+      "id": 317,
+      "apiName": "PandorasBox",
+      "name": "Pandora's Box",
+      "description": "Transmute all of your augments into random Prismatic%i:Augment% Augments.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/pandorasbox.png"
+    },
+    {
+      "id": 335,
+      "apiName": "PanicRoom",
+      "name": "Panic Room",
+      "description": "Once per combat, when you would die, instead turn into a wisp, set yourself to % Health, and travel to a random spot in the arena.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/panicroom.png"
+    },
+    {
+      "id": 240,
+      "apiName": "ParasiticMutation",
+      "name": "Parasitic Mutation",
+      "description": "Every round this mutates into one of your opponent's augments. Only mutates into augments you could roll.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/parasiticmutation.png"
+    },
+    {
+      "id": 175,
+      "apiName": "ParasiticRelationship",
+      "name": "Parasitic Relationship",
+      "description": "{{ Cherry_ParasiticRelationship_Summary }}",
+      "rarity": "gold",
+      "iconPath": "assets/augments/parasiticrelationship.png"
+    },
+    {
+      "id": 64,
+      "apiName": "Perseverance",
+      "name": "Perseverance",
+      "description": "Gain hugely increased Health Regen, further increased at low Health.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/perseverance.png"
+    },
+    {
+      "id": 65,
+      "apiName": "PhenomenalEvil",
+      "name": "Phenomenal Evil",
+      "description": "Permanently gain Ability Power when you hit an enemy with an Ability. If taken after round , gain Ability Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/phenomenalevil.png"
+    },
+    {
+      "id": 224,
+      "apiName": "PrismaticEgg",
+      "name": "Prismatic Egg",
+      "description": "Gain stack on takedown, once per champion per round. After stacks, this hatches into a Prismatic Item Anvil, %i:Augment% Prismatic Augment, and a %i:StatAnvil%…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/prismaticegg.png"
+    },
+    {
+      "id": 66,
+      "apiName": "QuantumComputing",
+      "name": "Quantum Computing",
+      "description": "Periodically Autocast a massive slash around you, dealing physical damage. Enemies hit by the outer edge are Slowed, take additional damage, and heal you.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/quantumcomputing.png"
+    },
+    {
+      "id": 192,
+      "apiName": "Quest_AngelofRetribution",
+      "name": "Quest: Angel of Retribution",
+      "description": "Requirement: Heal or prevent damage to allies. Reward: Gain % Attack Speed, and your Attacks deal additional magic damage equal to % Heal/Shield Power.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/quest_angelofretribution.png"
+    },
+    {
+      "id": 318,
+      "apiName": "Quest_MadHatter",
+      "name": "Quest: Mad Hatter",
+      "description": "Requirement: Wear hats at the end of combat. Reward: Gain Adaptive Force, Armor, Magic Resist, Tenacity, and Movement Speed per hat.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/quest_madhatter.png"
+    },
+    {
+      "id": 333,
+      "apiName": "Quest_RiteOfTheForgeGod",
+      "name": "Quest: Rite Of The Forge God",
+      "description": "Requirement: Purchase Item Anvils. Reward: All of your items become Masterwork, increasing their stats by %.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/quest_riteoftheforgegod.png"
+    },
+    {
+      "id": 152,
+      "apiName": "Quest_SteelYourHeart",
+      "name": "Quest: Steel Your Heart",
+      "description": "Requirement: Possess Heartsteel with + stacks. Reward: Multiply your Heartsteel stacks by . Increase your Health Regeneration by % of your Heartsteel stacks.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/quest_steelyourheart.png"
+    },
+    {
+      "id": 319,
+      "apiName": "Quest_ThreeSacredTreasures",
+      "name": "Quest: Three Sacred Treasures",
+      "description": "Requirement: Possess Infinity Edge, Perplexity, and Hextech Gunblade. Reward: Yunara's Attacks are replaced with lasers that deal mixed damage.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/quest_threesacredtreasures.png"
+    },
+    {
+      "id": 154,
+      "apiName": "Quest_UrfsChampion",
+      "name": "Quest: Urf's Champion",
+      "description": "Requirement: Score takedowns. Reward: Golden Spatula",
+      "rarity": "gold",
+      "iconPath": "assets/augments/quest_urfschampion.png"
+    },
+    {
+      "id": 156,
+      "apiName": "Quest_WoogletsWitchcap",
+      "name": "Quest: Wooglet's Witchcap",
+      "description": "Immediate: Gain Needlessly Large Rod. Requirement: Possess Rabadon's Deathcap and Zhonya's Hourglass. Reward: Gain Wooglet's Witchcap.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/quest_woogletswitchcap.png"
+    },
+    {
+      "id": 67,
+      "apiName": "RabbleRousing",
+      "name": "Rabble Rousing",
+      "description": "Using an Ability restores Health.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/rabblerousing.png"
+    },
+    {
+      "id": 125,
+      "apiName": "RaidBoss",
+      "name": "Raid Boss",
+      "description": "You start each round imprisoned. While imprisoned, you have massive damage reduction and accumulate size, and power over time. When you escape, Knock Back enem…",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/raidboss.png"
+    },
+    {
+      "id": 68,
+      "apiName": "Recursion",
+      "name": "Recursion",
+      "description": "Gain Ability Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/recursion.png"
+    },
+    {
+      "id": 354,
+      "apiName": "GoHRemnantOfTheWatchers",
+      "name": "Remnant of the Watchers",
+      "description": "Reduce the Attack Speed of nearby champions.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohremnantofthewatchers.png"
+    },
+    {
+      "id": 364,
+      "apiName": "ReplaceAugment",
+      "name": "Replace Augment",
+      "description": "Replace one of your %i:Augment% Augments with an Augment %i:AugmentLevel% tier higher.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/replaceaugment.png"
+    },
+    {
+      "id": 69,
+      "apiName": "Repulsor",
+      "name": "Repulsor",
+      "description": "On dropping below % or % Health, nearby enemies are Knocked Back.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/repulsor.png"
+    },
+    {
+      "id": 165,
+      "apiName": "Restart",
+      "name": "Restart",
+      "description": "Your non-Ultimate Abilities Automatically refresh every seconds.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/restart.png"
+    },
+    {
+      "id": 70,
+      "apiName": "RestlessRestoration",
+      "name": "Restless Restoration",
+      "description": "You constantly heal while moving.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/restlessrestoration.png"
+    },
+    {
+      "id": 343,
+      "apiName": "RighteousFury",
+      "name": "Righteous Fury",
+      "description": "Healing or Shielding increases your Ability damage by %, stacking infinitely for the round.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/righteousfury.png"
+    },
+    {
+      "id": 303,
+      "apiName": "GoHSacrificeForGold",
+      "name": "Sacrifice: For Gold",
+      "description": "Sacrifice % of your current health. After rounds, gain a bonus Gold Augment and restore your health.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/gohsacrificeforgold.png"
+    },
+    {
+      "id": 304,
+      "apiName": "GoHSacrificeForPrismatic",
+      "name": "Sacrifice: For Prismatic",
+      "description": "Sacrifice % of your current health. After rounds, gain a bonus Prismatic Augment and restore your health.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/gohsacrificeforprismatic.png"
+    },
+    {
+      "id": 302,
+      "apiName": "GoHSacrificeForSilver",
+      "name": "Sacrifice: For Silver",
+      "description": "After rounds, gain a bonus Silver Augment.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/gohsacrificeforsilver.png"
+    },
+    {
+      "id": 115,
+      "apiName": "ScopiestWeapons",
+      "name": "Scopiest Weapons",
+      "description": "Gain Attack Range.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/scopiestweapons.png"
+    },
+    {
+      "id": 72,
+      "apiName": "SearingDawn",
+      "name": "Searing Dawn",
+      "description": "Your Abilities mark enemies, causing them to take additional magic damage from your ally's next Attack or Ability.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/searingdawn.png"
+    },
+    {
+      "id": 108,
+      "apiName": "SelfDestruct",
+      "name": "Self Destruct",
+      "description": "Every seconds Autocast, attach a bomb to yourself, it explodes, dealing massive true damage and Knocking Up nearby enemies.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/selfdestruct.png"
+    },
+    {
+      "id": 120,
+      "apiName": "ServeBeyondDeath",
+      "name": "Serve Beyond Death",
+      "description": "The first time you would die each round, instead return to full Health, decaying over time. Taking down an enemy champion while your Health is decaying stops t…",
+      "rarity": "silver",
+      "iconPath": "assets/augments/servebeyonddeath.png"
+    },
+    {
+      "id": 73,
+      "apiName": "ShadowRunner",
+      "name": "Shadow Runner",
+      "description": "After using a dash, leap, blink, or teleport Ability or exiting Stealth, gain Move Speed for seconds.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/shadowrunner.png"
+    },
+    {
+      "id": 74,
+      "apiName": "ShrinkRay",
+      "name": "Shrink Ray",
+      "description": "Your Attacks reduce the target's damage and size by % item keyword onhit.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/shrinkray.png"
+    },
+    {
+      "id": 356,
+      "apiName": "SilverSpoon",
+      "name": "Silver Spoon",
+      "description": "Deal increased damage per %i:Augment% Silver Augment you have.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/silverspoon.png"
+    },
+    {
+      "id": 113,
+      "apiName": "SkilledSniper",
+      "name": "Skilled Sniper",
+      "description": "Hitting an enemy with a non-Ultimate Ability at far range drastically reduces its Cooldown.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/skilledsniper.png"
+    },
+    {
+      "id": 136,
+      "apiName": "SlapAround",
+      "name": "Slap Around",
+      "description": "Each time you Immobilize or Ground an enemy, gain %i:miniAdaptiveForce% Adaptive Force for the round.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/slaparound.png"
+    },
+    {
+      "id": 232,
+      "apiName": "SlimeTime",
+      "name": "Slime Time",
+      "description": "Every few seconds Autocast a burst slime from your body, dealing magic damage to nearby enemies. If you hit a champion, secrete a blob that heals you when walk…",
+      "rarity": "silver",
+      "iconPath": "assets/augments/slimetime.png"
+    },
+    {
+      "id": 75,
+      "apiName": "SlowCooker",
+      "name": "Slow Cooker",
+      "description": "Every second, apply an infinitely stacking Burn to nearby enemy champions, scaling with your max Health.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/slowcooker.png"
+    },
+    {
+      "id": 76,
+      "apiName": "SonicBoom",
+      "name": "Sonic Boom",
+      "description": "Buffing, Healing, or Shielding your ally deals damage and Slows enemies surrounding them.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/sonicboom.png"
+    },
+    {
+      "id": 77,
+      "apiName": "SoulSiphon",
+      "name": "Soul Siphon",
+      "description": "Heal for % of damage done by Critical Strikes. Gain %i:scaleCrit% % Crit chance.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/soulsiphon.png"
+    },
+    {
+      "id": 135,
+      "apiName": "Spellwake",
+      "name": "Spellwake",
+      "description": "Hitting enemies with Abilities creates a blast that deals magic damage from you to the location you hit them.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/spellwake.png"
+    },
+    {
+      "id": 214,
+      "apiName": "SpinToWin",
+      "name": "Spin To Win",
+      "description": "Your spin Abilities gain Ability Haste and deal % more damage!",
+      "rarity": "silver",
+      "iconPath": "assets/augments/spintowin.png"
+    },
+    {
+      "id": 78,
+      "apiName": "SpiritLink",
+      "name": "Spirit Link",
+      "description": "{{Cherry_SpiritLink_Summary}}",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/spiritlink.png"
+    },
+    {
+      "id": 204,
+      "apiName": "StackosaurusRex",
+      "name": "Stackosaurus Rex",
+      "description": "When you gain permanent Stacks of an Ability, gain % more!",
+      "rarity": "silver",
+      "iconPath": "assets/augments/stackosaurusrex.png"
+    },
+    {
+      "id": 228,
+      "apiName": "StatsOnStatsOnStats",
+      "name": "Stats on Stats on Stats!",
+      "description": "Gain %i:StatAnvil% Stat Anvils!",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/statsonstatsonstats.png"
+    },
+    {
+      "id": 227,
+      "apiName": "StatsOnStats",
+      "name": "Stats on Stats!",
+      "description": "Gain %i:StatAnvil% Stat Anvils!",
+      "rarity": "gold",
+      "iconPath": "assets/augments/statsonstats.png"
+    },
+    {
+      "id": 226,
+      "apiName": "Stats",
+      "name": "Stats!",
+      "description": "Gain %i:StatAnvil% Stat Anvils!",
+      "rarity": "silver",
+      "iconPath": "assets/augments/stats.png"
+    },
+    {
+      "id": 223,
+      "apiName": "SummonerRevolution",
+      "name": "Summoner Revolution",
+      "description": "Your Summoner Spells gain additional charge(s). Flash resets every round.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/summonerrevolution.png"
+    },
+    {
+      "id": 123,
+      "apiName": "SummonersRoulette",
+      "name": "Summoner's Roulette",
+      "description": "Replace your Summoner Spells with random ones. When you use a Summoner Spell, replace it with another random one on a second Cooldown.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/summonersroulette.png"
+    },
+    {
+      "id": 392,
+      "apiName": "GoHSwindlersOrb",
+      "name": "Swindler's Orb",
+      "description": "Dealing damage to an enemy champion reduces their shields.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohswindlersorb.png"
+    },
+    {
+      "id": 239,
+      "apiName": "SymbioticMutation",
+      "name": "Symbiotic Mutation",
+      "description": "Every round this mutates into one of your ally's augments. Only mutates into augments you could roll.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/symbioticmutation.png"
+    },
+    {
+      "id": 79,
+      "apiName": "SymphonyofWar",
+      "name": "Symphony of War",
+      "description": "Gain the Lethal Tempo and Conqueror Keystone Runes.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/symphonyofwar.png"
+    },
+    {
+      "id": 313,
+      "apiName": "TankEngine",
+      "name": "Tank Engine",
+      "description": "Gain increased size and percent bonus Health per takedown.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/tankengine.png"
+    },
+    {
+      "id": 80,
+      "apiName": "TankItOrLeaveIt",
+      "name": "Tank It Or Leave It",
+      "description": "You can Critically Defend using your Crit Chance (max % chance), giving you a chance to reduce damage. Gain %i:scaleCrit% % Crit Chance.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/tankitorleaveit.png"
+    },
+    {
+      "id": 81,
+      "apiName": "TapDancer",
+      "name": "Tap Dancer",
+      "description": "Your Attacks grant you Move Speed item keyword onhit. Gain Attack Speed equal to % of your Move Speed.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/tapdancer.png"
+    },
+    {
+      "id": 82,
+      "apiName": "TheBrutalizer",
+      "name": "The Brutalizer",
+      "description": "Gain Attack Damage, Ability Haste, and Lethality.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/thebrutalizer.png"
+    },
+    {
+      "id": 84,
+      "apiName": "ThreadtheNeedle",
+      "name": "Thread the Needle",
+      "description": "Gain % %i:scaleAPen% Armor Penetration and %i:scaleMPen% Magic Penetration.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/threadtheneedle.png"
+    },
+    {
+      "id": 85,
+      "apiName": "Tormentor",
+      "name": "Tormentor",
+      "description": "Immobilizing or Grounding enemy champions applies a Burn that deals damage over time, stacking infinitely.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/tormentor.png"
+    },
+    {
+      "id": 221,
+      "apiName": "Trailblazer",
+      "name": "Trailblazer",
+      "description": "Dashing or Blinking applies a Burn to a nearby enemy that deals damage over time, stacking infinitely.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/trailblazer.png"
+    },
+    {
+      "id": 243,
+      "apiName": "TransmuteChaos",
+      "name": "Transmute: Chaos",
+      "description": "Gain random %i:Augment%Augments.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/transmutechaos.png"
+    },
+    {
+      "id": 237,
+      "apiName": "TransmuteGold",
+      "name": "Transmute: Gold",
+      "description": "Gain a random %i:Augment% Gold Augment.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/transmutegold.png"
+    },
+    {
+      "id": 238,
+      "apiName": "TransmutePrismatic",
+      "name": "Transmute: Prismatic",
+      "description": "Gain a random %i:Augment% Prismatic Augment.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/transmuteprismatic.png"
+    },
+    {
+      "id": 236,
+      "apiName": "TricksterDemon",
+      "name": "Trickster Demon",
+      "description": "When you exit stealth explode for Magic Damage, your clones and traps will do the same on death.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/tricksterdemon.png"
+    },
+    {
+      "id": 86,
+      "apiName": "TrueshotProdigy",
+      "name": "Trueshot Prodigy",
+      "description": "When you damage a champion from far away, fire a Trueshot Barrage at them.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/trueshotprodigy.png"
+    },
+    {
+      "id": 107,
+      "apiName": "TwiceThrice",
+      "name": "Twice Thrice",
+      "description": "Every attacks, your item keyword onhit effects trigger a second time.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/twicethrice.png"
+    },
+    {
+      "id": 87,
+      "apiName": "Typhoon",
+      "name": "Typhoon",
+      "description": "Your Attacks fire a bolt at an additional target dealing reduced damage and applying item keyword onhit effects.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/typhoon.png"
+    },
+    {
+      "id": 88,
+      "apiName": "UltimateRevolution",
+      "name": "Ultimate Revolution",
+      "description": "Once per round, refresh your Ultimate after casting it.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/ultimaterevolution.png"
+    },
+    {
+      "id": 233,
+      "apiName": "UltimateRoulette",
+      "name": "Ultimate Roulette",
+      "description": "Replace Flee with a random Ultimate. After casting the Ultimate, replace it with new random Ultimate.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/ultimateroulette.png"
+    },
+    {
+      "id": 112,
+      "apiName": "UltimateUnstoppable",
+      "name": "Ultimate Unstoppable",
+      "description": "After using your Ultimate, you become immune to crowd control for seconds. ( second Cooldown).",
+      "rarity": "silver",
+      "iconPath": "assets/augments/ultimateunstoppable.png"
+    },
+    {
+      "id": 327,
+      "apiName": "UndyingGuard",
+      "name": "Undying Guard",
+      "description": "Upon reviving with Cultivation of War, Zaahen deals damage to nearby enemies based on their current Health and knocks all targets back, becoming impervious to…",
+      "rarity": "gold",
+      "iconPath": "assets/augments/undyingguard.png"
+    },
+    {
+      "id": 314,
+      "apiName": "Unshackled",
+      "name": "Unshackled",
+      "description": "You can now Hijack your ally's ultimate. On takedown, reduce Hijack's lockout and cooldown by %. Gain Ultimate Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/unshackled.png"
+    },
+    {
+      "id": 89,
+      "apiName": "Vanish",
+      "name": "Vanish",
+      "description": "Gain the Vanish Summoner Spell. Vanish turns you Invisible.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/vanish.png"
+    },
+    {
+      "id": 90,
+      "apiName": "Vengeance",
+      "name": "Vengeance",
+      "description": "{{ Cherry_Vengeance_Summary }}",
+      "rarity": "gold",
+      "iconPath": "assets/augments/vengeance.png"
+    },
+    {
+      "id": 92,
+      "apiName": "Vulnerability",
+      "name": "Vulnerability",
+      "description": "Your Item and damage over time effects can Critically Strike. Gain %i:scaleCrit% % Crit chance.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/vulnerability.png"
+    },
+    {
+      "id": 93,
+      "apiName": "WarmupRoutine",
+      "name": "Warmup Routine",
+      "description": "Gain the Warmup Routine Summoner Spell. Channel your inner dancer to increase your damage by 2% per second, up to % max.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/warmuproutine.png"
+    },
+    {
+      "id": 312,
+      "apiName": "WellBeRightBack",
+      "name": "We'll Be Right Back",
+      "description": "Gain Time Stop Summoner Spell. Time Stop: ALL nearby champions are put in Stasis. The Stasis is shorter on you, and during it you Heal based on missing Health.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/wellberightback.png"
+    },
+    {
+      "id": 94,
+      "apiName": "WillingSacrifice",
+      "name": "Willing Sacrifice",
+      "description": "When an allied champion drops below % Health, trade some of your health to Shield them.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/willingsacrifice.png"
+    },
+    {
+      "id": 96,
+      "apiName": "WisdomofAges",
+      "name": "Wisdom of Ages",
+      "description": "Gain 1 level now, and 1 bonus level every other round. Your level cap is removed. If taken after round , gain additional levels.",
+      "rarity": "prismatic",
+      "iconPath": "assets/augments/wisdomofages.png"
+    },
+    {
+      "id": 97,
+      "apiName": "WitchfulThinking",
+      "name": "Witchful Thinking",
+      "description": "Gain %i:scaleAP% Ability Power.",
+      "rarity": "silver",
+      "iconPath": "assets/augments/witchfulthinking.png"
+    },
+    {
+      "id": 98,
+      "apiName": "WithHaste",
+      "name": "With Haste",
+      "description": "Gain Move Speed equal to % of your Ability Haste.",
+      "rarity": "gold",
+      "iconPath": "assets/augments/withhaste.png"
+    },
+    {
+      "id": 358,
+      "apiName": "GoHWolf",
+      "name": "Wolf's Frenzy",
+      "description": "Lose your innate revive. Increase your Health by %. If you deal damage that would leave a champion below below % maximum health, execute them.",
+      "rarity": "unknown",
+      "iconPath": "assets/augments/gohwolf.png"
+    }
+  ]
+}
