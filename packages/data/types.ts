@@ -18,20 +18,50 @@ export interface AugmentsFile {
   augments: Augment[];
 }
 
+/**
+ * Numeric stat block parsed from the leading stat line of an item's
+ * description (e.g. "350 Health 45 Armor ..." -> { health: 350, armor: 45 }).
+ * Best-effort — see parseItemStats in fetch-items.ts. Percentage stats
+ * (attackSpeed, critChance, lifeSteal, …) are stored as the number, e.g.
+ * `attackSpeed: 25` means +25%. Absent when the description has no
+ * parseable stat prefix.
+ */
+export interface ItemStats {
+  abilityPower?: number;
+  attackDamage?: number;
+  health?: number;
+  armor?: number;
+  magicResist?: number;
+  attackSpeed?: number;
+  abilityHaste?: number;
+  critChance?: number;
+  critDamage?: number;
+  lifeSteal?: number;
+  omnivamp?: number;
+  moveSpeed?: number;
+  magicPen?: number;
+  lethality?: number;
+  mana?: number;
+  tenacity?: number;
+  healShieldPower?: number;
+}
+
 export interface Item {
   id: number;
   name: string;
   /** Plain-text, tag-stripped short description. */
   description: string;
+  /** Parsed numeric stats from the description's stat prefix (optional — absent when unparseable). */
+  stats?: ItemStats;
   /** Total gold cost (buy price). */
   price: number;
   /** Relative to this package's root, e.g. "assets/items/3089.png". */
   iconPath: string;
   /** True for a top-tier item with no further upgrade (no "into" build path). */
   isCompleted: boolean;
-  /** Data Dragon's own item tags, e.g. ["SpellDamage", "Mana"] — raw, unmodified. */
+  /** Item tags/categories, e.g. ["SpellDamage", "Mana"] — raw from Community Dragon's `categories` (same vocabulary as Data Dragon's `tags`). */
   tags: string[];
-  /** Data Dragon's build-tree depth (1 = basic component, higher = more built-up). Absent for untiered items (consumables, trinkets). */
+  /** Build-tree depth (1 = basic component, higher = more built-up), reconstructed from the `from` chain. */
   depth?: number;
   /** Item ids this is built from (components). Absent/empty for a basic component. */
   from?: number[];
@@ -40,7 +70,12 @@ export interface Item {
 }
 
 export interface ItemsFile {
-  /** Data Dragon patch version this data was generated from (e.g. "16.16.1"). */
+  /**
+   * Where this data was generated from. Items are sourced from Community
+   * Dragon (`latest`), cross-referenced against a Data Dragon patch for
+   * map legality — e.g. "cdragon-latest (data) + ddragon-16.17.1 (map 12
+   * legality)". See packages/data/scripts/fetch-items.ts.
+   */
   source: string;
   generatedAt: string;
   items: Item[];
@@ -136,4 +171,59 @@ export interface ChampionsFile {
   source: string;
   generatedAt: string;
   champions: ChampionSummary[];
+}
+
+// --- Challenges (6-stage architecture, Stage 1) --------------------------
+
+/**
+ * Stat vocabulary a challenge can prioritize / tolerate. Deliberately
+ * coarse — these are build-direction stats, not exact item stat lines.
+ */
+export type Stat =
+  | 'AP'
+  | 'AD'
+  | 'HP'
+  | 'Armor'
+  | 'MR'
+  | 'AttackSpeed'
+  | 'Crit'
+  | 'AbilityHaste'
+  | 'Lethality'
+  | 'ArmorPen'
+  | 'MagicPen'
+  | 'Mana'
+  | 'MoveSpeed';
+
+export type ChallengeDamageType = 'AP' | 'AD' | 'mixed';
+
+/**
+ * A troll-challenge definition: the authored bridge from "what challenge
+ * was rolled" to "what build the engine should steer toward". This is the
+ * Stage-1 skeleton — an 8-row 1:1 formalization of the build directions
+ * that already exist implicitly (CHALLENGE_SUBTITLES + TAG_TO_ITEM_TAGS in
+ * @wisp/engine). NOT yet consumed by buildPlan/apps; the finer named-
+ * challenge list and the real `itemStyle` vocabulary are later passes.
+ */
+export interface Challenge {
+  /** Stable slug, e.g. "ap", "attack-speed". */
+  id: string;
+  /** Must be one of @wisp/engine's BUILD_TAGS (kept as a string here to avoid a data->engine dependency; the validator enforces the match). */
+  direction: string;
+  /**
+   * Item-archetype tag (DoT-caster, burst-caster, on-hit, …). PLACEHOLDER:
+   * the real closed vocabulary is Stage 3 work — treat these values as
+   * provisional until then.
+   */
+  itemStyle: string;
+  damageType: ChallengeDamageType;
+  /** Ordered — most build-defining stat first. */
+  primaryStatPriority: Stat[];
+  /** Off-archetype stats still considered acceptable, with a 0..1 tolerance weight (e.g. AP build still wants some HP). */
+  secondaryStatAllowance: Partial<Record<Stat, number>>;
+  /** Flavor line shown under the challenge title — seeded from CHALLENGE_SUBTITLES. */
+  subtitle: string;
+}
+
+export interface ChallengesFile {
+  challenges: Challenge[];
 }

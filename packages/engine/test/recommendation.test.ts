@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import type { Item } from '@wisp/data/types';
-import { pickTrollDirection, recommendItemsForTag, scoreAllTags } from '../src/recommendation';
+import {
+  isSupportItemization,
+  pickTrollDirection,
+  recommendItemsForTag,
+  scoreAllTags,
+} from '../src/recommendation';
 import { makeChampion } from './fixtures';
 
 describe('scoreAllTags', () => {
@@ -135,6 +140,68 @@ describe('recommendItemsForTag', () => {
 
   it('recommends nothing when no item matches the tag', () => {
     expect(recommendItemsForTag(items, 'Support')).toEqual([]);
+  });
+
+  it('excludes support-itemization items from non-Support directions, keeps them for Support', () => {
+    const forbiddenIdol: Item = {
+      id: 3114,
+      name: 'Forbidden Idol',
+      description: '',
+      price: 500,
+      iconPath: '',
+      isCompleted: false,
+      tags: ['ManaRegen'],
+      into: [500],
+    };
+    const enchanter: Item = {
+      id: 500,
+      name: 'Enchanter Core',
+      description: '',
+      price: 2500,
+      iconPath: '',
+      isCompleted: true,
+      tags: ['SpellDamage', 'ManaRegen', 'HealthRegen'],
+      from: [3114, 1052],
+      depth: 3,
+    };
+    const goldIncome: Item = {
+      id: 501,
+      name: 'Gold Income Finisher',
+      description: '',
+      price: 2200,
+      iconPath: '',
+      isCompleted: true,
+      tags: ['SpellDamage', 'GoldPer', 'Lane'],
+      from: [3867],
+      depth: 2,
+    };
+    const bandlepipes: Item = {
+      id: 2524,
+      name: 'Bandlepipes',
+      description: '',
+      price: 2300,
+      iconPath: '',
+      isCompleted: true,
+      tags: ['Health', 'SpellDamage'],
+      from: [3067],
+      depth: 3,
+    };
+    const withSupport = [...items, forbiddenIdol, enchanter, goldIncome, bandlepipes];
+
+    const apById = new Map(withSupport.map((i) => [i.id, i]));
+    expect(isSupportItemization(enchanter, apById)).toBe(true);
+    expect(isSupportItemization(goldIncome, apById)).toBe(true);
+    expect(isSupportItemization(bandlepipes, apById)).toBe(true);
+    expect(isSupportItemization(items[0], apById)).toBe(false);
+
+    const apResult = recommendItemsForTag(withSupport, 'AP').map((i) => i.id);
+    expect(apResult).not.toContain(500);
+    expect(apResult).not.toContain(501);
+    expect(apResult).not.toContain(2524);
+
+    const supportResult = recommendItemsForTag(withSupport, 'Support').map((i) => i.id);
+    expect(supportResult).toContain(500);
+    expect(supportResult).toContain(501);
   });
 
   it('dedupes items sharing a name (e.g. Summoner\'s Rift vs Arena variants), keeping the higher-scoring one', () => {

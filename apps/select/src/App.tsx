@@ -1,7 +1,13 @@
 import { useMemo, useState } from 'react';
 import type { Champion, ChampionSummary } from '@wisp/data/types';
 import { InfoTooltip } from '@wisp/ui';
-import { pickTrollDirection, scoreAllTags, type BuildTag } from '@wisp/engine';
+import {
+  pickTrollDirection,
+  resolveItemStyle,
+  scoreAllTags,
+  type BuildTag,
+  type ItemStyle,
+} from '@wisp/engine';
 import championsData from '@wisp/data/champions.json';
 import { ChampionIcon } from './ChampionIcon';
 import { loadChampionDetail } from './championDetail';
@@ -35,6 +41,7 @@ function SearchIcon() {
 interface Reveal {
   champion: Champion;
   tag: BuildTag;
+  itemStyle: ItemStyle;
 }
 
 export default function App() {
@@ -58,11 +65,15 @@ export default function App() {
     }
     const scores = scoreAllTags(champion);
     const tag = pickTrollDirection(scores).tag;
-    setReveal({ champion, tag });
+    // Finer archetype axis, resolved from the champion's kit — passed
+    // forward so the mockup renders exactly what the preview computed.
+    const itemStyle = resolveItemStyle(champion, tag);
+    setReveal({ champion, tag, itemStyle });
     window.setTimeout(() => {
       const url = new URL(MOCKUP_URL, window.location.href);
       url.searchParams.set('champion', champion.id);
       url.searchParams.set('tag', tag);
+      url.searchParams.set('style', itemStyle);
       window.location.href = url.toString();
     }, REVEAL_DURATION_MS);
   }
@@ -146,6 +157,9 @@ export default function App() {
             <h2 className="font-display text-3xl font-semibold tracking-tight">
               {reveal.tag} {reveal.champion.name}
             </h2>
+            <p className="text-xs font-medium uppercase tracking-wider text-wisp-400">
+              {reveal.itemStyle}
+            </p>
             <p className="text-sm text-mist-400">Loading the build overlay…</p>
           </div>
         </div>

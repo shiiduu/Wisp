@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Augment, Champion } from '@wisp/data/types';
 import { InfoTooltip } from '@wisp/ui';
-import { buildPlan, BUILD_TAGS, type BuildTag } from '@wisp/engine';
+import { buildPlan, BUILD_TAGS, ITEM_STYLES, type BuildTag, type ItemStyle } from '@wisp/engine';
 import augmentsData from '@wisp/data/augments.json';
 import itemsData from '@wisp/data/items.json';
 
@@ -15,7 +15,11 @@ import Companion, { type ReactionKind } from './Companion';
 import { useNoGoZones } from './useNoGoZones';
 import { loadChampionDetail } from './championDetail';
 
-const CHAMPION_LEVEL = 14;
+// Skill-order panel shows the full plan, so treat the champion as max
+// level: ARAM / ARAM Mayhem keep the standard cap of 18 (5+5+5 for Q/W/E,
+// 3 for R). Mayhem only changes starting level (3) and adds augment
+// breakpoints — not the cap.
+const CHAMPION_LEVEL = 18;
 const DEFAULT_CHAMPION_ID = 'DrMundo';
 const DEFAULT_TAG: BuildTag = 'AP';
 
@@ -31,13 +35,21 @@ const RARITY_STYLES: Record<string, string> = {
   unknown: 'border-void-600 bg-void-800/60 text-mist-300',
 };
 
-/** Reads ?champion=<id>&tag=<BuildTag> — set by the champion-select page. Falls back to a fixed default for standalone/dev use. */
-function readSelectionFromUrl(): { championId: string; tag: BuildTag } {
+/**
+ * Reads ?champion=<id>&tag=<BuildTag>&style=<ItemStyle> — set by the
+ * champion-select page. `style` is optional; when absent (standalone/dev
+ * use) buildPlan resolves it from the champion's kit itself.
+ */
+function readSelectionFromUrl(): { championId: string; tag: BuildTag; itemStyle?: ItemStyle } {
   const params = new URLSearchParams(window.location.search);
   const championId = params.get('champion') ?? DEFAULT_CHAMPION_ID;
   const tagParam = params.get('tag');
   const tag = (BUILD_TAGS as readonly string[]).includes(tagParam ?? '') ? (tagParam as BuildTag) : DEFAULT_TAG;
-  return { championId, tag };
+  const styleParam = params.get('style');
+  const itemStyle = (ITEM_STYLES as readonly string[]).includes(styleParam ?? '')
+    ? (styleParam as ItemStyle)
+    : undefined;
+  return { championId, tag, itemStyle };
 }
 
 function championLetters(name: string): string {
@@ -70,7 +82,7 @@ function sampleRandom<T>(arr: T[], n: number): T[] {
 }
 
 export default function App() {
-  const { championId, tag } = useMemo(readSelectionFromUrl, []);
+  const { championId, tag, itemStyle } = useMemo(readSelectionFromUrl, []);
   const [champion, setChampion] = useState<Champion | null>(null);
 
   useEffect(() => {
@@ -91,22 +103,36 @@ export default function App() {
     );
   }
 
-  return <Mockup champion={champion} tag={tag} />;
+  return <Mockup champion={champion} tag={tag} itemStyle={itemStyle} />;
 }
 
-function Mockup({ champion, tag }: { champion: Champion; tag: BuildTag }) {
-  const plan = useMemo(() => buildPlan(champion, tag, ITEMS, AUGMENTS), [champion, tag]);
+function Mockup({
+  champion,
+  tag,
+  itemStyle,
+}: {
+  champion: Champion;
+  tag: BuildTag;
+  itemStyle?: ItemStyle;
+}) {
+  const plan = useMemo(
+    () => buildPlan(champion, tag, ITEMS, AUGMENTS, itemStyle),
+    [champion, tag, itemStyle],
+  );
 
   const [reaction, setReaction] = useState<ReactionKind>(null);
   const [gold] = useState(4269);
   const [cs] = useState(187);
 
+  // "Items to buy" IS the recommended build: exactly the plan.build slots
+  // (boots + up to 5 non-boots, <= 6 total — see @wisp/engine assembleBuild),
+  // signature slot flagged as "recommended". Purchased inventory starts
+  // EMPTY; items only ever move here via the buy interaction (buyItem), and
+  // MAX_PURCHASED_ITEMS (6, boots included) matches the build size.
   const [shopEntries, setShopEntries] = useState<ShopEntry[]>(() =>
-    plan.shopItems.map(({ item, recommended }) => ({ item, recommended })),
+    plan.build.map((slot) => ({ item: slot.item, recommended: slot.role === 'signature' })),
   );
-  const [purchased, setPurchased] = useState<ShopEntry[]>(() =>
-    plan.ownedItems.map((item) => ({ item })),
-  );
+  const [purchased, setPurchased] = useState<ShopEntry[]>([]);
   const [selectedAugments, setSelectedAugments] = useState<Augment[]>([]);
   const [popupChoices, setPopupChoices] = useState<Augment[] | null>(null);
   const [popupRecommendation, setPopupRecommendation] = useState<string | null>(null);
@@ -188,6 +214,9 @@ function Mockup({ champion, tag }: { champion: Champion; tag: BuildTag }) {
             <div>
               <h1 className="font-display text-2xl font-semibold tracking-tight">
                 {plan.challengeTitle}
+                <span className="ml-2 align-middle text-xs font-medium uppercase tracking-wider text-wisp-400">
+                  {plan.itemStyle}
+                </span>
               </h1>
               <p className="text-sm text-mist-400">{plan.challengeSubtitle}</p>
             </div>
@@ -220,10 +249,11 @@ function Mockup({ champion, tag }: { champion: Champion; tag: BuildTag }) {
             purchased={purchased}
             purchasedInfo={
               <InfoTooltip label="About item data">
-                Item names, icons and prices come from static, local JSON generated from Riot
-                Data Dragon. What you own here is currently mock/manual data (click a purchased
-                item to remove it, for testing) — later it will update live from your actual
-                in-game purchases via GEP.
+                Item names, icons and prices come from static, local JSON generated from
+                Community Dragon (cross-referenced with Data Dragon for ARAM legality). This
+                inventory starts empty and only fills as you buy from &ldquo;Items to buy&rdquo;
+                (click a purchased item to remove it, for testing) — later it will update live
+                from your actual in-game purchases via GEP.
               </InfoTooltip>
             }
             selectedAugments={selectedAugments}

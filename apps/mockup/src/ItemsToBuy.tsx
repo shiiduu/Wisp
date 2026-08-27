@@ -26,11 +26,14 @@ export function ItemsToBuy({ entries, onBuy, disabled = false }: ItemsToBuyProps
 
   return (
     <Panel title="Items to buy">
+      <p className="mb-2 text-xs text-mist-500">
+        The full recommended build — at most 6 (boots + 5). Buy them to fill your inventory.
+      </p>
       {disabled && (
         <p className="mb-2 text-xs text-troll-400">Inventory full — sell or use an item first.</p>
       )}
       {entries.length === 0 ? (
-        <p className="text-xs text-mist-500">All stocked items purchased.</p>
+        <p className="text-xs text-mist-500">Whole build purchased — inventory complete.</p>
       ) : (
         <div className="grid grid-cols-3 gap-2">
           {entries.map(({ item, recommended }) => (

@@ -1,0 +1,76 @@
+{
+  "challenges": [
+    {
+      "id": "ap",
+      "direction": "AP",
+      "itemStyle": "ap-generic",
+      "damageType": "AP",
+      "primaryStatPriority": ["AP", "AbilityHaste"],
+      "secondaryStatAllowance": { "HP": 0.3, "Mana": 0.3, "MagicPen": 0.4 },
+      "subtitle": "Full magic damage, zero shame"
+    },
+    {
+      "id": "ad",
+      "direction": "AD",
+      "itemStyle": "ad-generic",
+      "damageType": "AD",
+      "primaryStatPriority": ["AD", "AttackSpeed"],
+      "secondaryStatAllowance": { "Crit": 0.4, "AbilityHaste": 0.3, "Lethality": 0.3 },
+      "subtitle": "Sharpen everything, cast nothing"
+    },
+    {
+      "id": "tank",
+      "direction": "Tank",
+      "itemStyle": "warden-tank",
+      "damageType": "mixed",
+      "primaryStatPriority": ["HP", "Armor", "MR"],
+      "secondaryStatAllowance": { "AbilityHaste": 0.3, "AP": 0.2 },
+      "subtitle": "Stack armor, forget you have a Q"
+    },
+    {
+      "id": "bruiser",
+      "direction": "Bruiser",
+      "itemStyle": "bruiser-generic",
+      "damageType": "AD",
+      "primaryStatPriority": ["AD", "HP", "Armor"],
+      "secondaryStatAllowance": { "MR": 0.3, "AbilityHaste": 0.3, "AttackSpeed": 0.2 },
+      "subtitle": "Numbers go up, so do you"
+    },
+    {
+      "id": "attack-speed",
+      "direction": "AttackSpeed",
+      "itemStyle": "on-hit",
+      "damageType": "mixed",
+      "primaryStatPriority": ["AttackSpeed", "AD"],
+      "secondaryStatAllowance": { "AP": 0.4, "Crit": 0.3, "HP": 0.2 },
+      "subtitle": "Click faster than you think"
+    },
+    {
+      "id": "crit",
+      "direction": "Crit",
+      "itemStyle": "crit-marksman",
+      "damageType": "AD",
+      "primaryStatPriority": ["Crit", "AD", "AttackSpeed"],
+      "secondaryStatAllowance": { "ArmorPen": 0.3, "AbilityHaste": 0.2 },
+      "subtitle": "Feast or famine, mostly famine"
+    },
+    {
+      "id": "support",
+      "direction": "Support",
+      "itemStyle": "enchanter",
+      "damageType": "mixed",
+      "primaryStatPriority": ["AbilityHaste", "HP"],
+      "secondaryStatAllowance": { "AP": 0.4, "Armor": 0.3, "MR": 0.3, "Mana": 0.3 },
+      "subtitle": "Peel for everyone but yourself"
+    },
+    {
+      "id": "lethality",
+      "direction": "Lethality",
+      "itemStyle": "lethality",
+      "damageType": "AD",
+      "primaryStatPriority": ["Lethality", "AD"],
+      "secondaryStatAllowance": { "AbilityHaste": 0.3, "Crit": 0.3, "MoveSpeed": 0.2 },
+      "subtitle": "One shot, zero patience"
+    }
+  ]
+}

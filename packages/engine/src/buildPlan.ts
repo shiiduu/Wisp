@@ -1,6 +1,8 @@
 import type { Augment, Champion, Item } from '@wisp/data/types';
+import type { ItemStyle } from './archetype';
 import { pickBestAugmentForTag, rankAugmentsForTag } from './augment-matcher';
-import { recommendItemsForTag } from './recommendation';
+import { assembleBuild, type BuildSlot } from './buildShape';
+import { resolveItemStyle } from './recommendation';
 import { pickSkillPriority, type LaneAbilityKey } from './skillOrder';
 import type { BuildTag } from './types';
 
@@ -15,19 +17,21 @@ const CHALLENGE_SUBTITLES: Record<BuildTag, string> = {
   Lethality: 'One shot, zero patience',
 };
 
-export interface ShopItemPlan {
-  item: Item;
-  recommended: boolean;
-}
-
 export interface BuildPlan {
   championId: string;
   championName: string;
   tag: BuildTag;
+  /** Finer archetype axis within `tag`, resolved from the champion's kit (see resolveItemStyle). */
+  itemStyle: ItemStyle;
   challengeTitle: string;
   challengeSubtitle: string;
-  ownedItems: Item[];
-  shopItems: ShopItemPlan[];
+  /**
+   * The real, inventory-legal recommended build: at most 6 slots
+   * (1 boots + up to 5 non-boots, one of which is the signature). This is
+   * the whole build, not a candidate pool for the UI to trim — see
+   * assembleBuild for the shape rules.
+   */
+  build: BuildSlot[];
   featuredAugment: Augment;
   otherAugmentNames: string[];
   skillPriority: LaneAbilityKey[];
@@ -40,13 +44,20 @@ export interface BuildPlan {
  * the same output, so the tag chosen on the select page is exactly what
  * the mockup shows (the only randomness — which tag — already happened in
  * pickTrollDirection and is passed in here as a fixed value).
+ *
+ * `itemStyle` (the finer archetype axis) is resolved from the champion's
+ * kit by default; apps/select passes its own resolved value forward via
+ * the URL so the preview and the mockup can't disagree — same pattern as
+ * `tag`.
  */
-export function buildPlan(champion: Champion, tag: BuildTag, items: Item[], augments: Augment[]): BuildPlan {
-  const ranked = recommendItemsForTag(items, tag);
-  const half = Math.min(6, Math.ceil(ranked.length / 2));
-  const ownedItems = ranked.slice(0, half);
-  const shopCandidates = ranked.slice(half, half + 6);
-  const shopItems: ShopItemPlan[] = shopCandidates.map((item, i) => ({ item, recommended: i < 2 }));
+export function buildPlan(
+  champion: Champion,
+  tag: BuildTag,
+  items: Item[],
+  augments: Augment[],
+  itemStyle: ItemStyle = resolveItemStyle(champion, tag),
+): BuildPlan {
+  const build = assembleBuild(items, tag, { itemStyle });
 
   const rankedAugments = rankAugmentsForTag(augments, tag);
   const featuredAugment = pickBestAugmentForTag(augments, tag);
@@ -59,10 +70,10 @@ export function buildPlan(champion: Champion, tag: BuildTag, items: Item[], augm
     championId: champion.id,
     championName: champion.name,
     tag,
+    itemStyle,
     challengeTitle: `${tag} ${champion.name}`,
     challengeSubtitle: CHALLENGE_SUBTITLES[tag],
-    ownedItems,
-    shopItems,
+    build,
     featuredAugment,
     otherAugmentNames,
     skillPriority: pickSkillPriority(champion, tag),
