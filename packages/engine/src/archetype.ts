@@ -1,4 +1,4 @@
-import type { Item } from '@wisp/data/types';
+import type { Item, ItemStats } from '@wisp/data/types';
 
 /**
  * The "archetype" layer (6-stage architecture, Stage 3). This is a SECOND,
@@ -208,4 +208,98 @@ export function itemStylesOf(item: Item): ItemStyle[] {
 /** Does this item match the given ItemStyle? */
 export function itemMatchesStyle(item: Item, style: ItemStyle): boolean {
   return itemStylesOf(item).includes(style);
+}
+
+// --- ItemStyle stat shapes (intra-pool differentiation) -----------------
+
+/**
+ * Rough "large roll on a completed item" magnitude per stat — used only to
+ * normalise disparate stat units (AP ~120, Health ~500, Crit% ~25, Haste
+ * ~30) onto a common ~0..1 scale before weighting. Not a cap, just a
+ * denominator; values above it simply score >1 for that stat.
+ */
+const STAT_NORM: Record<keyof ItemStats, number> = {
+  abilityPower: 120,
+  attackDamage: 80,
+  health: 500,
+  armor: 80,
+  magicResist: 80,
+  attackSpeed: 60,
+  abilityHaste: 30,
+  critChance: 25,
+  critDamage: 40,
+  lifeSteal: 20,
+  omnivamp: 20,
+  moveSpeed: 12,
+  magicPen: 20,
+  lethality: 20,
+  mana: 600,
+  tenacity: 30,
+  healShieldPower: 25,
+};
+
+/**
+ * Canonical stat shape per ItemStyle: which stats *define* the style and
+ * how strongly (weights ~0..1). This is the fix for the "flat pool"
+ * problem — several ItemStyle pools (lethality, burst-caster, ap-bruiser,
+ * crit-marksman, juggernaut, aura-tank) contain items that are identical
+ * under tag-overlap + tier scoring, so every champion resolved to that
+ * style, and every champion within it, got the byte-identical build.
+ * `itemStyleStatAffinity` turns this table into a real, item-intrinsic
+ * ranking signal, modulated by the champion's own stat profile so two
+ * champions in the same style still separate (see scoreItemForTag).
+ *
+ * Same "static hand-curated table alongside the data-driven signal"
+ * pattern as ITEM_ARCHETYPE_TAGS itself. FRAGILE POINT: the stat *names*
+ * must stay in sync with ItemStats; re-check weights if the item pool for
+ * a style shifts materially between patches.
+ */
+export const ITEM_STYLE_STAT_SHAPE: Record<ItemStyle, Partial<Record<keyof ItemStats, number>>> = {
+  'burst-caster': { abilityPower: 1, magicPen: 0.6, abilityHaste: 0.35 },
+  'dot-caster': { abilityPower: 0.8, health: 0.6, abilityHaste: 0.4 },
+  'artillery-caster': { abilityPower: 1, magicPen: 0.5, abilityHaste: 0.3 },
+  'ap-bruiser': { health: 0.9, abilityPower: 0.7, abilityHaste: 0.4 },
+  'on-hit': { attackSpeed: 1, attackDamage: 0.4, abilityPower: 0.3, health: 0.3 },
+  'crit-marksman': { critChance: 1, attackDamage: 0.7, attackSpeed: 0.6, critDamage: 0.4 },
+  lethality: { lethality: 1, attackDamage: 0.8, abilityHaste: 0.4, critChance: 0.3 },
+  'ad-caster': { abilityHaste: 1, attackDamage: 0.8, mana: 0.4 },
+  bruiser: { attackDamage: 0.8, health: 0.8, armor: 0.3, abilityHaste: 0.3 },
+  juggernaut: { health: 1, attackDamage: 0.6, tenacity: 0.4 },
+  'warden-tank': { armor: 0.9, magicResist: 0.9, health: 0.8 },
+  'aura-tank': { health: 0.8, armor: 0.55, magicResist: 0.55, abilityHaste: 0.5, healShieldPower: 0.4 },
+  enchanter: { healShieldPower: 1, abilityHaste: 0.8, mana: 0.4, moveSpeed: 0.3 },
+};
+
+/**
+ * How well an item's stat block embodies an ItemStyle, as a ~0..1 score.
+ *
+ * The style shape acts as a RELEVANCE MASK — only stats that define the
+ * style are considered at all (a warden-tank item's Health matters, its
+ * stray AbilityHaste does not). The champion's `profileWeights`
+ * (deriveStatProfile output) then supplies the MAGNITUDE within that mask,
+ * so the ranking is genuinely champion-specific: two champions resolved to
+ * the same style pull different items out of it according to their own
+ * scaling. With no profile it degrades to a pure style-shape ranking
+ * (still enough to un-flatten the pool). Weight-normalised -> bounded ~0..1
+ * regardless of how many stats the shape names.
+ */
+export function itemStyleStatAffinity(
+  item: Item,
+  style: ItemStyle,
+  profileWeights?: Partial<Record<keyof ItemStats, number>>,
+): number {
+  if (!item.stats) return 0;
+  const shape = ITEM_STYLE_STAT_SHAPE[style];
+
+  let sum = 0;
+  let weightSum = 0;
+  for (const [k, shapeWeight] of Object.entries(shape) as [keyof ItemStats, number][]) {
+    // shape gates which stats count; champion profile scales how much.
+    const weight = shapeWeight * (0.3 + (profileWeights?.[k] ?? 0.5));
+    if (weight <= 0) continue;
+    const value = item.stats[k] ?? 0;
+    sum += (value / STAT_NORM[k]) * weight;
+    weightSum += weight;
+  }
+  return weightSum > 0 ? sum / weightSum : 0;
 }

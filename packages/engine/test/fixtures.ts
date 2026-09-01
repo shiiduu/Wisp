@@ -1,6 +1,6 @@
 import type { Ability, Champion } from '@wisp/data/types';
 
-function makeAbility(overrides: Partial<Ability> = {}): Ability {
+export function makeAbility(overrides: Partial<Ability> = {}): Ability {
   return {
     id: 'Test',
     name: 'Test',

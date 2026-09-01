@@ -1,5 +1,5 @@
 import type { Champion, Item, ItemStats } from '@wisp/data/types';
-import { itemMatchesStyle, type ItemStyle } from './archetype';
+import { itemMatchesStyle, itemStyleStatAffinity, type ItemStyle } from './archetype';
 import { classifyItemTier } from './itemTier';
 import { BUILD_TAGS, type BuildTag, type TagScore } from './types';
 
@@ -208,6 +208,16 @@ export interface ArchetypeContext {
 /** Small tie-break only: weights ~0..1, stats ~10..1000, scaled so it never crosses a tier step (~10+). */
 const STAT_PROFILE_SCALE = 0.01;
 
+/**
+ * Weight of the ItemStyle stat-shape term (see itemStyleStatAffinity).
+ * Affinity is ~0..1, so the term contributes ~0..8 — deliberately larger
+ * than STAT_PROFILE_SCALE's sub-tie-break nudge (the flat pools need real
+ * separation) but still under one full tier step (10), so it reorders
+ * WITHIN a style pool without lifting a situational item over a core one.
+ * Only ever added when a style gate is active.
+ */
+const STYLE_AFFINITY_SCALE = 5;
+
 function statProfileBonus(item: Item, profile: Partial<Record<keyof ItemStats, number>>): number {
   if (!item.stats) return 0;
   let sum = 0;
@@ -225,9 +235,21 @@ export function scoreItemForTag(item: Item, tag: BuildTag, ctx?: ArchetypeContex
   const overlap = item.tags.filter((t) => wantedTags.includes(t)).length;
   if (overlap === 0) return 0;
   const tier = classifyItemTier(item);
-  const base = overlap * 10 * (TIER_WEIGHT[tier] ?? 0);
+  let score = overlap * 10 * (TIER_WEIGHT[tier] ?? 0);
 
-  return ctx?.statProfile ? base + statProfileBonus(item, ctx.statProfile) : base;
+  if (ctx?.statProfile) score += statProfileBonus(item, ctx.statProfile);
+
+  // Intra-pool differentiation — ONLY when a style gate is active, so every
+  // legacy path (tag-only, and itemStyle-less archetype context) stays
+  // byte-for-byte unchanged. Several style pools score every item
+  // identically under tag-overlap + tier alone (lethality being the
+  // extreme: 9 items, one score); this gives them a real, stat-shape-based
+  // ranking, tilted by the champion's own stat profile when present.
+  if (ctx?.itemStyle) {
+    score += STYLE_AFFINITY_SCALE * itemStyleStatAffinity(item, ctx.itemStyle, ctx.statProfile);
+  }
+
+  return score;
 }
 
 /** How many of the tag's wanted item-tags this item carries — used as a tie-break "on-theme-ness" signal. */
@@ -393,4 +415,66 @@ export function resolveItemStyle(champion: Champion, tag: BuildTag): ItemStyle {
       return 'bruiser';
     }
   }
+}
+
+// --- Stage-3 stat profile (champion -> item stat weights) ----------------
+
+const clamp01 = (n: number): number => (n < 0 ? 0 : n > 1 ? 1 : n);
+
+/**
+ * Derive a Stage-3 `ArchetypeContext.statProfile` from a champion's kit —
+ * per-stat weights (~0..1) that let `scoreItemForTag` separate items that
+ * otherwise tie on tag/tier alone (the Lethality pool being the extreme
+ * case: 9 items, identical tag overlap + tier, identical base score).
+ *
+ * The bonus this feeds is deliberately sub-tier: `statProfileBonus` scales
+ * it by `STAT_PROFILE_SCALE` (0.01), so with weights kept <= ~0.8 and real
+ * item stat lines (AD <= ~70, AP <= ~140, Health <= ~500 on completed
+ * items) the resulting nudge stays well under a single tier step — it
+ * reorders within a tier, never across one.
+ *
+ * Signals are the same ones Stage 1/2 already read (no new data source):
+ *  - per-ability scaling counts (physical / magic / true)
+ *  - `info.{attack,magic,defense}` (Riot's 0-10 role-fit ratings)
+ *  - `attackspeedperlevel` / `hpperlevel` growth
+ *  - role tags (Marksman / Assassin / Fighter / Mage / Tank / Support)
+ *
+ * NOTE: `attackdamageperlevel` is 0 for every champion in the current Data
+ * Dragon pull (a known dead field — see fetch-champions). It is kept in the
+ * formula so a future data fix lights it up automatically, but today it
+ * contributes nothing.
+ */
+export function deriveStatProfile(champion: Champion): Partial<Record<keyof ItemStats, number>> {
+  const { info, stats, tags } = champion;
+  const has = (t: string) => tags.includes(t);
+
+  const phys = countScaling(champion, 'physical') / 5; // 0..1
+  const magic = countScaling(champion, 'magic') / 5; // 0..1
+  const tru = countScaling(champion, 'true') / 3; // 0..~1
+  const atk = info.attack / 10;
+  const mag = info.magic / 10;
+  const def = info.defense / 10;
+  const asGrow = clamp01(stats.attackspeedperlevel / 5);
+  const adGrow = clamp01(stats.attackdamageperlevel / 4); // currently always 0 (see note)
+  const hpGrow = clamp01((stats.hpperlevel - 69) / (126 - 69));
+
+  const marksman = has('Marksman');
+  const assassin = has('Assassin');
+  const fighter = has('Fighter');
+  const mage = has('Mage');
+  const tank = has('Tank');
+
+  return {
+    attackDamage: clamp01(
+      0.2 + 0.35 * phys + 0.2 * atk + 0.2 * adGrow + (marksman || fighter || assassin ? 0.12 : 0),
+    ),
+    abilityPower: clamp01(0.35 * magic + 0.3 * mag + (mage ? 0.18 : 0)),
+    attackSpeed: clamp01(0.22 * asGrow + (marksman ? 0.35 : 0) + 0.18 * phys),
+    critChance: clamp01((marksman && !assassin ? 0.4 : 0) + 0.18 * asGrow),
+    lethality: clamp01(0.12 + (assassin ? 0.4 : 0) + 0.22 * phys + 0.25 * tru),
+    abilityHaste: clamp01(0.1 + (mage || magic >= 0.6 ? 0.16 : 0) + (fighter ? 0.08 : 0)),
+    health: clamp01(0.28 * def + 0.22 * hpGrow + (fighter || tank ? 0.22 : 0)),
+    armor: clamp01(0.22 * def + (tank ? 0.18 : 0)),
+    magicResist: clamp01(0.22 * def + (tank ? 0.18 : 0)),
+  };
 }

@@ -2,7 +2,7 @@ import type { Augment, Champion, Item } from '@wisp/data/types';
 import type { ItemStyle } from './archetype';
 import { pickBestAugmentForTag, rankAugmentsForTag } from './augment-matcher';
 import { assembleBuild, type BuildSlot } from './buildShape';
-import { resolveItemStyle } from './recommendation';
+import { deriveStatProfile, resolveItemStyle } from './recommendation';
 import { pickSkillPriority, type LaneAbilityKey } from './skillOrder';
 import type { BuildTag } from './types';
 
@@ -57,7 +57,12 @@ export function buildPlan(
   augments: Augment[],
   itemStyle: ItemStyle = resolveItemStyle(champion, tag),
 ): BuildPlan {
-  const build = assembleBuild(items, tag, { itemStyle });
+  // Stage-3 archetype context: the finer ItemStyle axis PLUS a champion-
+  // derived stat profile. The stat profile is a sub-tier tie-break inside
+  // scoreItemForTag (see deriveStatProfile / statProfileBonus) — it lets
+  // two champions in the same ItemStyle bucket separate items that tie on
+  // tag/tier alone (Lethality's 9-item pool being the worst case).
+  const build = assembleBuild(items, tag, { itemStyle, statProfile: deriveStatProfile(champion) });
 
   const rankedAugments = rankAugmentsForTag(augments, tag);
   const featuredAugment = pickBestAugmentForTag(augments, tag);
