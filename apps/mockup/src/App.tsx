@@ -1,8 +1,16 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Augment, Champion } from '@wisp/data/types';
 import { InfoTooltip } from '@wisp/ui';
-import { buildPlan, BUILD_TAGS, ITEM_STYLES, type BuildTag, type ItemStyle } from '@wisp/engine';
+import {
+  buildPlan,
+  BUILD_TAGS,
+  ITEM_STYLES,
+  filterAramMayhemAugments,
+  type BuildTag,
+  type ItemStyle,
+} from '@wisp/engine';
 import augmentsData from '@wisp/data/augments.json';
+import aramMayhemAugmentsData from '@wisp/data/aram-mayhem-augments.json';
 import itemsData from '@wisp/data/items.json';
 
 import { Panel } from './Panel';
@@ -24,8 +32,13 @@ const DEFAULT_CHAMPION_ID = 'DrMundo';
 const DEFAULT_TAG: BuildTag = 'AP';
 
 // NullAugment is an internal placeholder entry in Community Dragon's data
-// (used for empty slots), not a real offerable augment — exclude it.
-const AUGMENTS = (augmentsData.augments as Augment[]).filter((a) => a.apiName !== 'NullAugment');
+// (used for empty slots), not a real offerable augment — exclude it. Then
+// restrict to the ARAM-Mayhem-valid subset (Arena's augment pool is not
+// the same as Mayhem's — see packages/data/scripts/filter-aram-mayhem-augments.ts).
+const ARENA_AUGMENTS = (augmentsData.augments as Augment[]).filter(
+  (a) => a.apiName !== 'NullAugment',
+);
+const AUGMENTS = filterAramMayhemAugments(ARENA_AUGMENTS, aramMayhemAugmentsData.validApiNames);
 const ITEMS = itemsData.items;
 
 const RARITY_STYLES: Record<string, string> = {
@@ -275,8 +288,10 @@ function Mockup({
               info={
                 <InfoTooltip label="About augment data">
                   Augment name, icon and description are static, local JSON generated from
-                  Community Dragon&apos;s Arena augment data — never fetched live. Ranking against
-                  the current build direction is Wisp&apos;s own heuristic.
+                  Community Dragon&apos;s Arena augment data, filtered down to what&apos;s
+                  actually offered in ARAM Mayhem (cross-referenced against the League of
+                  Legends Wiki) — never fetched live. Ranking against the current build
+                  direction is Wisp&apos;s own heuristic.
                 </InfoTooltip>
               }
             >
@@ -334,6 +349,20 @@ function Mockup({
             className="rounded-lg border border-void-600 bg-void-800 px-3 py-1.5 text-xs font-medium text-mist-200 transition-colors hover:border-gold-500/50 hover:text-gold-500"
           >
             Trigger funny number
+          </button>
+          <button
+            type="button"
+            onClick={() => setReaction('scared')}
+            className="rounded-lg border border-void-600 bg-void-800 px-3 py-1.5 text-xs font-medium text-mist-200 transition-colors hover:border-troll-500/50 hover:text-troll-400"
+          >
+            Trigger scared
+          </button>
+          <button
+            type="button"
+            onClick={() => setReaction('penta')}
+            className="rounded-lg border border-void-600 bg-void-800 px-3 py-1.5 text-xs font-medium text-mist-200 transition-colors hover:border-gold-500/50 hover:text-gold-500"
+          >
+            Trigger penta
           </button>
           <button
             type="button"

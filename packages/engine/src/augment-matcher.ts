@@ -39,3 +39,16 @@ export function pickBestAugmentForTag(augments: Augment[], tag: BuildTag): Augme
   const ranked = rankAugmentsForTag(augments, tag);
   return ranked[0] ?? augments[0];
 }
+
+/**
+ * Restricts an augment list to only those actually obtainable in ARAM
+ * Mayhem (`validApiNames` from packages/data/aram-mayhem-augments.json —
+ * see scripts/filter-aram-mayhem-augments.ts). augments.json itself is
+ * Community Dragon's Arena pool, which is a superset/non-subset of
+ * Mayhem's roster, so every augment consumer (random popup pool, "best
+ * augment" recommendation) must apply this before ranking or sampling.
+ */
+export function filterAramMayhemAugments(augments: Augment[], validApiNames: string[]): Augment[] {
+  const valid = new Set(validApiNames);
+  return augments.filter((a) => valid.has(a.apiName));
+}

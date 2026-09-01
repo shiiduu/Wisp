@@ -35,7 +35,8 @@ export function AugmentSelectPopup({
         <div className="absolute right-4 top-4">
           <InfoTooltip label="About this popup" side="bottom" align="end">
             Simulates the real ARAM Mayhem in-game augment choice prompt. Augment data is
-            static, local JSON generated from Community Dragon — never fetched live.
+            static, local JSON generated from Community Dragon, filtered to only augments
+            actually available in ARAM Mayhem — never fetched live.
           </InfoTooltip>
         </div>
 

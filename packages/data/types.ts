@@ -19,6 +19,21 @@ export interface AugmentsFile {
 }
 
 /**
+ * Output of scripts/filter-aram-mayhem-augments.ts: the subset of
+ * AugmentsFile's apiNames that are actually obtainable in ARAM Mayhem,
+ * cross-referenced against the League of Legends Wiki's maintained
+ * Module:MayhemAugmentData/data. Arena and ARAM Mayhem have different
+ * augment rosters, so this is a strict subset — see the script's header
+ * comment for why and how the match was verified.
+ */
+export interface AramMayhemAugmentsFile {
+  /** URL of the wiki module this was generated from. */
+  source: string;
+  generatedAt: string;
+  validApiNames: string[];
+}
+
+/**
  * Numeric stat block parsed from the leading stat line of an item's
  * description (e.g. "350 Health 45 Armor ..." -> { health: 350, armor: 45 }).
  * Best-effort — see parseItemStats in fetch-items.ts. Percentage stats
