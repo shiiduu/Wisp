@@ -1,8 +1,6 @@
 const SELECT_URL = import.meta.env.PROD ? '/Wisp/select/' : 'http://localhost:5175/';
 const GITHUB_URL = 'https://github.com/shiiduu/Wisp';
 
-const CHALLENGES = ['AP Mundo', 'Tank Yuumi', 'Full Lethality Soraka', 'Attack Speed Nasus'];
-
 function WispMark() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
@@ -90,28 +88,6 @@ export default function App() {
               <GithubIcon />
               Source
             </a>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-4xl px-6 pb-20">
-          <div className="rounded-xl2 border border-void-700 bg-void-900/50 p-6 shadow-panel sm:p-8">
-            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-mist-400">
-              This game's challenge
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {CHALLENGES.map((challenge, i) => (
-                <span
-                  key={challenge}
-                  className={`rounded-full border px-4 py-2 text-sm font-medium ${
-                    i === 0
-                      ? 'border-troll-500/40 bg-troll-500/10 text-troll-400'
-                      : 'border-void-700 text-mist-400'
-                  }`}
-                >
-                  {challenge}
-                </span>
-              ))}
-            </div>
           </div>
         </section>
 

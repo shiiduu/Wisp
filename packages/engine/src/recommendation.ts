@@ -42,12 +42,21 @@ export function scoreChampionForTag(champion: Champion, tag: BuildTag): number {
         stats.attackdamageperlevel * 1.5
       );
     case 'Tank':
+      // A champion must earn a Tank score from something tank-specific — a
+      // Tank/Fighter role tag, abilities that scale with resistances/health
+      // (countScaling('tank')), or a genuinely high defensive profile —
+      // NOT from base stat growth, which every champion has. Base bulk only
+      // contributes the portion ABOVE roster-typical, and lightly:
+      //   info.defense: mages ~2-4, bruisers ~5-7, tanks ~8-10 (only >4 counts)
+      //   hpperlevel:   roster median ~104 (only >95 counts)
+      //   armor+MR:     roster median ~61  (only >52 counts)
       return (
-        info.defense * 4 +
-        countScaling(champion, 'tank') * 8 +
-        (stats.armor + stats.spellblock) * 0.3 +
-        stats.hpperlevel * 0.5 +
-        (has('Tank') ? 15 : 0)
+        (has('Tank') ? 26 : 0) +
+        (has('Fighter') ? 8 : 0) +
+        countScaling(champion, 'tank') * 12 +
+        Math.max(0, info.defense - 4) * 7 +
+        Math.max(0, stats.hpperlevel - 95) * 0.25 +
+        Math.max(0, stats.armor + stats.spellblock - 52) * 0.35
       );
     case 'Bruiser':
       return (
@@ -61,7 +70,17 @@ export function scoreChampionForTag(champion: Champion, tag: BuildTag): number {
         stats.attackspeedperlevel * 6 + (has('Marksman') ? 12 : 0) + countScaling(champion, 'physical') * 3
       );
     case 'Crit':
-      return (has('Marksman') ? 20 : 0) + stats.attackdamageperlevel * 1 + stats.attackspeedperlevel * 2;
+      // Was floored so low it never cleared pickTrollDirection's 0.5×top
+      // cutoff for anyone — Crit could never be rolled. A crit build is an
+      // auto-attack build: marksman prior + AD/attack-speed growth + how
+      // physical the kit's damage is.
+      return (
+        (has('Marksman') ? 26 : 0) +
+        (has('Fighter') ? 4 : 0) +
+        countScaling(champion, 'physical') * 3 +
+        stats.attackdamageperlevel * 2 +
+        stats.attackspeedperlevel * 4
+      );
     case 'Support':
       return (
         (has('Support') ? 20 : 0) +
@@ -87,8 +106,19 @@ export function scoreAllTags(champion: Champion): TagScore[] {
 }
 
 export interface PickTrollDirectionOptions {
-  /** Scores below (topScore * floor) are never selectable. Default 0.5. */
-  percentileFloor?: number;
+  /**
+   * Any tag scoring at least (topScore * this) counts as one of the
+   * champion's *real* roles and is removed from the troll pool — not just
+   * the literal #1. Handles champions with 2+ genuine directions (e.g. a
+   * viable Tank AND Bruiser). Default 0.65.
+   */
+  realRoleThreshold?: number;
+  /**
+   * Directions scoring below (topScore * this) are dropped as absurd — but
+   * only while that still leaves something to roll. Low bar: a troll build
+   * should be a bad fit, just not literally nonsensical. Default 0.25.
+   */
+  coherenceFloor?: number;
   /** Injectable RNG for deterministic tests. Default Math.random. */
   rng?: () => number;
 }
@@ -96,28 +126,36 @@ export interface PickTrollDirectionOptions {
 /**
  * Weighted-random pick of the "troll build direction" for a champion.
  *
- * 1. Compute a cutoff = topScore * percentileFloor (simple percentile
- *    floor, not a full statistical model — the simplest rule that reliably
- *    avoids nonsensical picks: a tag scoring under half of the champion's
- *    best-fit tag is never a coherent "troll" direction, just a bad one).
- * 2. Drop every tag below that cutoff.
- * 3. Exclude the single top-scoring ("typical") tag from the pool, so the
- *    pick favors a non-typical-but-still-plausible direction — that's the
- *    whole point of a troll build. If that empties the pool (a champion
- *    with only one viable direction), fall back to including it.
- * 4. Weighted-random pick from what's left, weight = score (so among the
- *    eligible non-typical tags, higher-scoring ones are still favored).
+ * 1. Identify the champion's real role(s): every tag within
+ *    `realRoleThreshold` of the top score. Remove them all — the point of
+ *    a troll build is to avoid what the champion is actually good at, and
+ *    a champion can have more than one genuine direction.
+ * 2. Drop the absurd tail (below `coherenceFloor` of the top) if anything
+ *    survives it.
+ * 3. Weighted-random pick over what's left, weight = score — a
+ *    less-terrible troll direction is favoured but every remaining
+ *    direction stays possible (a troll build is *meant* to be a bad fit).
+ *
+ * Only falls back toward a real role for the degenerate case of a
+ * champion whose every direction scores within `realRoleThreshold` of the
+ * top — then it still avoids the literal #1.
  */
 export function pickTrollDirection(
   scores: TagScore[],
-  { percentileFloor = 0.5, rng = Math.random }: PickTrollDirectionOptions = {},
+  {
+    realRoleThreshold = 0.65,
+    coherenceFloor = 0.25,
+    rng = Math.random,
+  }: PickTrollDirectionOptions = {},
 ): TagScore {
   const sorted = [...scores].sort((a, b) => b.score - a.score);
   const top = sorted[0];
-  const cutoff = top.score * percentileFloor;
-  const eligible = sorted.filter((s) => s.score >= cutoff);
-  const nonTypical = eligible.filter((s) => s.tag !== top.tag);
-  const pool = nonTypical.length > 0 ? nonTypical : eligible;
+
+  const offRole = sorted.filter((s) => s.score < top.score * realRoleThreshold);
+  const coherent = offRole.filter((s) => s.score >= top.score * coherenceFloor);
+  const nonTop = sorted.filter((s) => s.tag !== top.tag);
+  const pool =
+    coherent.length > 0 ? coherent : offRole.length > 0 ? offRole : nonTop.length > 0 ? nonTop : sorted.slice(0, 1);
 
   const total = pool.reduce((sum, s) => sum + Math.max(s.score, 0), 0);
   if (total <= 0) return pool[0];
@@ -340,7 +378,12 @@ export function resolveItemStyle(champion: Champion, tag: BuildTag): ItemStyle {
     }
 
     case 'Tank': {
-      if (has('Support') || sustain > 0) return 'aura-tank';
+      // aura-tank is the ally-buffing / warding line (Locket, Knight's Vow,
+      // Zeke's). Only a genuine enchanter-tank earns it — a Support tag
+      // backed by a real heal/shield, or a heavily heal/shield kit.
+      // Everything else (bruisers, mages, pure tanks turned tanky) ->
+      // warden-tank, the correct default.
+      if ((has('Support') && sustain > 0) || sustain >= 2) return 'aura-tank';
       return 'warden-tank';
     }
 

@@ -27,6 +27,33 @@ describe('scoreAllTags', () => {
     expect(scores.map((s) => s.tag).sort()).toEqual(
       ['AD', 'AP', 'AttackSpeed', 'Bruiser', 'Crit', 'Lethality', 'Support', 'Tank'].sort(),
     );
+    // Tank must NOT be inflated by base stat growth — a squishy mage
+    // should score near-nothing for Tank, nowhere near its AP score.
+    const ap = scores.find((s) => s.tag === 'AP')!.score;
+    const tank = scores.find((s) => s.tag === 'Tank')!.score;
+    expect(tank).toBeLessThan(ap * 0.35);
+  });
+
+  it('scores Tank highly only for a kit with tank signals (role tag / tank scaling), not for a generic squishy champion', () => {
+    const base = {
+      info: { attack: 5, defense: 4, magic: 5, difficulty: 5 },
+    } as const;
+    const squishy = makeChampion({ ...base, tags: ['Mage'] });
+    const realTank = makeChampion({
+      tags: ['Tank'],
+      info: { attack: 3, defense: 9, magic: 4, difficulty: 4 },
+      abilities: {
+        passive: { name: 'p', description: '', scaling: ['tank'] },
+        Q: { id: 'Q', name: 'Q', description: '', maxRank: 5, cooldown: [], cost: [], scaling: ['tank'] },
+        W: { id: 'W', name: 'W', description: '', maxRank: 5, cooldown: [], cost: [], scaling: ['none'] },
+        E: { id: 'E', name: 'E', description: '', maxRank: 5, cooldown: [], cost: [], scaling: ['none'] },
+        R: { id: 'R', name: 'R', description: '', maxRank: 3, cooldown: [], cost: [], scaling: ['none'] },
+      },
+    });
+    const squishyTank = scoreAllTags(squishy).find((s) => s.tag === 'Tank')!.score;
+    const realTankScore = scoreAllTags(realTank).find((s) => s.tag === 'Tank')!.score;
+    expect(realTankScore).toBeGreaterThan(squishyTank * 3);
+    expect(scoreAllTags(realTank)[0].tag).toBe('Tank');
   });
 
   it('scores a marksman highest on AD/AttackSpeed/Crit over AP', () => {
@@ -63,37 +90,51 @@ describe('scoreAllTags', () => {
 });
 
 describe('pickTrollDirection', () => {
-  it('never picks a tag scoring below the percentile floor', () => {
+  it('prefers a coherent off-role direction over a barely-viable one', () => {
     const scores = [
       { tag: 'AP' as const, score: 100 },
-      { tag: 'AD' as const, score: 60 },
-      { tag: 'Tank' as const, score: 10 }, // below 0.5 * 100 cutoff
+      { tag: 'AD' as const, score: 60 }, // off-role and coherent (>= 0.4 * top)
+      { tag: 'Tank' as const, score: 10 }, // off-role but incoherent
     ];
-    // run many times with real randomness — Tank must never appear
     for (let i = 0; i < 200; i++) {
-      const pick = pickTrollDirection(scores, { percentileFloor: 0.5 });
-      expect(pick.tag).not.toBe('Tank');
+      expect(pickTrollDirection(scores).tag).toBe('AD');
     }
   });
 
-  it('is deterministic given an injected rng, and excludes the typical (top) tag when alternatives exist', () => {
+  it('excludes every near-top tag, not just the #1 (multi-role champions)', () => {
+    // AP, AD and Tank are all within realRoleThreshold (0.65) of the top —
+    // all three count as "real roles" and must be excluded.
     const scores = [
       { tag: 'AP' as const, score: 100 },
       { tag: 'AD' as const, score: 90 },
       { tag: 'Tank' as const, score: 80 },
+      { tag: 'Bruiser' as const, score: 45 }, // the only genuine off-role option
     ];
-    // rng() = 0 always picks the first eligible, non-typical entry
-    const pick = pickTrollDirection(scores, { rng: () => 0 });
-    expect(pick.tag).not.toBe('AP');
+    for (let i = 0; i < 200; i++) {
+      expect(pickTrollDirection(scores).tag).toBe('Bruiser');
+    }
   });
 
-  it('falls back to the typical tag if it is the only one above the cutoff', () => {
+  it('still rolls an off-role direction for a one-dimensional champion (never hands back the main role)', () => {
     const scores = [
       { tag: 'AP' as const, score: 100 },
       { tag: 'AD' as const, score: 1 },
     ];
-    const pick = pickTrollDirection(scores, { percentileFloor: 0.5, rng: () => 0 });
-    expect(pick.tag).toBe('AP');
+    // A troll build is meant to be suboptimal — AD is picked despite the
+    // poor fit; it must not fall back to AP.
+    expect(pickTrollDirection(scores, { rng: () => 0 }).tag).toBe('AD');
+  });
+
+  it('only collapses to the top tag when literally every direction is a real role', () => {
+    const scores = [
+      { tag: 'AP' as const, score: 100 },
+      { tag: 'AD' as const, score: 95 },
+      { tag: 'Tank' as const, score: 90 },
+      { tag: 'Bruiser' as const, score: 88 },
+    ];
+    // no off-role option exists -> degenerate fallback still avoids the #1
+    const pick = pickTrollDirection(scores, { rng: () => 0 });
+    expect(pick.tag).not.toBe('AP');
   });
 });
 
